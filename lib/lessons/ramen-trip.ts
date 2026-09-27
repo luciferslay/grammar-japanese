@@ -1,0 +1,237 @@
+import type { Lesson } from './types';
+
+const AUDIO = '/audio/standard/gj-01';
+
+/**
+ * 网站第 1 课：動詞た形 + ことがある（有过……的经历）。JLPT N4。
+ * 大纲 ~/Developer/nihongo/grammar/LESSON_DRAFT_gj-01-02.md（Luna 2026-09-27 拍板）。
+ * 人物：A＝拓也（男，日本大学生）；B＝リン（女，中国留学生）。
+ * 语体：N4 基础课课文一律です・ます（Luna 2026-09-27）→ 练习第 1 题用普通体。
+ */
+export const ramenTrip: Lesson = {
+  id: 'gj-01',
+  badge: 'JLPT N4',
+  listTitle: '北海道に行ったことがありますか',
+  listSummary: '拉面店里，同学给你看北海道旅行的照片',
+  image: {
+    src: '/ramen-trip.png',
+    alt: '傍晚的拉面店柜台，日本男生把手机里的照片给戴圆眼镜的中国女生看，两人面前各一碗拉面',
+  },
+  grammar: {
+    title: '動詞た形 + ことがある',
+    summary: '「有过……的经历」：说的是这辈子做过没有，不是上次什么时候做的。',
+    example: '北海道に行ったことがありますか。',
+    note: '动词た形接 ことがある，表示有过某种经历，感觉像中文的「我去过北海道」，而不是「我去年去了北海道」。否定是 〜たことがない（一次都没有过），常配 一度も、一回も、まだ。刚发生的具体事件（昨天、上周）不用这个句型，直接说 〜た。丁寧語说 あります／ありません。',
+    points: [
+      '形：动词 **た形 + ことがある**（行った・食べたことがある）',
+      '意思：**有过……的经历**（这辈子做过没有）',
+      '否定：**〜たことがない**；常配 **一度も・一回も・まだ**',
+      '**刚发生的事不用**：昨天吃的直接说「食べました」',
+      '丁寧語：**あります／ありません**；普通体：**ある／ない**',
+    ],
+  },
+  dialogue: [
+    {
+      role: 'A',
+      text: 'リンさんは北海道に行ったことがありますか。',
+      zh: '小林，你去过北海道吗？',
+      audio: `${AUDIO}/dialogue-01.m4a`,
+    },
+    {
+      role: 'B',
+      text: 'いいえ、一度もありません。写真を見せてください。',
+      zh: '没有，一次都没去过。照片给我看看。',
+      audio: `${AUDIO}/dialogue-02.m4a`,
+    },
+    {
+      role: 'A',
+      text: 'これは札幌の味噌ラーメンです。こんなにおいしいラーメンは食べたことがありませんでした。',
+      zh: '这是札幌的味噌拉面。这么好吃的拉面，我以前没吃过。',
+      audio: `${AUDIO}/dialogue-03.m4a`,
+    },
+    {
+      role: 'B',
+      text: 'いいですね。私は函館のラーメンなら食べたことがありますよ。',
+      zh: '真好啊。函馆的拉面我倒是吃过。',
+      audio: `${AUDIO}/dialogue-04.m4a`,
+    },
+    {
+      role: 'A',
+      text: 'え、函館ですか。北海道に行ったことがないと言いましたよね。',
+      zh: '诶，函馆？你刚才说没去过北海道吧。',
+      audio: `${AUDIO}/dialogue-05.m4a`,
+    },
+    {
+      role: 'B',
+      text: '東京のお店で食べたんです。本場で食べたことは一回もありませんよ。',
+      zh: '是在东京的店里吃的。在当地吃过一次都没有。',
+      audio: `${AUDIO}/dialogue-06.m4a`,
+    },
+  ],
+  feeling: {
+    eyebrow: '整体感觉',
+    question: 'リンさんは函館のラーメンをどこで食べましたか。',
+    choices: [
+      { value: 'hakodate', label: '函館の店' },
+      { value: 'sapporo', label: '札幌の店' },
+      { value: 'tokyo', label: '東京の店' },
+      { value: 'home', label: '拓也さんの家' },
+    ],
+    correct: 'tokyo',
+    success: '答对了。第 6 句：她是在东京的店里吃的，北海道一次都没去过。',
+    hint: '看第 6 句。',
+  },
+  meaning: {
+    eyebrow: '语法原型',
+    question: '「〜たことがある」は何を表す？',
+    choices: [
+      { value: 'exp', label: '今までにそういう経験がある' },
+      { value: 'plan', label: 'これからする予定' },
+      { value: 'now', label: '今そうしている最中' },
+      { value: 'just', label: '昨日したばかり' },
+    ],
+    correct: 'exp',
+    success: '答对了。说的是「到现在为止有没有过这个经历」。',
+    hint: '第 1 句：拓也问的是「上次什么时候去」，还是「去没去过」？',
+  },
+  grammarTests: [
+    {
+      question: '把括号里的动词接上适合句子的形式。',
+      full: '富士山に登ったことがある？',
+      blank: '富士山に (登る) ______？',
+      choices: ['登ることがある', '登るたことがある', '登りことがある', '登ったことがある'],
+      correct: '登ったことがある',
+      explain: '答对了。动词先变成た形（登った），再接 ことがある。跟朋友说话用普通体 ある。',
+      zh: '你爬过富士山吗？',
+    },
+    {
+      question: '「納豆は一度も食べたことがない」に一番近い意味は？',
+      full: '納豆は一度も食べたことがない。',
+      blank: '「…」 ______',
+      choices: [
+        '納豆を今までに食べた経験がない',
+        '納豆は嫌いだ',
+        '納豆をこれから食べる',
+        '納豆を昨日食べなかった',
+      ],
+      correct: '納豆を今までに食べた経験がない',
+      explain: '答对了。说的是「到现在一次都没吃过」，不代表讨厌，也不是只说昨天。',
+      zh: '我一次都没吃过纳豆。',
+    },
+    {
+      question: '次の中で自然な文は？',
+      full: '子どものころ、この公園でよく遊んだことがある。',
+      blank: '「…」 ______',
+      choices: [
+        '昨日、友達と映画を見たことがある。',
+        '子どものころ、この公園でよく遊んだことがある。',
+        '来週、京都に行ったことがある。',
+        '今、ラーメンを食べたことがある。',
+      ],
+      correct: '子どものころ、この公園でよく遊んだことがある。',
+      explain: '答对了。①刚发生的事直接说 見た；③未来的事不能用；④正在做的事也不能用。',
+      zh: '小时候我常在这个公园玩。',
+    },
+  ],
+  grammarTestHint: '不太对。动词先变成た形再接 ことがある；说的是「有没有过这个经历」，刚发生的事和将来的事都不用它。',
+  errorTests: [
+    {
+      wrong: '北海道に行くことがありますか。',
+      fixed: '北海道に行ったことがありますか。',
+      choices: [
+        '北海道 の後ろは へ にしなければならない',
+        '行く は た形 にしてから ことがある を付ける',
+        '質問には ことがある が使えない',
+        '行く は 行きます にしてから ことがある を付ける',
+      ],
+      correct: '行く は た形 にしてから ことがある を付ける',
+      explain: '问「去没去过」，要用た形：行った + ことがある。「行くことがある」是另一个意思（有时会去）。',
+      zh: '你去过北海道吗？',
+    },
+    {
+      wrong: '昨日、札幌でラーメンを食べたことがあります。',
+      fixed: '昨日、札幌でラーメンを食べました。',
+      choices: [
+        'ラーメン は カタカナで書けない',
+        '食べた の後ろに ことがある は付けられない',
+        '札幌で は 札幌に にしなければならない',
+        '昨日 のような最近の出来事には 〜たことがある を使わない',
+      ],
+      correct: '昨日 のような最近の出来事には 〜たことがある を使わない',
+      explain: '昨天做的事是一件具体的事，直接说「食べました」。〜たことがある 说的是人生经历。',
+      zh: '昨天在札幌吃了拉面。',
+    },
+    {
+      wrong: '私は函館のラーメンを食べたことがあるじゃないです。',
+      fixed: '私は函館のラーメンを食べたことがありません。',
+      choices: [
+        '函館のラーメン は 函館ラーメン にする',
+        '私は は言わない',
+        '否定は ことがありません で、ことがあるじゃないです とは言わない',
+        '食べた は 食べる にする',
+      ],
+      correct: '否定は ことがありません で、ことがあるじゃないです とは言わない',
+      explain: '「没有过」的否定是 ことがない／ことがありません。',
+      zh: '我没吃过函馆的拉面。',
+    },
+  ],
+  lessonWords: [
+    {
+      ja: '一度も',
+      zh: '一次也（没有）',
+      example: '海外に一度も行ったことがありません。',
+      audio: `${AUDIO}/lesson-01-example.m4a`,
+      termAudio: `${AUDIO}/lesson-01-term.m4a`,
+      quiz: '「一回も」と同じ意味の言葉は「___」だ。',
+    },
+    {
+      ja: '見せる',
+      zh: '给（人）看',
+      example: '昨日撮った写真を友達に見せました。',
+      audio: `${AUDIO}/lesson-02-example.m4a`,
+      termAudio: `${AUDIO}/lesson-02-term.m4a`,
+      quiz: '自分の物を人に見てもらうことを「___」と言う。',
+    },
+    {
+      ja: 'こんなに',
+      zh: '这么（程度）',
+      example: 'こんなに寒い日は初めてです。',
+      audio: `${AUDIO}/lesson-03-example.m4a`,
+      termAudio: `${AUDIO}/lesson-03-term.m4a`,
+      quiz: '「これほど」とほぼ同じ意味の言葉は「___」だ。',
+    },
+    {
+      ja: '本場',
+      zh: '正宗的产地；当地',
+      example: '本場のイタリアでピザを食べたいです。',
+      audio: `${AUDIO}/lesson-04-example.m4a`,
+      termAudio: `${AUDIO}/lesson-04-term.m4a`,
+      quiz: 'その料理が生まれた土地のことを「___」と言う。',
+    },
+  ],
+  bonusWords: [
+    { ja: '旅行する', zh: '旅行', example: '夏休みに家族で旅行しました。', audio: `${AUDIO}/word-01-example.m4a`, termAudio: `${AUDIO}/word-01-term.m4a`, quiz: 'ほかの町や国へ遊びに行くことを「___」と言う。' },
+    { ja: '名物', zh: '特产；名吃', example: 'この町の名物は焼きそばです。', audio: `${AUDIO}/word-02-example.m4a`, termAudio: `${AUDIO}/word-02-term.m4a`, quiz: 'その土地で有名な食べ物や物を「___」と言う。' },
+    { ja: 'おすすめ', zh: '推荐（的东西）', example: '店員さんのおすすめを頼みました。', audio: `${AUDIO}/word-03-example.m4a`, termAudio: `${AUDIO}/word-03-term.m4a`, quiz: '人に「これがいいですよ」と勧めるものを「___」と言う。' },
+    { ja: '行列', zh: '排队的长龙', example: '人気の店に行列ができています。', audio: `${AUDIO}/word-04-example.m4a`, termAudio: `${AUDIO}/word-04-term.m4a`, quiz: 'たくさんの人が一列に並んでいる様子を「___」と言う。' },
+    { ja: '並ぶ', zh: '排队', example: '三十分並んで、やっと入れました。', audio: `${AUDIO}/word-05-example.m4a`, termAudio: `${AUDIO}/word-05-term.m4a`, quiz: '順番を待って列を作ることを「___」と言う。' },
+    { ja: '予約する', zh: '预约', example: 'ホテルはもう予約しました。', audio: `${AUDIO}/word-06-example.m4a`, termAudio: `${AUDIO}/word-06-term.m4a`, quiz: '前もって席や部屋を取っておくことを「___」と言う。' },
+    { ja: '日帰り', zh: '当天往返', example: '日帰りで温泉に行きました。', audio: `${AUDIO}/word-07-example.m4a`, termAudio: `${AUDIO}/word-07-term.m4a`, quiz: '泊まらないでその日のうちに帰ることを「___」と言う。' },
+    { ja: 'お土産', zh: '伴手礼；特产', example: '友達にお土産を買いました。', audio: `${AUDIO}/word-08-example.m4a`, termAudio: `${AUDIO}/word-08-term.m4a`, quiz: '旅行先で買って人にあげる物を「___」と言う。' },
+    { ja: '観光', zh: '观光', example: '午後は市内を観光します。', audio: `${AUDIO}/word-09-example.m4a`, termAudio: `${AUDIO}/word-09-term.m4a`, quiz: '有名な場所を見て回ることを「___」と言う。' },
+    { ja: '景色', zh: '景色', example: '山の上からの景色がきれいでした。', audio: `${AUDIO}/word-10-example.m4a`, termAudio: `${AUDIO}/word-10-term.m4a`, quiz: '山や海など、目に見える自然の様子を「___」と言う。' },
+    { ja: '混む', zh: '拥挤', example: '週末はどこも混んでいます。', audio: `${AUDIO}/word-11-example.m4a`, termAudio: `${AUDIO}/word-11-term.m4a`, quiz: '人がたくさんいていっぱいになることを「___」と言う。' },
+    { ja: '初めて', zh: '第一次', example: '初めて一人で旅行しました。', audio: `${AUDIO}/word-12-example.m4a`, termAudio: `${AUDIO}/word-12-term.m4a`, quiz: '今まで一度もなかったことをする時に「___」と言う。' },
+  ],
+  sentence: {
+    marker: '(た|だ)ことが(ある|ない|あります|ありません|あった|なかった)',
+    markerNoSpace: '(た|だ)事が',
+    spacingLabel: '写法：こと 用假名，没有写成汉字「事」',
+    displayName: '〜たことがある',
+    meaningSide: 'before',
+    meaningLabel: '句意完整：ことがある 前面写出了什么经历',
+    starters: ['海外に', '有名人に', '一人で'],
+    placeholder: '例：一人で海外旅行をしたことがあります。',
+  },
+  sentenceTitle: '用 〜たことがある 说说你的经历',
+};
