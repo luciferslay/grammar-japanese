@@ -427,6 +427,9 @@ def run_voice(voice_id: str, jobs: dict[str, str], completed: list[str], config:
 
 
 def main() -> None:
+    # 急停开关：audio-jobs/STOP 存在就不开跑（用于中途换声线时让 generate_batch 后面的课别再录）。删掉文件即恢复。
+    if (ROOT / "audio-jobs" / "STOP").exists():
+        raise SystemExit("audio-jobs/STOP 存在，跳过本课（删掉 STOP 文件后重新投递 job）")
     OUT.mkdir(parents=True, exist_ok=True)
     config = load_config()
     completed: list[str] = []
