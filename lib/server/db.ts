@@ -39,6 +39,11 @@ export function now(): number {
   return Math.floor(Date.now() / 1000);
 }
 
+/** 有没有绑定 D1。线上没配数据库时为 false，会员功能整体关闭（见 lib/server/access.ts）。 */
+export function hasDb(): boolean {
+  return !!(env as Cloudflare.Env).DB;
+}
+
 export async function getDb(): Promise<D1Database> {
   const db = (env as Cloudflare.Env).DB;
   if (!db) throw new Error('D1 绑定 DB 不存在：检查 .openai/hosting.json 的 d1 字段，并重启 dev server');

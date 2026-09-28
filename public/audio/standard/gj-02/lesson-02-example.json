@@ -1,0 +1,72 @@
+{
+  "voice_id": "FEMALE_CLEAR_SOFT",
+  "text": "壁に釘を打ちました。",
+  "seed": 202609231,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "d55b07f5e4f712898051d9773c6299fa418789d9c4b944442096e1f9f6c3f7bf",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 1.977,
+    "speech_seconds": 1.38,
+    "mora_count": 11,
+    "seconds_per_mora": 0.1255,
+    "active_rms_dbfs": -23.82,
+    "peak_dbfs": -10.17,
+    "median_f0_hz": 171.43,
+    "voiced_f0_p10_hz": 125.4,
+    "voiced_f0_p90_hz": 192.0,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "9ea4573e0266d6e52ee34056f38fd73a4ca92491b8df73b39c1fcfb46f0fc857",
+  "tempo_conformance": {
+    "atempo_factor": 0.915579,
+    "pre_conformance_seconds_per_mora": 0.1155,
+    "target_seconds_per_mora": 0.1261
+  },
+  "tts_input_text": "壁に釘を打ちました。",
+  "page_text": "壁に釘を打ちました。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 171.4,
+    "baseline_f0": 181.86,
+    "f0_vs_baseline": 0.943,
+    "tail_f0": 156.4,
+    "tail_vs_median": 0.912,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.0579,
+    "limit": 0.35,
+    "pass": true
+  },
+  "internal_pause": {
+    "gaps_ms": [],
+    "pass": true
+  }
+}

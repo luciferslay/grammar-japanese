@@ -133,7 +133,7 @@ def collect_jobs() -> tuple[dict[str, str], dict[str, str], dict[str, str]]:
             if not block:
                 continue
             items = re.findall(
-                r"ja: '((?:[^'\\]|\\.)*)',\n      zh: '(?:[^'\\]|\\.)*',\n      example: '((?:[^'\\]|\\.)*)',",
+                r"ja: '((?:[^'\\]|\\.)*)',\s*zh: '(?:[^'\\]|\\.)*',\s*example: '((?:[^'\\]|\\.)*)',",
                 block.group(1),
             )
             for i, (ja, example) in enumerate(items, start=1):
