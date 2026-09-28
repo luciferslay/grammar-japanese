@@ -106,3 +106,15 @@
 - 男声的参考音 `reference-b-calm-slow.wav` 和旧女声的 `reference-a-clear-soft.wav` 原来不在仓库里（wav 被 .gitignore 排除），Windows 这台录不了男声。Luna 让 Mac 那边的 Claude 用 `git add -f` 提交了（`53b8464`），已经拉到这台，sha256 校验通过。
 - 第 1 课对话 5（男声，函館→はこだて）排在女声之后重录。
 - 新女声的参考音 `reference-ono-anna-flat.wav` 提交时也要用 `git add -f`，否则 Mac 上用不了。
+- 第 2 课：单词卡 + 女声对话共 39 条，用了 778 秒（约 13 分钟）。自动质检没过的是 lesson-04-term、word-01-term。
+- 第 1 课对话 5（男声）重录用了 104 秒，第 2 个 seed 通过。
+- 本地提交 `adc7eb7`，和 Mac 的 `8ecbce1`、`53b8464` 合并成 `ae2ee54`（v2 试听脚本冲突时保留本机版本；Mac 那两处修复这边都已经有了）。`package-lock.json` 被这台的 npm 9 改过，已还原，没有提交。
+- 推送：这台原来没有 GitHub 凭据。装了 gh，Luna 用 `gh auth login --web` 登录 luciferslay，dry-run 推送成功 → **这台能 push**。真正推送等 Luna 确认（Cloudflare 接好后，推送会触发部署）。
+- 预览服务器 `npm run dev` 挂在 Claude 的后台任务上，这个任务结束时服务器会跟着停，需要时重新启动。
+
+### 2026-09-29 01:xx Luna 人耳复核
+
+- 第 1 课附加单词 並ぶ 的例句：「三十分並んで、やっと~~入れました~~入りました。」，读 はいりました。
+  - 改了 `lib/lessons/ramen-trip.ts` 和大纲 `LESSON_DRAFT_gj-01-02.md`。
+  - 读音表加了「やっと入り→やっとはいり」。~~登记「入りました→はいりました」~~（否决：读音表全站通用，「気に入りました」会被读成「気にはいりました」）。
+  - 重录 word-05-example，第 1 个 seed 就过了，用时 41 秒，已转 m4a。

@@ -214,7 +214,7 @@ export const ramenTrip: Lesson = {
     { ja: '名物', zh: '特产；名吃', example: 'この町の名物は焼きそばです。', audio: `${AUDIO}/word-02-example.m4a`, termAudio: `${AUDIO}/word-02-term.m4a`, quiz: 'その土地で有名な食べ物や物を「___」と言う。' },
     { ja: 'おすすめ', zh: '推荐（的东西）', example: '店員さんのおすすめを頼みました。', audio: `${AUDIO}/word-03-example.m4a`, termAudio: `${AUDIO}/word-03-term.m4a`, quiz: '人に「これがいいですよ」と勧めるものを「___」と言う。' },
     { ja: '行列', zh: '排队的长龙', example: '人気の店に行列ができています。', audio: `${AUDIO}/word-04-example.m4a`, termAudio: `${AUDIO}/word-04-term.m4a`, quiz: 'たくさんの人が一列に並んでいる様子を「___」と言う。' },
-    { ja: '並ぶ', zh: '排队', example: '三十分並んで、やっと入れました。', audio: `${AUDIO}/word-05-example.m4a`, termAudio: `${AUDIO}/word-05-term.m4a`, quiz: '順番を待って列を作ることを「___」と言う。' },
+    { ja: '並ぶ', zh: '排队', example: '三十分並んで、やっと入りました。', audio: `${AUDIO}/word-05-example.m4a`, termAudio: `${AUDIO}/word-05-term.m4a`, quiz: '順番を待って列を作ることを「___」と言う。' },
     { ja: '予約する', zh: '预约', example: 'ホテルはもう予約しました。', audio: `${AUDIO}/word-06-example.m4a`, termAudio: `${AUDIO}/word-06-term.m4a`, quiz: '前もって席や部屋を取っておくことを「___」と言う。' },
     { ja: '日帰り', zh: '当天往返', example: '日帰りで温泉に行きました。', audio: `${AUDIO}/word-07-example.m4a`, termAudio: `${AUDIO}/word-07-term.m4a`, quiz: '泊まらないでその日のうちに帰ることを「___」と言う。' },
     { ja: 'お土産', zh: '伴手礼；特产', example: '友達にお土産を買いました。', audio: `${AUDIO}/word-08-example.m4a`, termAudio: `${AUDIO}/word-08-term.m4a`, quiz: '旅行先で買って人にあげる物を「___」と言う。' },
