@@ -1,6 +1,6 @@
 # /// script
 # requires-python = ">=3.12"
-# dependencies = ["qwen-tts==0.1.1", "soundfile", "numpy", "torch", "pykakasi"]
+# dependencies = ["qwen-tts==0.1.1", "soundfile", "numpy", "torch", "faster-whisper", "pykakasi"]
 # ///
 """Ono_Anna 第二版试听（Luna 2026-09-28 16:41）：第一版声音稳定，但语气夸张、前后有杂音/气声。
 这一版：① 指示语改成原来女声 A3 的读法（明亮清澈、抑揚控えめ、落ち着いた，不带感情/叹气/气声）；
@@ -54,6 +54,7 @@ cfg["voices"][VID] = {
     "instruct_term": INSTRUCT_TERM,
     "reference_audio": str(ref.relative_to(ROOT)),
     "reference_text": ref_text,
+    "reference_sha256": __import__("hashlib").sha256(ref.read_bytes()).hexdigest(),
     "baseline": {
         "seconds_per_mora": old["seconds_per_mora"],
         "active_rms_dbfs": old["active_rms_dbfs"],
