@@ -41,9 +41,38 @@ def to_hiragana(text: str) -> str:
     return "".join(out).translate(_KATA_TO_HIRA)
 
 
+_KANJI_DIGITS = "〇一二三四五六七八九"
+
+
+def _int_to_kanji(n: int) -> str:
+    """12345 → 一万二千三百四十五（十、百、千前面的「一」省略，和课文写法一致）。"""
+    if n == 0:
+        return "零"
+    out = ""
+    for unit_value, unit in ((10**8, "億"), (10**4, "万")):
+        if n >= unit_value:
+            out += _int_to_kanji(n // unit_value) + unit
+            n %= unit_value
+    for unit_value, unit in ((1000, "千"), (100, "百"), (10, "十")):
+        if n >= unit_value:
+            d = n // unit_value
+            out += ("" if d == 1 else _KANJI_DIGITS[d]) + unit
+            n %= unit_value
+    if n:
+        out += _KANJI_DIGITS[n]
+    return out
+
+
+def digits_to_kanji(text: str) -> str:
+    """把阿拉伯数字（含全角）换成汉字数字。whisper 常把「三十分」写成「30分」，而假名转换会直接丢掉数字，
+    句首有数字的句子就会被判成「句首没读」（2026-09-29 gj-01「三十分並んで…」）。"""
+    text = text.translate(str.maketrans("０１２３４５６７８９", "0123456789"))
+    return re.sub(r"\d+", lambda m: _int_to_kanji(int(m.group())), text.replace(",", ""))
+
+
 def kana_only(text: str) -> str:
     """只留平假名读音（含长音「ー」），去掉标点、空格、拉丁字母。这是 ASR 比对的基准形。"""
-    return re.sub(r"[^ぁ-ゖー]", "", to_hiragana(text))
+    return re.sub(r"[^ぁ-ゖー]", "", to_hiragana(digits_to_kanji(text)))
 
 
 def decompose(text: str) -> str:

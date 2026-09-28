@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 3.4282,
-    "speech_seconds": 2.77,
+    "duration_seconds": 3.4069,
+    "speech_seconds": 2.73,
     "mora_count": 18,
-    "seconds_per_mora": 0.1539,
-    "active_rms_dbfs": -23.75,
-    "peak_dbfs": -12.39,
-    "median_f0_hz": 234.15,
-    "voiced_f0_p10_hz": 205.13,
-    "voiced_f0_p90_hz": 258.06,
+    "seconds_per_mora": 0.1517,
+    "active_rms_dbfs": -23.73,
+    "peak_dbfs": -11.95,
+    "median_f0_hz": 247.42,
+    "voiced_f0_p10_hz": 213.34,
+    "voiced_f0_p90_hz": 282.35,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,34 +41,44 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "6f83230813aeb142c08b668de6dd099aa7720650a85295ec7b300a76fb16e167",
+  "output_sha256": "f4d735aa8ffafd9d8617c555e171b4fa473bb28747b462cb4572d7e3630a9f93",
   "tempo_conformance": {
-    "atempo_factor": 0.951864,
-    "pre_conformance_seconds_per_mora": 0.1461,
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.1361,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "三十分並んで、やっとはいりました。",
+  "tts_input_text": "三十分並んで、やっと入りました。",
   "page_text": "三十分並んで、やっと入りました。",
-  "seed_offset": 0,
+  "seed_offset": 4,
   "prosody": {
-    "median_f0": 235.3,
+    "median_f0": 247.4,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.946,
-    "tail_f0": 255.3,
-    "tail_vs_median": 1.085,
+    "f0_vs_baseline": 0.995,
+    "tail_f0": 279.1,
+    "tail_vs_median": 1.128,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0378,
+    "distance": 0.0546,
     "limit": 0.35,
     "pass": true
   },
+  "sentence_asr": {
+    "by_model": {
+      "small": "30分並んでやっと入りました",
+      "medium": "30分並んで、やっと入りました。"
+    },
+    "target": "さんじゅうふんならんでやっといりました",
+    "ratio": 0.878,
+    "tail_ratio": 1.0,
+    "head_ratio": 0.75,
+    "lead_filler": false,
+    "pass": false
+  },
   "internal_pause": {
-    "gaps_ms": [
-      350
-    ],
+    "gaps_ms": [],
     "pass": true
   }
 }

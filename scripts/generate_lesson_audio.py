@@ -338,6 +338,13 @@ def generate_one(model, voice_id: str, filename: str, text: str, config: dict, c
             manifest["tail_fade"] = fade
             manifest["sentence_asr"] = sent
             tail_ok = cliff["pass"] and fade["pass"] and sent["pass"]
+        elif not is_term:
+            # 例句也过整句 ASR：以前只有对话过这一关，例句读漏了也会被收下
+            # （2026-09-29 Luna 人耳：gj-01 並ぶ 例句「やっと入りました」没录全，whisper 听成「やっと会えました」）
+            sent = check_sentence(transcribe(np.asarray(final_audio, dtype=np.float32),
+                                             config["output"]["sample_rate_hz"]), text)
+            manifest["sentence_asr"] = sent
+            tail_ok = sent["pass"]
         # 例句：没有标点的地方不该断开（2026-09-20 custom-17「올라오자마자」中间断了 370ms）
         pause_ok, max_gap = True, 0
         if (is_card and not is_term) or (MATCH_PROSODY and not is_card):
