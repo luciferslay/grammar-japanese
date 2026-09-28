@@ -1,0 +1,92 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_V3B",
+  "text": "いいですね。私は函館のラーメンなら食べたことがありますよ。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+  "model_revision": null,
+  "reference_sha256": "6b7531cd8ccdfe661f90dd0acf029def83a2a89777b1c0ab71a55813c8f9d6c6",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 6.371,
+    "speech_seconds": 5.54,
+    "mora_count": 31,
+    "seconds_per_mora": 0.1787,
+    "active_rms_dbfs": -23.85,
+    "peak_dbfs": -8.08,
+    "median_f0_hz": 258.06,
+    "voiced_f0_p10_hz": 201.18,
+    "voiced_f0_p90_hz": 321.3,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -29.2
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "346c168830098b009df1518a7cc5e24d4a176b5d9ca82731420729be4812fef8",
+  "tempo_conformance": {
+    "atempo_factor": 0.940785,
+    "pre_conformance_seconds_per_mora": 0.1677,
+    "target_seconds_per_mora": 0.1783
+  },
+  "tts_input_text": "いいですね。私ははこだてのラーメンなら食べたことがありますよ。 はい。",
+  "page_text": "いいですね。私は函館のラーメンなら食べたことがありますよ。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 275.9,
+    "baseline_f0": 266.67,
+    "f0_vs_baseline": 1.034,
+    "tail_f0": 265.4,
+    "tail_vs_median": 0.962,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -29.2,
+    "cliff_db": 1.0,
+    "pass": true,
+    "limit_db": -18.0
+  },
+  "tail_fade": {
+    "fade_ms": 250,
+    "max_step_db": 7.1,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "いいですね 私は箱立てのラーメンなら食べたことがありますよ",
+      "medium": "いいですね 私は函館のラーメンなら食べたことがありますよ"
+    },
+    "target": "いいですねわたしははこだてのらーめんならたべたことがありますよ",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  }
+}

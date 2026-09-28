@@ -24,8 +24,36 @@
     "max_new_tokens": 480
   },
   "voices": {
-    "FEMALE_CLEAR_SOFT": {
+    "FEMALE_ONO_ANNA_CLONE": {
       "role": "B",
+      "mode": "voice_clone",
+      "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+      "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+      "language": "Japanese",
+      "seed": 202609221,
+      "reference_audio": "public/audio/reference-ono-anna-flat.wav",
+      "reference_text": "本日はお忙しいところ、お時間をいただきありがとうございます。担当の田中と申します。どうぞよろしくお願いいたします。",
+      "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+      "source_design": "CustomVoice 内置 Ono_Anna，指示语「ニュース原稿を読むように淡々と、感情を入れない」，温度 0.3、top_k 10，4 个 seed 里挑音高起伏最小的（起伏比 1.32）",
+      "instruct": "",
+      "generation_override": {
+        "temperature": 0.45,
+        "subtalker_temperature": 0.45,
+        "top_k": 20,
+        "subtalker_top_k": 20
+      },
+      "baseline": {
+        "seconds_per_mora": 0.1535,
+        "active_rms_dbfs": -23.09,
+        "median_f0_hz": 248.71,
+        "voiced_f0_p10_hz": 211.13,
+        "voiced_f0_p90_hz": 289.19
+      },
+      "chosen": "Luna 2026-09-29 从第三轮试听里选 c（克隆 Ono_Anna 平读样音）。语速取试听里两句对话变速前的中位数（她自己的语速）；音高取 4 句中位数；音量沿用原女声，和男声一致。",
+      "note": "voice_clone 模式没有 instruct 参数；语气稳靠参考音的平读 + generation_override 的低随机性（对话也用，和单词卡同一套）。"
+    },
+    "FEMALE_CLEAR_SOFT": {
+      "role": null,
       "mode": "voice_clone",
       "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
       "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -45,7 +73,8 @@
         "voiced_f0_p90_hz": 206.9
       },
       "chosen": "Luna 2026-09-22 从 6 条样音里选定（A3）。baseline 取 5 条样音的中位数。",
-      "note": "voice_clone 模式没有 instruct 参数：instruct / instruct_term 对 A 不起作用，词卡的播音腔来自参考音本身（A3 的案内广播式）+ generation_card 的低随机性。"
+      "note": "voice_clone 模式没有 instruct 参数：instruct / instruct_term 对 A 不起作用，词卡的播音腔来自参考音本身（A3 的案内广播式）+ generation_card 的低随机性。",
+      "retired": "2026-09-29 停用：每句音色漂移（Luna 人耳：第 1 课 見せる、こんなに、对话 4）。换成 FEMALE_ONO_ANNA_CLONE。"
     },
     "MALE_CALM_SLOW": {
       "role": "A",
@@ -67,6 +96,96 @@
         "voiced_f0_p90_hz": 214.53
       },
       "chosen": "Luna 2026-09-22 确认 B4（B1 音色 + B3 读法）。baseline 取 4 条样音中位数。"
+    },
+    "FEMALE_ONO_ANNA_TRIAL": {
+      "mode": "custom_voice",
+      "model": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+      "speaker": "Ono_Anna",
+      "language": "Japanese",
+      "role": "B",
+      "candidate": true,
+      "model_revision": null,
+      "seed": 202609221,
+      "instruct": "二十代後半の女性らしい、明るく澄んだ声で、丁寧で聞き取りやすく話してください。標準語で、抑揚は控えめにし、落ち着いた一定のトーンを保ってください。感情を込めすぎたり、驚いたり笑ったりする演技はせず、ため息や息の音、ささやき声は入れないでください。普通の速さで、文末まで音を落とさずはっきり言い切ってください。",
+      "instruct_term": "標準語のアクセントで、明るく澄んだ声のまま、落ち着いて一回だけはっきり読んでください。感情や演技、驚き、笑いは一切入れず、一定の高さと速さを保ってください。ため息、息の混じった声、ささやき声は使わず、最後までくっきり言い切ってください。",
+      "reference_audio": "public/audio/samples/ono-anna/dialogue-06.wav",
+      "reference_text": "東京のお店で食べたんです。本場で食べたことは一回もありませんよ。",
+      "reference_sha256": "6b7531cd8ccdfe661f90dd0acf029def83a2a89777b1c0ab71a55813c8f9d6c6",
+      "baseline": {
+        "seconds_per_mora": 0.1783,
+        "active_rms_dbfs": -23.09,
+        "median_f0_hz": 266.67,
+        "voiced_f0_p10_hz": 205.13,
+        "voiced_f0_p90_hz": 307.69
+      },
+      "note": "2026-09-28 试听用候选（v2），candidate=true 所以不会被正式流程选中。"
+    },
+    "FEMALE_ONO_ANNA_V3A": {
+      "mode": "custom_voice",
+      "model": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+      "speaker": "Ono_Anna",
+      "language": "Japanese",
+      "model_revision": null,
+      "seed": 202609221,
+      "reference_audio": "public/audio/samples/ono-anna/dialogue-06.wav",
+      "reference_text": "東京のお店で食べたんです。本場で食べたことは一回もありませんよ。",
+      "reference_sha256": "6b7531cd8ccdfe661f90dd0acf029def83a2a89777b1c0ab71a55813c8f9d6c6",
+      "baseline": {
+        "seconds_per_mora": 0.1783,
+        "active_rms_dbfs": -23.09,
+        "median_f0_hz": 266.67,
+        "voiced_f0_p10_hz": 205.13,
+        "voiced_f0_p90_hz": 307.69
+      },
+      "role": "B",
+      "candidate": true,
+      "instruct": "",
+      "instruct_term": "",
+      "note": "2026-09-28 第三轮试听 a：不给指示语"
+    },
+    "FEMALE_ONO_ANNA_V3B": {
+      "mode": "custom_voice",
+      "model": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+      "speaker": "Ono_Anna",
+      "language": "Japanese",
+      "model_revision": null,
+      "seed": 202609221,
+      "reference_audio": "public/audio/samples/ono-anna/dialogue-06.wav",
+      "reference_text": "東京のお店で食べたんです。本場で食べたことは一回もありませんよ。",
+      "reference_sha256": "6b7531cd8ccdfe661f90dd0acf029def83a2a89777b1c0ab71a55813c8f9d6c6",
+      "baseline": {
+        "seconds_per_mora": 0.1783,
+        "active_rms_dbfs": -23.09,
+        "median_f0_hz": 266.67,
+        "voiced_f0_p10_hz": 205.13,
+        "voiced_f0_p90_hz": 307.69
+      },
+      "role": "B",
+      "candidate": true,
+      "instruct": "標準語で、ニュース原稿を読むように淡々と読んでください。感情は入れず、声の高さと速さを一定に保ち、抑揚は最小限にしてください。息の音やため息は入れないでください。",
+      "instruct_term": "標準語で、ニュース原稿を読むように淡々と読んでください。感情は入れず、声の高さと速さを一定に保ち、抑揚は最小限にしてください。息の音やため息は入れないでください。",
+      "note": "2026-09-28 第三轮试听 b：平读指示语 + 温度 0.3"
+    },
+    "FEMALE_ONO_ANNA_V3C": {
+      "mode": "voice_clone",
+      "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+      "language": "Japanese",
+      "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+      "seed": 202609221,
+      "reference_audio": "public/audio/samples/ja-female-v3/c-reference/reference.wav",
+      "reference_text": "本日はお忙しいところ、お時間をいただきありがとうございます。担当の田中と申します。どうぞよろしくお願いいたします。",
+      "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+      "baseline": {
+        "seconds_per_mora": 0.1783,
+        "active_rms_dbfs": -23.09,
+        "median_f0_hz": 266.67,
+        "voiced_f0_p10_hz": 205.13,
+        "voiced_f0_p90_hz": 307.69
+      },
+      "role": "B",
+      "candidate": true,
+      "instruct": "",
+      "note": "2026-09-28 第三轮试听 c：克隆 Ono_Anna 平读样音（Base 模型）"
     }
   },
   "quality": {
@@ -221,5 +340,5 @@
       ]
     ]
   },
-  "card_voice": "FEMALE_CLEAR_SOFT"
+  "card_voice": "FEMALE_ONO_ANNA_CLONE"
 }

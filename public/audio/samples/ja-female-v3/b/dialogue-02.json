@@ -1,0 +1,92 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_V3B",
+  "text": "いいえ、一度もありません。写真を見せてください。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+  "model_revision": null,
+  "reference_sha256": "6b7531cd8ccdfe661f90dd0acf029def83a2a89777b1c0ab71a55813c8f9d6c6",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 5.173,
+    "speech_seconds": 4.6,
+    "mora_count": 23,
+    "seconds_per_mora": 0.2,
+    "active_rms_dbfs": -24.17,
+    "peak_dbfs": -10.94,
+    "median_f0_hz": 260.87,
+    "voiced_f0_p10_hz": 214.29,
+    "voiced_f0_p90_hz": 303.8,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -28.6
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "af606f691669c32809311a03548952da2f444b4db6cdfdb7ab15dd16b574b123",
+  "tempo_conformance": {
+    "atempo_factor": 1.12,
+    "pre_conformance_seconds_per_mora": 0.2226,
+    "target_seconds_per_mora": 0.1783
+  },
+  "tts_input_text": "いいえ、一度もありません。写真を見せてください。 はい。",
+  "page_text": "いいえ、一度もありません。写真を見せてください。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 263.7,
+    "baseline_f0": 266.67,
+    "f0_vs_baseline": 0.989,
+    "tail_f0": 266.7,
+    "tail_vs_median": 1.011,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -28.6,
+    "cliff_db": 2.0,
+    "pass": true,
+    "limit_db": -18.0
+  },
+  "tail_fade": {
+    "fade_ms": 50,
+    "max_step_db": 7.3,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "いいえ、一度もありません。写真を見せてください。",
+      "medium": "いえ、一度もありません。写真を見せて下さい。"
+    },
+    "target": "いいえいちどもありませんしゃしんをみせてください",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  }
+}

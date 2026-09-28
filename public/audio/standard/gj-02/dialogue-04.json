@@ -1,10 +1,10 @@
 {
-  "voice_id": "FEMALE_CLEAR_SOFT",
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
   "text": "すみません、この建物では動物を飼ってはいけないんです。",
-  "seed": 202609231,
+  "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
-  "reference_sha256": "d55b07f5e4f712898051d9773c6299fa418789d9c4b944442096e1f9f6c3f7bf",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
   "generation": {
     "do_sample": true,
     "top_k": 50,
@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 4.1475,
-    "speech_seconds": 3.42,
+    "duration_seconds": 5.2119,
+    "speech_seconds": 4.36,
     "mora_count": 29,
-    "seconds_per_mora": 0.1179,
-    "active_rms_dbfs": -24.06,
-    "peak_dbfs": -13.43,
-    "median_f0_hz": 190.48,
-    "voiced_f0_p10_hz": 124.35,
-    "voiced_f0_p90_hz": 220.18,
+    "seconds_per_mora": 0.1503,
+    "active_rms_dbfs": -23.75,
+    "peak_dbfs": -12.27,
+    "median_f0_hz": 247.42,
+    "voiced_f0_p10_hz": 203.39,
+    "voiced_f0_p90_hz": 296.3,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -28.0
+    "tail_margin_db": -29.2
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,21 +43,21 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "4ad410806655249f008106034f9ebab92b737d9715de5ab1d7ca02be757f7de6",
+  "output_sha256": "cf46b9b2cab747e6d998bbb09e62d520911c1e335abec87be9d9dfa5ec4dfe31",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1066,
-    "target_seconds_per_mora": 0.1261
+    "pre_conformance_seconds_per_mora": 0.1352,
+    "target_seconds_per_mora": 0.1535
   },
   "tts_input_text": "すみません、この建物では動物を飼ってはいけないんです。 はい。",
   "page_text": "すみません、この建物では動物を飼ってはいけないんです。",
   "seed_offset": 0,
   "prosody": {
-    "median_f0": 189.0,
-    "baseline_f0": 181.86,
-    "f0_vs_baseline": 1.039,
-    "tail_f0": 133.3,
-    "tail_vs_median": 0.706,
+    "median_f0": 250.0,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.005,
+    "tail_f0": 214.3,
+    "tail_vs_median": 0.857,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
@@ -67,20 +67,20 @@
     "pass": true
   },
   "tail_cliff": {
-    "margin_db": -28.0,
-    "cliff_db": 2.6,
+    "margin_db": -29.2,
+    "cliff_db": 3.1,
     "pass": true,
     "limit_db": -20.0
   },
   "tail_fade": {
     "fade_ms": 200,
-    "max_step_db": 3.7,
+    "max_step_db": 5.6,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "すみませんこの建物では動物を買ってはいけないんです",
-      "medium": "すみません、この建物では動物を飼ってはいけないんです"
+      "small": "すみません この建物では動物を買ってはいけないんです",
+      "medium": "すみません この建物では動物を飼ってはいけないんです"
     },
     "target": "すみませんこのたてものではどうぶつをかってはいけないんです",
     "ratio": 1.0,

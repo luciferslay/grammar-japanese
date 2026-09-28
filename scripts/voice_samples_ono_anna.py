@@ -15,7 +15,7 @@ import torch
 from huggingface_hub import snapshot_download
 from qwen_tts import Qwen3TTSModel
 
-from standardized_course_tts import ROOT, generation_kwargs, load_config, normalize_active_rms, set_seed, trim_and_pad
+from standardized_course_tts import ROOT, generation_kwargs, load_config, model_load_kwargs, normalize_active_rms, set_seed, trim_and_pad
 
 OUT = ROOT / "public" / "audio" / "samples" / "ono-anna"
 OUT.mkdir(parents=True, exist_ok=True)
@@ -35,7 +35,7 @@ ITEMS = [
 ]
 
 model_path = snapshot_download(cand["model"], local_files_only=True)
-model = Qwen3TTSModel.from_pretrained(model_path, device_map="cpu", dtype=torch.float32)
+model = Qwen3TTSModel.from_pretrained(model_path, **model_load_kwargs())
 for name, text, ikey in ITEMS:
     set_seed(cand["seed"])
     kwargs = generation_kwargs(cfg, "card" if ikey == "instruct_term" else "default")

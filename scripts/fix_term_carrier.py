@@ -37,6 +37,7 @@ from huggingface_hub import snapshot_download
 from qwen_tts import Qwen3TTSModel
 
 from standardized_course_tts import (
+    model_load_kwargs,
     ROOT,
     conform_existing,
     generation_kwargs,
@@ -246,8 +247,7 @@ def main() -> None:
     voice = config["voices"][voice_id]
     model = Qwen3TTSModel.from_pretrained(
         snapshot_download(voice["model"], revision=voice["model_revision"], local_files_only=True),
-        device_map="cpu",
-        dtype=torch.float32,
+        **model_load_kwargs(),
     )
     results = []
     for item in req["items"]:

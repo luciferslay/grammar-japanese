@@ -52,3 +52,57 @@
 2. Cloudflare 后台「Workers & Pages」→「Create」→「Import a repository」→ 选 `luciferslay/grammar-japanese`；Build command 填 `npm run build`，Deploy command 填 `npx wrangler deploy --config dist/server/wrangler.json`（和韩语站一样，如果韩语站填的不同就照韩语站的）。
 3. 部署成功后先不用管数据库：全站开放、没有登录入口。
 4. 要开会员功能时：D1 建 `grammar-japanese-db` → 构建变量加 `D1_DATABASE_ID` → 运行时密钥加 `ADMIN_EMAILS`、`AUTH_SECRET`、`OUTBOX_KEY` → 再推送一次。
+
+### 2026-09-28 22:xx 搬到 Windows（ROG G14）：环境装好、脚本改 GPU、录 Ono_Anna 第二版试听
+
+- **Claude App 在 Windows 上能跑命令、读写文件**（交接第 1 步通过）。
+- WSL：Luna 说装好了，实际上「虚拟机平台」没开、没有 Ubuntu。Luna 用管理员 PowerShell 跑 `wsl --install -d Ubuntu` 并重启后正常（Ubuntu 26.04，用户 `lunafan716`）。
+- Ubuntu 用户的密码 Luna 没设过，所以 sudo 用不了 → 装系统包一律由 Claude 用 `wsl -u root` 装（不需要密码）。已装：ffmpeg、sox、build-essential（Triton 要现场编译 C）、Node 22.22 + npm；uv 装在 `~/.local/bin`。
+- 仓库在 WSL 的 `~/nihongo/grammar-japanese`，`npm install` 完成；两个 Qwen3-TTS 模型（CustomVoice、Base@fd4b254）和 whisper small/medium 都下好了。
+- **驱动 555.97 只支持 CUDA 12.5**，PyPI 默认的 torch 2.14 是 CUDA 13 版，`cuda.is_available()` 为 False。~~让 Luna 再更新驱动~~ → 改为这台机器上设 `UV_INDEX=https://download.pytorch.org/whl/cu126`（torch 2.14.0+cu126，实测能用 GPU）。只影响这台，Mac 不受影响。
+- **改 GPU**：`standardized_course_tts.py` 新增 `model_load_kwargs()`：有 CUDA → `cuda + bfloat16`，否则 `cpu + float32`（Mac 照旧）。所有加载模型的地方都改用它：generate_lesson_audio、standardized_course_tts、fix_dialogue_lines、fix_dialogue_tails、fix_term_carrier、voice_samples_ono_anna。
+- whisper 仍用 CPU int8（没改）。
+- 本地预览：`npm run dev -- --host 0.0.0.0`，Windows 浏览器打开 http://localhost:3200 可以直接访问。
+- **Ono_Anna 第一版在这台重录了**：原来的 wav/m4a 没入库，而第二版要拿第一版的 dialogue-06 当参考。用同样的设置和 seed，GPU 上 7 条共 139 秒（对话一句约 22 秒）。和 Mac 上那版不一定逐字相同。
+- 第二版脚本的修正：① 依赖里补上 faster-whisper（generate_one 会调 whisper，不补会报错）；② 试听声线补上 `reference_sha256`（audit_output 要用，不补会 KeyError）。
+- Luna 22:3x：「ono anna 原本的语速很正常，就是语气飘忽不定。让她用原本的语速，语气和初版女声一致。」
+  - 实测：Ono_Anna 第一版约 0.17～0.21 秒/音拍，原女声 0.126。~~语速对齐原女声~~（否决：句句判「语速不过关」，还会被 atempo 硬拉快）→ 语速基准改用第一版三句对话的中位数 0.1783；音高基准改用 5 句的中位数 266.7Hz（不只看对话 6）。
+  - 音高起伏比（p90/p10）：Ono_Anna 1.41～1.65，原女声 1.53～2.12。数字上她的起伏并不更大，「飘」更可能是句与句之间语气风格不同 → 对话句 ~~温度 0.6、top_k 30~~ 改用和单词卡同一套 generation_card（温度 0.45、top_k 20）。
+- **第二版速度**（GPU，正式流水线含 whisper 质检、多 seed 重试）：6 条共 568 秒。对话 2 试到第 3 个 seed 才过（每次约 40 秒）；对话 4 第 1 个 seed 就过；单词卡每个 seed 约 15～20 秒，見せる、こんなに 都试满 6 个 seed。
+- 质检全过的只有 3 条：对话 2、对话 4、例句「昨日撮った写真を友達に見せました。」。
+- 单词 見せる、こんなに：6 个 seed 都卡在单词时长/杂音那一关（term），保存的是最接近过关的那一版。
+- 例句「こんなに寒い日は初めてです。」：6 个 seed 都没过（大多是句中停顿），保存的是 seed+2（音高 324Hz，偏高）。
+- 对话 2 过关的那一版音高也偏高（320Hz）。**这 3 条请 Luna 重点听。**
+- 发现的小问题：单词没过关时的「载体短语」补救，会去读 `public/audio/standard/ono-anna-v2/`，这个目录不存在，所以失败了。只影响试听脚本（它把输出目录改成了 samples），正式课程不受影响。
+- 未提交 git。等 Luna 听完第二版拍板后一起提交。
+
+### 2026-09-28 23:5x〜 女声第三轮（Luna：「ono anna 还是带了很多不必要的感情」）
+
+- ~~换别的内置声音~~：查了 CustomVoice 模型的 spk_id，9 个声音里说日语的女声只有 ono_anna。其余是 serena、vivian（中文女声）、sohee（韩语女声），以及 uncle_fu、ryan、aiden、eric（四川话）、dylan（北京话）等男声。读日语会带口音，否决。
+- 所以不换人，换控制方法。新脚本 `scripts/voice_samples_ja_female_v3.py`，三种一起录，对比页 `/samples-ja-female-v3.html`（原女声 / 第二版 / a / b / c 五栏）：
+  - a 空指示语（第二版指示语里有「明るく澄んだ」之类的词，模型会把它们读成情绪）。
+  - b 指示语只写「ニュース原稿を読むように淡々と、感情を入れない」，温度 0.3、top_k 10。
+  - c 先用 b 的设置让 Ono_Anna 读原女声的参考句，4 个 seed 里挑音高起伏最小的一条，再用 Base 模型克隆它。原女声语气稳，靠的就是克隆（读法跟着参考音走）。风险：原女声的问题正是克隆出来的音色每句漂移。
+- 为了快一点，每条最多试 3〜4 个 seed。
+- 空指示语时「载体短语」补救会一直念到 480 token 上限（每次约 2 分钟，而且目录不对，本来就会失败）→ 以后试听脚本应该关掉这个补救。
+- 速度：a 约 11 分钟（其中约 7 分钟耗在载体短语上），b 约 8 分钟。
+- 自动质检：
+  - a：对话 2、对话 4、例句 見せました 过了；单词 見せる 音高偏低。
+  - b：对话 2、对话 4、单词 こんなに、例句 こんなに寒い 过了；例句 見せました 音高偏低（231Hz）。
+  - c：参考音 4 个 seed 的起伏比是 1.39、1.32、1.32、1.46，选了 ref-1。对话 2、对话 4、单词 こんなに 过了。其余几条主要卡在语速和音高：克隆出来的读法比第一版快一点、低一点，而基准还是按第一版定的。c 全程约 11 分钟。
+
+### 2026-09-29 00:2x Luna 拍板：女声用 c（克隆 Ono_Anna 平读样音）
+
+- `audio_voice_presets.json`：
+  - 新增正式声线 **FEMALE_ONO_ANNA_CLONE**（role B，同时当 card_voice）。Base 模型克隆，参考音 `public/audio/reference-ono-anna-flat.wav`，就是试听 c 用的那条。
+  - 基准：语速 0.1535 秒/音拍（试听里两句对话变速前的中位数，也就是她自己的语速）；音高 248.7Hz（4 句中位数）；音量沿用原女声 -23.09，和男声一致。
+  - 新字段 `generation_override`：这个声线的对话也用温度 0.45、top_k 20，和单词卡一样。`generate_one` 已改成会读这个字段。注意：fix_* 修补脚本还不读它。
+  - FEMALE_CLEAR_SOFT **不删**，role 改为 null，并加 `retired` 说明停用原因。试听用的 TRIAL、V3A、V3B、V3C 都是 candidate，留作记录。
+- 新脚本：
+  - `scripts/rerecord_female.py`：把本课男声对话预先记成「已完成」，再调用 `generate_lesson_audio.main()`，所以只录单词卡和女声对话。
+  - `scripts/redo_items.py`：用 `REDO=` 指定条目，只重录这几条。job 的 redo= 选项靠进度文件，而这台电脑没有进度文件，用它会把整课重录一遍。
+- 第 1、2 课的女声条目在这台上重录，录完跑 `publish_audio.py` 转 m4a。
+- 第 1 课：38 条里单词卡 + 女声对话共 35 条，用了 691 秒（约 11.5 分钟，平均约 20 秒一条）。自动质检只有 word-07-example 没过，等 Luna 人耳复核。
+- 男声的参考音 `reference-b-calm-slow.wav` 和旧女声的 `reference-a-clear-soft.wav` 原来不在仓库里（wav 被 .gitignore 排除），Windows 这台录不了男声。Luna 让 Mac 那边的 Claude 用 `git add -f` 提交了（`53b8464`），已经拉到这台，sha256 校验通过。
+- 第 1 课对话 5（男声，函館→はこだて）排在女声之后重录。
+- 新女声的参考音 `reference-ono-anna-flat.wav` 提交时也要用 `git add -f`，否则 Mac 上用不了。

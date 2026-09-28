@@ -28,6 +28,7 @@ from huggingface_hub import snapshot_download
 from qwen_tts import Qwen3TTSModel
 
 from standardized_course_tts import (
+    model_load_kwargs,
     ROOT,
     conform_existing,
     generation_kwargs,
@@ -60,7 +61,7 @@ def lesson_texts(lesson_id: str) -> dict[str, tuple[str, str]]:
 
 def load_model(voice: dict):
     path = snapshot_download(voice["model"], revision=voice["model_revision"], local_files_only=True)
-    return Qwen3TTSModel.from_pretrained(path, device_map="cpu", dtype=torch.float32)
+    return Qwen3TTSModel.from_pretrained(path, **model_load_kwargs())
 
 
 def regenerate(model, clone_prompt, voice_id, config, lesson, filename, text) -> bool:

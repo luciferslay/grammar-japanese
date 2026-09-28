@@ -27,6 +27,7 @@ from huggingface_hub import snapshot_download
 from qwen_tts import Qwen3TTSModel
 
 from standardized_course_tts import (
+    model_load_kwargs,
     ROOT,
     conform_existing,
     generation_kwargs,
@@ -224,7 +225,7 @@ def save_progress(completed: list[str]) -> None:
 
 def load_model(voice: dict):
     model_path = snapshot_download(voice["model"], revision=voice["model_revision"], local_files_only=True)
-    return Qwen3TTSModel.from_pretrained(model_path, device_map="cpu", dtype=torch.float32)
+    return Qwen3TTSModel.from_pretrained(model_path, **model_load_kwargs())
 
 
 def generate_one(model, voice_id: str, filename: str, text: str, config: dict, clone_prompt=None) -> None:
@@ -242,6 +243,8 @@ def generate_one(model, voice_id: str, filename: str, text: str, config: dict, c
     for attempt in range(attempts):
         set_seed(voice["seed"] + SEED_BASE + attempt)
         kwargs = generation_kwargs(config, "card" if is_card else "default")
+        # 声线自带的生成参数（2026-09-29 Ono_Anna 克隆声线：对话也用低随机性，语气才不飘）
+        kwargs.update(voice.get("generation_override", {}))
         if is_term:
             kwargs["max_new_tokens"] = min(kwargs["max_new_tokens"], 12 + 8 * syl)
         if voice["mode"] == "custom_voice":

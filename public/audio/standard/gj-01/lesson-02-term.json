@@ -1,10 +1,10 @@
 {
-  "voice_id": "FEMALE_CLEAR_SOFT",
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
   "text": "見せる",
-  "seed": 202609231,
+  "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
-  "reference_sha256": "d55b07f5e4f712898051d9773c6299fa418789d9c4b944442096e1f9f6c3f7bf",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
   "generation": {
     "do_sample": true,
     "top_k": 50,
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 0.9941,
-    "speech_seconds": 0.42,
+    "duration_seconds": 1.0424,
+    "speech_seconds": 0.47,
     "mora_count": 3,
-    "seconds_per_mora": 0.14,
-    "active_rms_dbfs": -24.07,
-    "peak_dbfs": -12.47,
-    "median_f0_hz": 221.2,
-    "voiced_f0_p10_hz": 191.7,
-    "voiced_f0_p90_hz": 264.03,
+    "seconds_per_mora": 0.1567,
+    "active_rms_dbfs": -23.73,
+    "peak_dbfs": -13.13,
+    "median_f0_hz": 227.49,
+    "voiced_f0_p10_hz": 218.2,
+    "voiced_f0_p90_hz": 275.86,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,24 +41,24 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "57719d1a1fee8a443592ea5041324a65c86cbd784c94839e4bd14d83f9089cc7",
+  "output_sha256": "2c886d4f47eaeffc002f5801d9fc668a96b22a073288c5b08d88e6a2aa5c0021",
   "tempo_conformance": {
-    "atempo_factor": 1.12,
-    "pre_conformance_seconds_per_mora": 0.1533,
-    "target_seconds_per_mora": 0.1261
+    "atempo_factor": 0.977199,
+    "pre_conformance_seconds_per_mora": 0.15,
+    "target_seconds_per_mora": 0.1535
   },
   "tts_input_text": "見せる。",
   "page_text": "見せる",
-  "seed_offset": 0,
+  "seed_offset": 2,
   "term_policy": {
-    "speech_seconds": 0.43,
-    "per_syllable": 0.1433,
+    "speech_seconds": 0.41,
+    "per_syllable": 0.1367,
     "too_short": false,
     "too_long": false,
     "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.0133,
+    "distance_to_target": 0.0067,
     "asr": {
       "by_model": {
         "small": "見せる",
@@ -75,17 +75,17 @@
     "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 222.2,
-    "baseline_f0": 181.86,
-    "f0_vs_baseline": 1.222,
-    "tail_f0": 218.2,
-    "tail_vs_median": 0.982,
+    "median_f0": 227.5,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 0.915,
+    "tail_f0": 234.2,
+    "tail_vs_median": 1.029,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.2175,
+    "distance": 0.0802,
     "limit": 0.35,
     "pass": true
   }

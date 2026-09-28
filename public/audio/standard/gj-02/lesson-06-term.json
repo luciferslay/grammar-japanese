@@ -1,10 +1,10 @@
 {
-  "voice_id": "FEMALE_CLEAR_SOFT",
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
   "text": "困る",
-  "seed": 202609231,
+  "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
-  "reference_sha256": "d55b07f5e4f712898051d9773c6299fa418789d9c4b944442096e1f9f6c3f7bf",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
   "generation": {
     "do_sample": true,
     "top_k": 50,
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 0.9835,
-    "speech_seconds": 0.41,
+    "duration_seconds": 1.0072,
+    "speech_seconds": 0.43,
     "mora_count": 3,
-    "seconds_per_mora": 0.1367,
-    "active_rms_dbfs": -23.82,
-    "peak_dbfs": -14.83,
-    "median_f0_hz": 184.62,
-    "voiced_f0_p10_hz": 124.49,
-    "voiced_f0_p90_hz": 199.34,
+    "seconds_per_mora": 0.1433,
+    "active_rms_dbfs": -23.63,
+    "peak_dbfs": -13.27,
+    "median_f0_hz": 244.9,
+    "voiced_f0_p10_hz": 211.65,
+    "voiced_f0_p90_hz": 267.27,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,24 +41,24 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "e2c3036a114548c2c173759d333b74b0adade6b8618dc0947f6597e5d6b0abe8",
+  "output_sha256": "9515b2ea506b5624aeb973de2533570d57a9535df910c8189678d87d0813dc40",
   "tempo_conformance": {
-    "atempo_factor": 1.057362,
-    "pre_conformance_seconds_per_mora": 0.1333,
-    "target_seconds_per_mora": 0.1261
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.13,
+    "target_seconds_per_mora": 0.1535
   },
   "tts_input_text": "困る。",
   "page_text": "困る",
-  "seed_offset": 1,
+  "seed_offset": 0,
   "term_policy": {
-    "speech_seconds": 0.38,
-    "per_syllable": 0.1267,
+    "speech_seconds": 0.37,
+    "per_syllable": 0.1233,
     "too_short": false,
     "too_long": false,
     "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.0033,
+    "distance_to_target": 0.0067,
     "asr": {
       "by_model": {
         "small": "困る",
@@ -75,17 +75,17 @@
     "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 185.3,
-    "baseline_f0": 181.86,
-    "f0_vs_baseline": 1.019,
-    "tail_f0": 181.2,
-    "tail_vs_median": 0.978,
+    "median_f0": 242.4,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 0.975,
+    "tail_f0": 246.2,
+    "tail_vs_median": 1.015,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.1854,
+    "distance": 0.0297,
     "limit": 0.35,
     "pass": true
   }

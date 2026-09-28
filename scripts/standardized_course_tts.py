@@ -46,6 +46,14 @@ def set_seed(seed: int) -> None:
     torch.manual_seed(seed)
 
 
+def model_load_kwargs() -> dict:
+    """加载 TTS 模型的设备参数：有 NVIDIA 显卡（Windows/WSL 那台）用 cuda + bfloat16，
+    否则（Mac）保持原来的 cpu + float32。2026-09-28 搬到 Windows 时加。"""
+    if torch.cuda.is_available():
+        return {"device_map": "cuda", "dtype": torch.bfloat16}
+    return {"device_map": "cpu", "dtype": torch.float32}
+
+
 from ja_text import mora_count  # noqa: E402
 
 
@@ -268,7 +276,7 @@ def generate(voice_id: str, text: str, output: Path) -> dict:
     model_path = snapshot_download(
         voice["model"], revision=voice["model_revision"], local_files_only=True
     )
-    model = Qwen3TTSModel.from_pretrained(str(model_path), device_map="cpu", dtype=torch.float32)
+    model = Qwen3TTSModel.from_pretrained(str(model_path), **model_load_kwargs())
     kwargs = generation_kwargs(config)
     if voice["mode"] == "custom_voice":
         wavs, sr = model.generate_custom_voice(

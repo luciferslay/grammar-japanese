@@ -1,0 +1,92 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_TRIAL",
+  "text": "こんなに",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+  "model_revision": null,
+  "reference_sha256": "6b7531cd8ccdfe661f90dd0acf029def83a2a89777b1c0ab71a55813c8f9d6c6",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 1.9901,
+    "speech_seconds": 1.45,
+    "mora_count": 4,
+    "seconds_per_mora": 0.3625,
+    "active_rms_dbfs": -25.18,
+    "peak_dbfs": -13.38,
+    "median_f0_hz": 251.32,
+    "voiced_f0_p10_hz": 205.13,
+    "voiced_f0_p90_hz": 328.77,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": true,
+    "manual_review": "required"
+  },
+  "output_sha256": "a7bbadcc7f0d5b01511dfafdb9d03b532dcb05a3ae0e130fb23eb7bb5401dd27",
+  "tempo_conformance": {
+    "atempo_factor": 1.12,
+    "pre_conformance_seconds_per_mora": 0.3825,
+    "target_seconds_per_mora": 0.1783
+  },
+  "tts_input_text": "こんなに。",
+  "page_text": "こんなに",
+  "seed_offset": 4,
+  "term_policy": {
+    "speech_seconds": 1.52,
+    "per_syllable": 0.38,
+    "too_short": false,
+    "too_long": true,
+    "pass": false,
+    "cut_applied": false,
+    "lead_filler_cut": false,
+    "distance_to_target": 0.25,
+    "asr": {
+      "by_model": {
+        "small": "こんなに",
+        "medium": "こんなにー"
+      },
+      "target": "こんなに",
+      "ratio": 1.0,
+      "exact": true,
+      "lead_filler": false,
+      "tail_extra": false,
+      "incomplete": false,
+      "pass": true
+    },
+    "ratio": 1.0
+  },
+  "prosody": {
+    "median_f0": 252.6,
+    "baseline_f0": 266.67,
+    "f0_vs_baseline": 0.947,
+    "tail_f0": 292.7,
+    "tail_vs_median": 1.159,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.1905,
+    "limit": 0.35,
+    "pass": true
+  }
+}

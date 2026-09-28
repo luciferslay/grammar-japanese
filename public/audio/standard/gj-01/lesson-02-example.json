@@ -1,10 +1,10 @@
 {
-  "voice_id": "FEMALE_CLEAR_SOFT",
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
   "text": "昨日撮った写真を友達に見せました。",
-  "seed": 202609231,
+  "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
-  "reference_sha256": "d55b07f5e4f712898051d9773c6299fa418789d9c4b944442096e1f9f6c3f7bf",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
   "generation": {
     "do_sample": true,
     "top_k": 50,
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 4.0329,
-    "speech_seconds": 2.49,
+    "duration_seconds": 3.3325,
+    "speech_seconds": 2.68,
     "mora_count": 20,
-    "seconds_per_mora": 0.1245,
-    "active_rms_dbfs": -23.91,
-    "peak_dbfs": -11.47,
-    "median_f0_hz": 175.83,
-    "voiced_f0_p10_hz": 152.87,
-    "voiced_f0_p90_hz": 256.69,
+    "seconds_per_mora": 0.134,
+    "active_rms_dbfs": -23.84,
+    "peak_dbfs": -11.68,
+    "median_f0_hz": 242.42,
+    "voiced_f0_p10_hz": 214.29,
+    "voiced_f0_p90_hz": 272.73,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,27 +41,27 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "3ff9669f75d0f549401f75d98a91ab4eafedc11e688521beb236b8fb3d65d71f",
+  "output_sha256": "c639fc886471ba30f7cbd1287a7546ed975ab1bf3a8352fc4091243d2ab6a3c6",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1125,
-    "target_seconds_per_mora": 0.1261
+    "pre_conformance_seconds_per_mora": 0.121,
+    "target_seconds_per_mora": 0.1535
   },
   "tts_input_text": "昨日撮った写真を友達に見せました。",
   "page_text": "昨日撮った写真を友達に見せました。",
   "seed_offset": 0,
   "prosody": {
-    "median_f0": 177.1,
-    "baseline_f0": 181.86,
-    "f0_vs_baseline": 0.974,
-    "tail_f0": 172.7,
-    "tail_vs_median": 0.975,
+    "median_f0": 243.7,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 0.98,
+    "tail_f0": 245.1,
+    "tail_vs_median": 1.006,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0187,
+    "distance": 0.0179,
     "limit": 0.35,
     "pass": true
   },

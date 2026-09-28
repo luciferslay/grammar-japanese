@@ -1,10 +1,10 @@
 {
-  "voice_id": "FEMALE_CLEAR_SOFT",
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
   "text": "いいえ、一度もありません。写真を見せてください。",
-  "seed": 202609231,
+  "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
-  "reference_sha256": "d55b07f5e4f712898051d9773c6299fa418789d9c4b944442096e1f9f6c3f7bf",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
   "generation": {
     "do_sample": true,
     "top_k": 50,
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 3.5174,
-    "speech_seconds": 2.92,
+    "duration_seconds": 4.1222,
+    "speech_seconds": 3.54,
     "mora_count": 23,
-    "seconds_per_mora": 0.127,
-    "active_rms_dbfs": -24.1,
-    "peak_dbfs": -9.3,
-    "median_f0_hz": 182.51,
-    "voiced_f0_p10_hz": 133.01,
-    "voiced_f0_p90_hz": 209.61,
+    "seconds_per_mora": 0.1539,
+    "active_rms_dbfs": -23.92,
+    "peak_dbfs": -8.88,
+    "median_f0_hz": 269.66,
+    "voiced_f0_p10_hz": 220.18,
+    "voiced_f0_p90_hz": 282.35,
     "sample_rate_hz": 24000,
     "channels": 1,
     "tail_margin_db": -29.7
@@ -43,21 +43,21 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "a73ebf102784e280dde2fad218a1444e26e116811095f33fabc50504a0ae88e1",
+  "output_sha256": "6499b06765b0accc19f7bdc14952e58deaa8671b915754ae24fcf495d4754b21",
   "tempo_conformance": {
-    "atempo_factor": 1.12,
-    "pre_conformance_seconds_per_mora": 0.1413,
-    "target_seconds_per_mora": 0.1261
+    "atempo_factor": 1.056508,
+    "pre_conformance_seconds_per_mora": 0.1622,
+    "target_seconds_per_mora": 0.1535
   },
   "tts_input_text": "いいえ、一度もありません。写真を見せてください。 はい。",
   "page_text": "いいえ、一度もありません。写真を見せてください。",
-  "seed_offset": 1,
+  "seed_offset": 0,
   "prosody": {
-    "median_f0": 181.8,
-    "baseline_f0": 181.86,
-    "f0_vs_baseline": 1.0,
-    "tail_f0": 127.0,
-    "tail_vs_median": 0.698,
+    "median_f0": 269.7,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.084,
+    "tail_f0": 222.2,
+    "tail_vs_median": 0.824,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
@@ -68,19 +68,19 @@
   },
   "tail_cliff": {
     "margin_db": -29.7,
-    "cliff_db": 9.2,
+    "cliff_db": 7.0,
     "pass": true,
     "limit_db": -20.0
   },
   "tail_fade": {
-    "fade_ms": 210,
-    "max_step_db": 8.0,
+    "fade_ms": 60,
+    "max_step_db": 10.2,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
       "small": "いいえ、一度もありません。写真を見せてください。",
-      "medium": "いいえ、一度もありません。写真を見せてください。"
+      "medium": "いいえ、一度もありません。写真を見せて下さい。"
     },
     "target": "いいえいちどもありませんしゃしんをみせてください",
     "ratio": 1.0,

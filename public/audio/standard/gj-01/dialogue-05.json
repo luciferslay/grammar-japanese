@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 4.6778,
-    "speech_seconds": 4.11,
+    "duration_seconds": 4.4155,
+    "speech_seconds": 3.85,
     "mora_count": 31,
-    "seconds_per_mora": 0.1326,
-    "active_rms_dbfs": -23.8,
-    "peak_dbfs": -8.75,
-    "median_f0_hz": 160.0,
-    "voiced_f0_p10_hz": 123.08,
-    "voiced_f0_p90_hz": 237.62,
+    "seconds_per_mora": 0.1242,
+    "active_rms_dbfs": -23.86,
+    "peak_dbfs": -7.05,
+    "median_f0_hz": 145.45,
+    "voiced_f0_p10_hz": 100.59,
+    "voiced_f0_p90_hz": 198.35,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -27.3
+    "tail_margin_db": -24.8
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,21 +43,21 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "43a29209a6ec04729c6aa586d75fcfe3c68a952fd0f97341cbbacca3a107827e",
+  "output_sha256": "9e7ce19c2003f1322ba89192f033e8dcb9f9db78c7964047af086b0fdc43b598",
   "tempo_conformance": {
-    "atempo_factor": 1.12,
-    "pre_conformance_seconds_per_mora": 0.1474,
+    "atempo_factor": 0.93358,
+    "pre_conformance_seconds_per_mora": 0.1155,
     "target_seconds_per_mora": 0.1237
   },
-  "tts_input_text": "え、函館ですか。北海道にいったことがないと言いましたよね。 はい。",
+  "tts_input_text": "え、はこだてですか。北海道にいったことがないと言いましたよね。 はい。",
   "page_text": "え、函館ですか。北海道に行ったことがないと言いましたよね。",
   "seed_offset": 1,
   "prosody": {
-    "median_f0": 163.3,
+    "median_f0": 146.3,
     "baseline_f0": 145.41,
-    "f0_vs_baseline": 1.123,
-    "tail_f0": 115.9,
-    "tail_vs_median": 0.71,
+    "f0_vs_baseline": 1.006,
+    "tail_f0": 94.3,
+    "tail_vs_median": 0.645,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
@@ -67,23 +67,23 @@
     "pass": true
   },
   "tail_cliff": {
-    "margin_db": -27.3,
-    "cliff_db": 9.4,
+    "margin_db": -24.8,
+    "cliff_db": 17.6,
     "pass": true,
     "limit_db": -20.0
   },
   "tail_fade": {
-    "fade_ms": 40,
-    "max_step_db": 8.7,
+    "fade_ms": 30,
+    "max_step_db": 8.6,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "え、箱型ですか。北海道に行ったことがないと言いましたよね",
-      "medium": "え、箱なたですか。北海道に行ったことがないと言いましたよね。"
+      "small": "えっ箱立てですか 北海道に行ったことがないと言いましたよね",
+      "medium": "え、函館ですか。北海道に行ったことがないと言いましたよね。"
     },
     "target": "えはこだてですかほっかいどうにいったことがないといいましたよね",
-    "ratio": 0.9565,
+    "ratio": 1.0,
     "tail_ratio": 1.0,
     "head_ratio": 1.0,
     "lead_filler": false,

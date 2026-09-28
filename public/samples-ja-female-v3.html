@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>女声对比：第三轮</title>
+<style>body{font-family:system-ui,sans-serif;max-width:1100px;margin:24px auto;padding:0 16px;color:#222}h1{font-size:20px}
+.row{border:1px solid #ddd;border-radius:12px;padding:12px 14px;margin:12px 0}.ja{font-size:17px;margin:0 0 4px}.zh{color:#666;font-size:13px;margin:0 0 10px}
+.cols{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.cols div{font-size:12px;color:#555}.cols div.new{color:#a33;font-weight:600}audio{width:100%;margin-top:4px}
+dl{font-size:13px;color:#444;line-height:1.6}dt{font-weight:600;margin-top:6px}dd{margin:0 0 0 1em}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}</style></head><body>
+<h1>第 1 课女声对比（第三轮）</h1>
+<p class="zh">Qwen3-TTS 内置声音里说日语的女声只有 Ono_Anna，所以这轮不换人，换三种控制方法。每句五个版本，红字三栏是这次新录的。</p>
+<dl>
+<dt>原女声</dt><dd>现在网站上的（语气稳，但每句音色漂移）</dd>
+<dt>第二版</dt><dd>Ono_Anna + 「明亮清澈、平稳」指示语（你说还是带感情）</dd>
+<dt>a 不给指示语</dt><dd>Ono_Anna 默认读法，不加任何形容词</dd>
+<dt>b 平读 + 低随机</dt><dd>指示语只要求「像读新闻稿一样淡淡地读、不带感情」，随机性再降一档</dd>
+<dt>c 克隆平读样音</dt><dd>先让 Ono_Anna 平读一段长句，再用克隆模型照着它的读法念（原女声语气稳就是这个原理）；要留意音色是否每句一样</dd>
+</dl>
+<p class="zh">克隆用的参考音：<audio controls preload="none" src="/audio/samples/ja-female-v3/c-reference/reference.m4a" style="width:320px;vertical-align:middle"></audio></p>
+<div id="list"></div>
+<script>
+const items=[
+ ["dialogue-02","いいえ、一度もありません。写真を見せてください。","课文 · 对话 2"],
+ ["dialogue-04","いいですね。私は函館のラーメンなら食べたことがありますよ。","课文 · 对话 4"],
+ ["lesson-02-term","見せる","单词"],
+ ["lesson-02-example","昨日撮った写真を友達に見せました。","单词例句"],
+ ["lesson-03-term","こんなに","单词"],
+ ["lesson-03-example","こんなに寒い日は初めてです。","单词例句"]];
+const a=(src)=>`<audio controls preload="none" src="${src}"></audio>`;
+const v3='/audio/samples/ja-female-v3/';
+document.getElementById('list').innerHTML=items.map(([f,ja,kind])=>`<div class="row"><p class="ja">${ja}</p><p class="zh">${kind}</p><div class="cols">
+<div>原女声${a('/audio/standard/gj-01/'+f+'.m4a')}</div>
+<div>第二版${a('/audio/samples/ono-anna-v2/'+f+'.m4a')}</div>
+<div class="new">a 不给指示语${a(v3+'a/'+f+'.m4a')}</div>
+<div class="new">b 平读 + 低随机${a(v3+'b/'+f+'.m4a')}</div>
+<div class="new">c 克隆平读样音${a(v3+'c/'+f+'.m4a')}</div></div></div>`).join('');
+</script></body></html>
