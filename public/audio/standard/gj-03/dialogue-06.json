@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 3.0966,
-    "speech_seconds": 2.51,
+    "duration_seconds": 3.354,
+    "speech_seconds": 2.76,
     "mora_count": 20,
-    "seconds_per_mora": 0.1255,
-    "active_rms_dbfs": -23.91,
-    "peak_dbfs": -9.27,
-    "median_f0_hz": 252.63,
-    "voiced_f0_p10_hz": 212.39,
-    "voiced_f0_p90_hz": 287.78,
+    "seconds_per_mora": 0.138,
+    "active_rms_dbfs": -23.88,
+    "peak_dbfs": -9.34,
+    "median_f0_hz": 250.0,
+    "voiced_f0_p10_hz": 212.96,
+    "voiced_f0_p90_hz": 289.16,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -25.9
+    "tail_margin_db": -27.7
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,16 +43,16 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "ef618d7078bee130ce505e8db109ad0c39ab9ef3aa9a5a4af9a7f4fa509afc25",
+  "output_sha256": "7b3acf2691b5f95f2d6ae3858682f3e915eac10108758d3b14468fa0fdf6a911",
   "tempo_conformance": {
-    "atempo_factor": 1.243961,
-    "pre_conformance_seconds_per_mora": 0.1545,
-    "target_seconds_per_mora": 0.1242
+    "atempo_factor": 0.90942,
+    "pre_conformance_seconds_per_mora": 0.1255,
+    "target_seconds_per_mora": 0.138
   },
   "sentence_asr": {
     "by_model": {
-      "small": "分かりました じゃあメモを取ってもいいですか",
-      "medium": "分かりました じゃあメモをとってもいいですか"
+      "small": "分かりました じゃあメモをとってもいいですか",
+      "medium": "わかりました じゃあメモをとってもいいですか"
     },
     "target": "わかりましたじゃあめもをとってもいいですか",
     "ratio": 1.0,
@@ -84,18 +84,18 @@
       "max_new_tokens": 480
     },
     "metrics": {
-      "duration_seconds": 3.6858,
-      "speech_seconds": 3.09,
+      "duration_seconds": 3.0966,
+      "speech_seconds": 2.51,
       "mora_count": 20,
-      "seconds_per_mora": 0.1545,
-      "active_rms_dbfs": -23.83,
-      "peak_dbfs": -9.03,
-      "median_f0_hz": 250.0,
-      "voiced_f0_p10_hz": 211.09,
-      "voiced_f0_p90_hz": 289.16,
+      "seconds_per_mora": 0.1255,
+      "active_rms_dbfs": -23.91,
+      "peak_dbfs": -9.27,
+      "median_f0_hz": 252.63,
+      "voiced_f0_p10_hz": 212.39,
+      "voiced_f0_p90_hz": 287.78,
       "sample_rate_hz": 24000,
       "channels": 1,
-      "tail_margin_db": -25.4
+      "tail_margin_db": -25.9
     },
     "quality_assessment": {
       "automatic_pass": true,
@@ -109,44 +109,16 @@
       "short_term_rule": false,
       "manual_review": "required"
     },
-    "output_sha256": "d55f37e55f02d539f43f6563b4074495b7fd5105491ef6acb14c09a64ef46d0c",
+    "output_sha256": "ef618d7078bee130ce505e8db109ad0c39ab9ef3aa9a5a4af9a7f4fa509afc25",
     "tempo_conformance": {
-      "atempo_factor": 1.035831,
-      "pre_conformance_seconds_per_mora": 0.159,
-      "target_seconds_per_mora": 0.1535
-    },
-    "tts_input_text": "わかりました。じゃあ、メモを取ってもいいですか。 はい。",
-    "page_text": "わかりました。じゃあ、メモを取ってもいいですか。",
-    "seed_offset": 0,
-    "prosody": {
-      "median_f0": 250.0,
-      "baseline_f0": 248.71,
-      "f0_vs_baseline": 1.005,
-      "tail_f0": 226.4,
-      "tail_vs_median": 0.906,
-      "low_pitch": false,
-      "falling_tail": false,
-      "pass": true
-    },
-    "timbre": {
-      "distance": null,
-      "pass": true
-    },
-    "tail_cliff": {
-      "margin_db": -25.4,
-      "cliff_db": 7.3,
-      "pass": true,
-      "limit_db": -20.0
-    },
-    "tail_fade": {
-      "fade_ms": 50,
-      "max_step_db": 6.2,
-      "pass": true
+      "atempo_factor": 1.243961,
+      "pre_conformance_seconds_per_mora": 0.1545,
+      "target_seconds_per_mora": 0.1242
     },
     "sentence_asr": {
       "by_model": {
-        "small": "分かりました じゃあメモをとってもいいですか",
-        "medium": "わかりました じゃあメモをとってもいいですか"
+        "small": "分かりました じゃあメモを取ってもいいですか",
+        "medium": "分かりました じゃあメモをとってもいいですか"
       },
       "target": "わかりましたじゃあめもをとってもいいですか",
       "ratio": 1.0,
@@ -154,6 +126,9 @@
       "head_ratio": 1.0,
       "lead_filler": false,
       "pass": true
-    }
+    },
+    "tts_input_text": "わかりました。じゃあ、メモを取ってもいいですか。 はい。",
+    "page_text": "わかりました。じゃあ、メモを取ってもいいですか。",
+    "seed_offset": 0
   }
 }

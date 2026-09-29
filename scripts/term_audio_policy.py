@@ -552,3 +552,20 @@ def accept_best_timbre(manifest: dict) -> dict:
         tb["note"] = "跑满 seed 后取音色最接近参考的一条；距离偏高多半来自该词的音素内容而非语气，建议人耳抽查。"
         tb["pass"] = True
     return manifest
+
+
+def head_rest_distance(audio: np.ndarray, sr: int) -> tuple[float | None, float]:
+    """句首段 ↔ 句子其余部分的音色距离（抓「はい」之类句首短词像换了个人）。
+    按第一段 ≥150ms 的停顿切开；没有停顿、或任一段太短就返回 None。返回 (距离, 切点秒)。
+    2026-09-29：好的 0.1〜0.4，Luna 听出「不是同一个人」的 0.9〜1.8。"""
+    from pause_check import internal_gaps
+
+    gaps = internal_gaps(np.asarray(audio, dtype=np.float64), sr, 150)
+    if not gaps:
+        return None, 0.0
+    start, ms = gaps[0]
+    head = audio[: int(start * sr) + int(0.01 * sr)]
+    rest = audio[int((start + ms / 1000) * sr):]
+    if len(head) < int(0.15 * sr) or len(rest) < int(0.3 * sr):
+        return None, start
+    return round(float(1 - np.dot(timbre_vector(head, sr), timbre_vector(rest, sr))), 4), start

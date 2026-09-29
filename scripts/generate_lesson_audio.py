@@ -360,6 +360,15 @@ def generate_one(model, voice_id: str, filename: str, text: str, config: dict, c
         lead_s = float(voiced[0] / sr_out) if len(voiced) else 0.0
         lead_ok = lead_s <= config["output"]["leading_silence_ms"] / 1000 + 0.4
         manifest["leading_blank"] = {"seconds": round(lead_s, 2), "pass": lead_ok}
+        # 句首短词（はい、ええ）音色像换了个人：句首段和其余部分的音色距离。2026-09-29 实测好的 0.1〜0.4，
+        # Luna 听出「不是同一个人」的 0.9〜1.8，门槛定 0.7（见 consistent_redo.py）
+        head_ok = True
+        if not is_card:
+            from term_audio_policy import head_rest_distance
+            hr, _cut = head_rest_distance(np.asarray(final_audio, dtype=np.float64), sr_out)
+            head_ok = hr is None or hr <= 0.7
+            manifest["head_consistency"] = {"distance": hr, "limit": 0.7, "pass": head_ok}
+            tail_ok = tail_ok and head_ok
         tempo = abs(manifest.get("tempo_conformance", {}).get("atempo_factor", 1.0) - 1.0)
         manifest_text = json.dumps(manifest, ensure_ascii=False, indent=2) + "\n"
         ok = (manifest["quality_assessment"]["automatic_pass"] and term_ok
@@ -372,7 +381,8 @@ def generate_one(model, voice_id: str, filename: str, text: str, config: dict, c
                            ("句尾电平", cliff is not None and not cliff["pass"]),
                            ("句尾断崖", fade is not None and not fade["pass"]),
                            ("句子ASR", sent is not None and not sent["pass"]),
-                           ("句中停顿", not pause_ok), ("句首空白", not lead_ok)) if v
+                           ("句中停顿", not pause_ok), ("句首空白", not lead_ok),
+                           ("句首音色", not head_ok)) if v
         )
         print(f"[{'PASS' if ok else 'CHECK'}] {voice_id}: {filename} ({dur}s, seed+{attempt}, "
               f"f0={pros['median_f0']}/{pros['baseline_f0']}, tail={pros['tail_vs_median']}, "

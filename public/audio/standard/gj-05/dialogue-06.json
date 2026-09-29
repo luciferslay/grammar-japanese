@@ -18,40 +18,40 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 5.4725,
-    "speech_seconds": 4.86,
+    "duration_seconds": 6.0119,
+    "speech_seconds": 5.38,
     "mora_count": 39,
-    "seconds_per_mora": 0.1246,
-    "active_rms_dbfs": -23.95,
-    "peak_dbfs": -10.64,
-    "median_f0_hz": 235.29,
+    "seconds_per_mora": 0.1379,
+    "active_rms_dbfs": -23.92,
+    "peak_dbfs": -10.69,
+    "median_f0_hz": 237.62,
     "voiced_f0_p10_hz": 205.13,
-    "voiced_f0_p90_hz": 289.16,
+    "voiced_f0_p90_hz": 285.71,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -19.5
+    "tail_margin_db": -20.1
   },
   "quality_assessment": {
-    "automatic_pass": false,
+    "automatic_pass": true,
     "checks": {
       "speed": true,
       "pitch": true,
       "loudness": true,
       "peak": true,
-      "tail": false
+      "tail": true
     },
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "9f80939720f189ba14628fe8f39b406ec2cfb9c086e33ca9fdb2203f10b212b2",
+  "output_sha256": "764064996e613dab4bfa95be423a3a5067aa769820cc3a4a322185b1028f0fda",
   "tempo_conformance": {
-    "atempo_factor": 1.236632,
-    "pre_conformance_seconds_per_mora": 0.1536,
-    "target_seconds_per_mora": 0.1242
+    "atempo_factor": 0.90301,
+    "pre_conformance_seconds_per_mora": 0.1246,
+    "target_seconds_per_mora": 0.138
   },
   "sentence_asr": {
     "by_model": {
-      "small": "実は私もです。昨日もドラマを見ながら宿題をして3時間かかりました。",
+      "small": "実は私もです 昨日もドラマを見ながら宿題をして3時間かかりました",
       "medium": "実は私もです 昨日もドラマを見ながら宿題をして3時間かかりました"
     },
     "target": "じつはわたしもですきのうもどらまをみながらしゅくだいをしてさんじかんかかりました",
@@ -84,68 +84,40 @@
       "max_new_tokens": 480
     },
     "metrics": {
-      "duration_seconds": 6.6055,
-      "speech_seconds": 5.99,
+      "duration_seconds": 5.4725,
+      "speech_seconds": 4.86,
       "mora_count": 39,
-      "seconds_per_mora": 0.1536,
-      "active_rms_dbfs": -23.88,
+      "seconds_per_mora": 0.1246,
+      "active_rms_dbfs": -23.95,
       "peak_dbfs": -10.64,
       "median_f0_hz": 235.29,
       "voiced_f0_p10_hz": 205.13,
-      "voiced_f0_p90_hz": 285.71,
+      "voiced_f0_p90_hz": 289.16,
       "sample_rate_hz": 24000,
       "channels": 1,
-      "tail_margin_db": -29.3
+      "tail_margin_db": -19.5
     },
     "quality_assessment": {
-      "automatic_pass": true,
+      "automatic_pass": false,
       "checks": {
         "speed": true,
         "pitch": true,
         "loudness": true,
         "peak": true,
-        "tail": true
+        "tail": false
       },
       "short_term_rule": false,
       "manual_review": "required"
     },
-    "output_sha256": "5efb0633214355e3a52499ff2d637496aa10f426480de6bae129b12430260899",
+    "output_sha256": "9f80939720f189ba14628fe8f39b406ec2cfb9c086e33ca9fdb2203f10b212b2",
     "tempo_conformance": {
-      "atempo_factor": 0.940449,
-      "pre_conformance_seconds_per_mora": 0.1444,
-      "target_seconds_per_mora": 0.1535
-    },
-    "tts_input_text": "実は私もです。昨日もドラマを見ながら宿題をして、三時間かかりました。 はい。",
-    "page_text": "実は私もです。昨日もドラマを見ながら宿題をして、三時間かかりました。",
-    "seed_offset": 0,
-    "prosody": {
-      "median_f0": 235.3,
-      "baseline_f0": 248.71,
-      "f0_vs_baseline": 0.946,
-      "tail_f0": 235.3,
-      "tail_vs_median": 1.0,
-      "low_pitch": false,
-      "falling_tail": false,
-      "pass": true
-    },
-    "timbre": {
-      "distance": null,
-      "pass": true
-    },
-    "tail_cliff": {
-      "margin_db": -29.3,
-      "cliff_db": 4.5,
-      "pass": true,
-      "limit_db": -20.0
-    },
-    "tail_fade": {
-      "fade_ms": 90,
-      "max_step_db": 7.0,
-      "pass": true
+      "atempo_factor": 1.236632,
+      "pre_conformance_seconds_per_mora": 0.1536,
+      "target_seconds_per_mora": 0.1242
     },
     "sentence_asr": {
       "by_model": {
-        "small": "実は私もです 昨日もドラマを見ながら宿題をして3時間かかりました",
+        "small": "実は私もです。昨日もドラマを見ながら宿題をして3時間かかりました。",
         "medium": "実は私もです 昨日もドラマを見ながら宿題をして3時間かかりました"
       },
       "target": "じつはわたしもですきのうもどらまをみながらしゅくだいをしてさんじかんかかりました",
@@ -154,6 +126,9 @@
       "head_ratio": 1.0,
       "lead_filler": false,
       "pass": true
-    }
+    },
+    "tts_input_text": "実は私もです。昨日もドラマを見ながら宿題をして、三時間かかりました。 はい。",
+    "page_text": "実は私もです。昨日もドラマを見ながら宿題をして、三時間かかりました。",
+    "seed_offset": 0
   }
 }

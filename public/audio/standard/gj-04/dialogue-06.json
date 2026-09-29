@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 4.7227,
-    "speech_seconds": 4.13,
+    "duration_seconds": 5.1513,
+    "speech_seconds": 4.54,
     "mora_count": 33,
-    "seconds_per_mora": 0.1252,
-    "active_rms_dbfs": -23.95,
-    "peak_dbfs": -8.22,
-    "median_f0_hz": 250.0,
-    "voiced_f0_p10_hz": 205.48,
+    "seconds_per_mora": 0.1376,
+    "active_rms_dbfs": -23.85,
+    "peak_dbfs": -8.29,
+    "median_f0_hz": 252.63,
+    "voiced_f0_p10_hz": 206.9,
     "voiced_f0_p90_hz": 307.69,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -27.8
+    "tail_margin_db": -27.9
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,15 +43,15 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "e3977d24f7245560d7f86552acc34c140a3f79ecc23f2895030eac1063c86e94",
+  "output_sha256": "d1a9bf5021699dfe5d43f46cb7daac7a63a80410bd63789b7937cfe5af1eecaa",
   "tempo_conformance": {
-    "atempo_factor": 1.237008,
-    "pre_conformance_seconds_per_mora": 0.1536,
-    "target_seconds_per_mora": 0.1242
+    "atempo_factor": 0.906895,
+    "pre_conformance_seconds_per_mora": 0.1252,
+    "target_seconds_per_mora": 0.138
   },
   "sentence_asr": {
     "by_model": {
-      "small": "やっぱり私も日曜日は一日中食べたり寝たりしていました",
+      "small": "やっぱり、私も日曜日は一日中、食べたり寝たりしていました。",
       "medium": "やっぱり私も日曜日は一日中食べたり寝たりしていました"
     },
     "target": "やっぱりわたしもにちようびはいちにちじゅうたべたりねたりしていました",
@@ -84,18 +84,18 @@
       "max_new_tokens": 480
     },
     "metrics": {
-      "duration_seconds": 5.6803,
-      "speech_seconds": 5.07,
+      "duration_seconds": 4.7227,
+      "speech_seconds": 4.13,
       "mora_count": 33,
-      "seconds_per_mora": 0.1536,
-      "active_rms_dbfs": -23.81,
-      "peak_dbfs": -8.29,
-      "median_f0_hz": 252.63,
-      "voiced_f0_p10_hz": 205.13,
+      "seconds_per_mora": 0.1252,
+      "active_rms_dbfs": -23.95,
+      "peak_dbfs": -8.22,
+      "median_f0_hz": 250.0,
+      "voiced_f0_p10_hz": 205.48,
       "voiced_f0_p90_hz": 307.69,
       "sample_rate_hz": 24000,
       "channels": 1,
-      "tail_margin_db": -28.2
+      "tail_margin_db": -27.8
     },
     "quality_assessment": {
       "automatic_pass": true,
@@ -109,43 +109,15 @@
       "short_term_rule": false,
       "manual_review": "required"
     },
-    "output_sha256": "ab238bd8b8653d1625e2ddc1b42365c209d15bf1f8d7e0595cf426eac34c4ea5",
+    "output_sha256": "e3977d24f7245560d7f86552acc34c140a3f79ecc23f2895030eac1063c86e94",
     "tempo_conformance": {
-      "atempo_factor": 0.959431,
-      "pre_conformance_seconds_per_mora": 0.1473,
-      "target_seconds_per_mora": 0.1535
-    },
-    "tts_input_text": "やっぱり。私も日曜日は一日中、食べたり寝たりしていました。 はい。",
-    "page_text": "やっぱり。私も日曜日は一日中、食べたり寝たりしていました。",
-    "seed_offset": 0,
-    "prosody": {
-      "median_f0": 252.6,
-      "baseline_f0": 248.71,
-      "f0_vs_baseline": 1.016,
-      "tail_f0": 228.6,
-      "tail_vs_median": 0.905,
-      "low_pitch": false,
-      "falling_tail": false,
-      "pass": true
-    },
-    "timbre": {
-      "distance": null,
-      "pass": true
-    },
-    "tail_cliff": {
-      "margin_db": -28.2,
-      "cliff_db": 3.4,
-      "pass": true,
-      "limit_db": -20.0
-    },
-    "tail_fade": {
-      "fade_ms": 80,
-      "max_step_db": 4.8,
-      "pass": true
+      "atempo_factor": 1.237008,
+      "pre_conformance_seconds_per_mora": 0.1536,
+      "target_seconds_per_mora": 0.1242
     },
     "sentence_asr": {
       "by_model": {
-        "small": "やっぱり、私も日曜日は一日中、食べたり寝たりしていました。",
+        "small": "やっぱり私も日曜日は一日中食べたり寝たりしていました",
         "medium": "やっぱり私も日曜日は一日中食べたり寝たりしていました"
       },
       "target": "やっぱりわたしもにちようびはいちにちじゅうたべたりねたりしていました",
@@ -154,6 +126,9 @@
       "head_ratio": 1.0,
       "lead_filler": false,
       "pass": true
-    }
+    },
+    "tts_input_text": "やっぱり。私も日曜日は一日中、食べたり寝たりしていました。 はい。",
+    "page_text": "やっぱり。私も日曜日は一日中、食べたり寝たりしていました。",
+    "seed_offset": 0
   }
 }

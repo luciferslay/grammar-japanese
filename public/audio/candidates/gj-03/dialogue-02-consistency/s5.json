@@ -1,0 +1,96 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "はい、大丈夫です。制服は自分で洗わなければなりませんか。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 4.9064,
+    "speech_seconds": 4.28,
+    "mora_count": 31,
+    "seconds_per_mora": 0.1381,
+    "active_rms_dbfs": -23.78,
+    "peak_dbfs": -10.36,
+    "median_f0_hz": 260.87,
+    "voiced_f0_p10_hz": 195.92,
+    "voiced_f0_p90_hz": 307.69,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -29.8
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "30ab28ae5e90170cb8b2f378e29fac55aa0123739e71810c0d311a43196c407a",
+  "tempo_conformance": {
+    "atempo_factor": 1.002805,
+    "pre_conformance_seconds_per_mora": 0.1384,
+    "target_seconds_per_mora": 0.138
+  },
+  "tts_input_text": "はい、大丈夫です。制服は自分で洗わなければなりませんか。 はい。",
+  "page_text": "はい、大丈夫です。制服は自分で洗わなければなりませんか。",
+  "seed_offset": 1104,
+  "prosody": {
+    "median_f0": 259.5,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.043,
+    "tail_f0": 252.7,
+    "tail_vs_median": 0.974,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -29.8,
+    "cliff_db": 4.1,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 140,
+    "max_step_db": 6.7,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "はい大丈夫です制服は自分で洗わなければなりませんか",
+      "medium": "はい大丈夫です制服は自分で洗わなければなりませんか"
+    },
+    "target": "はいだいじょうぶですせいふくはじぶんであらわなければなりませんか",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.12,
+    "pass": true
+  }
+}

@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 4.3352,
-    "speech_seconds": 3.75,
+    "duration_seconds": 4.7425,
+    "speech_seconds": 4.15,
     "mora_count": 30,
-    "seconds_per_mora": 0.125,
-    "active_rms_dbfs": -24.06,
-    "peak_dbfs": -8.59,
-    "median_f0_hz": 247.42,
+    "seconds_per_mora": 0.1383,
+    "active_rms_dbfs": -23.99,
+    "peak_dbfs": -8.66,
+    "median_f0_hz": 250.0,
     "voiced_f0_p10_hz": 203.39,
-    "voiced_f0_p90_hz": 285.71,
+    "voiced_f0_p90_hz": 282.35,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -28.7
+    "tail_margin_db": -25.1
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,15 +43,15 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "b2fc6bc8880079fbfec11e9b002c05fa2325a456a92b53df1a107f3920f7faad",
+  "output_sha256": "b90d4434d81cdd2525cd977bff52b4803387c751a98cf3675fadd54b68a49324",
   "tempo_conformance": {
-    "atempo_factor": 1.242619,
-    "pre_conformance_seconds_per_mora": 0.1543,
-    "target_seconds_per_mora": 0.1242
+    "atempo_factor": 0.905797,
+    "pre_conformance_seconds_per_mora": 0.125,
+    "target_seconds_per_mora": 0.138
   },
   "sentence_asr": {
     "by_model": {
-      "small": "友達と買い物をしたり映画を見たりしました タクヤさんは",
+      "small": "友達と買い物をしたり、映画を見たりしました。タクヤさんは?",
       "medium": "友達と買い物をしたり、映画を見たりしました。たくやさんは?"
     },
     "target": "ともだちとかいものをしたりえいがをみたりしましたたくやさんは",
@@ -84,18 +84,18 @@
       "max_new_tokens": 480
     },
     "metrics": {
-      "duration_seconds": 5.2223,
-      "speech_seconds": 4.63,
+      "duration_seconds": 4.3352,
+      "speech_seconds": 3.75,
       "mora_count": 30,
-      "seconds_per_mora": 0.1543,
-      "active_rms_dbfs": -23.99,
-      "peak_dbfs": -8.62,
-      "median_f0_hz": 246.16,
+      "seconds_per_mora": 0.125,
+      "active_rms_dbfs": -24.06,
+      "peak_dbfs": -8.59,
+      "median_f0_hz": 247.42,
       "voiced_f0_p10_hz": 203.39,
-      "voiced_f0_p90_hz": 282.35,
+      "voiced_f0_p90_hz": 285.71,
       "sample_rate_hz": 24000,
       "channels": 1,
-      "tail_margin_db": -30.0
+      "tail_margin_db": -28.7
     },
     "quality_assessment": {
       "automatic_pass": true,
@@ -109,39 +109,11 @@
       "short_term_rule": false,
       "manual_review": "required"
     },
-    "output_sha256": "0280704c7d0c5dde8f179f49724627928e5f69d4a873238a442f4e9b8ac58127",
+    "output_sha256": "b2fc6bc8880079fbfec11e9b002c05fa2325a456a92b53df1a107f3920f7faad",
     "tempo_conformance": {
-      "atempo_factor": 1.081433,
-      "pre_conformance_seconds_per_mora": 0.166,
-      "target_seconds_per_mora": 0.1535
-    },
-    "tts_input_text": "友達と買い物をしたり、映画を見たりしました。拓也さんは？ はい。",
-    "page_text": "友達と買い物をしたり、映画を見たりしました。拓也さんは？",
-    "seed_offset": 0,
-    "prosody": {
-      "median_f0": 247.4,
-      "baseline_f0": 248.71,
-      "f0_vs_baseline": 0.995,
-      "tail_f0": 205.1,
-      "tail_vs_median": 0.829,
-      "low_pitch": false,
-      "falling_tail": false,
-      "pass": true
-    },
-    "timbre": {
-      "distance": null,
-      "pass": true
-    },
-    "tail_cliff": {
-      "margin_db": -30.0,
-      "cliff_db": 4.1,
-      "pass": true,
-      "limit_db": -20.0
-    },
-    "tail_fade": {
-      "fade_ms": 50,
-      "max_step_db": 6.1,
-      "pass": true
+      "atempo_factor": 1.242619,
+      "pre_conformance_seconds_per_mora": 0.1543,
+      "target_seconds_per_mora": 0.1242
     },
     "sentence_asr": {
       "by_model": {
@@ -154,6 +126,9 @@
       "head_ratio": 1.0,
       "lead_filler": false,
       "pass": true
-    }
+    },
+    "tts_input_text": "友達と買い物をしたり、映画を見たりしました。拓也さんは？ はい。",
+    "page_text": "友達と買い物をしたり、映画を見たりしました。拓也さんは？",
+    "seed_offset": 0
   }
 }

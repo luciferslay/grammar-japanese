@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 4.93,
-    "speech_seconds": 3.74,
+    "duration_seconds": 5.391,
+    "speech_seconds": 4.14,
     "mora_count": 30,
-    "seconds_per_mora": 0.1247,
-    "active_rms_dbfs": -23.92,
-    "peak_dbfs": -9.61,
+    "seconds_per_mora": 0.138,
+    "active_rms_dbfs": -23.85,
+    "peak_dbfs": -9.68,
     "median_f0_hz": 269.66,
-    "voiced_f0_p10_hz": 218.18,
+    "voiced_f0_p10_hz": 216.61,
     "voiced_f0_p90_hz": 338.03,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -27.5
+    "tail_margin_db": -30.0
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,16 +43,16 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "cf49bbf3484a752a01a8861212a386ec730101423169dc5b4d15532ca4c56d5d",
+  "output_sha256": "ae8e8ff522b4b17db7e03a8f0619e594099f1cdb47c7dd2437835ee608b6e1cd",
   "tempo_conformance": {
-    "atempo_factor": 1.234568,
-    "pre_conformance_seconds_per_mora": 0.1533,
-    "target_seconds_per_mora": 0.1242
+    "atempo_factor": 0.903382,
+    "pre_conformance_seconds_per_mora": 0.1247,
+    "target_seconds_per_mora": 0.138
   },
   "sentence_asr": {
     "by_model": {
-      "small": "じゃあ少し手伝います。私のは甘すぎるのでちょうどいいです。",
-      "medium": "じゃあ少し手伝います 私のは甘すぎるのでちょうどいいです"
+      "small": "じゃあ、少し手伝います。私のは甘すぎるので、ちょうどいいです。",
+      "medium": "じゃあ、少し手伝います。私のは甘すぎるので、ちょうどいいです。"
     },
     "target": "じゃあすこしてつだいますわたしのはあますぎるのでちょうどいいです",
     "ratio": 1.0,
@@ -84,18 +84,18 @@
       "max_new_tokens": 480
     },
     "metrics": {
-      "duration_seconds": 5.9152,
-      "speech_seconds": 4.6,
+      "duration_seconds": 4.93,
+      "speech_seconds": 3.74,
       "mora_count": 30,
-      "seconds_per_mora": 0.1533,
-      "active_rms_dbfs": -23.86,
-      "peak_dbfs": -9.36,
+      "seconds_per_mora": 0.1247,
+      "active_rms_dbfs": -23.92,
+      "peak_dbfs": -9.61,
       "median_f0_hz": 269.66,
-      "voiced_f0_p10_hz": 214.29,
+      "voiced_f0_p10_hz": 218.18,
       "voiced_f0_p90_hz": 338.03,
       "sample_rate_hz": 24000,
       "channels": 1,
-      "tail_margin_db": -28.0
+      "tail_margin_db": -27.5
     },
     "quality_assessment": {
       "automatic_pass": true,
@@ -109,44 +109,16 @@
       "short_term_rule": false,
       "manual_review": "required"
     },
-    "output_sha256": "ec9ecf07df72568f8f94be7758a9b82b87f6ffeeb121766d839381e584661cab",
+    "output_sha256": "cf49bbf3484a752a01a8861212a386ec730101423169dc5b4d15532ca4c56d5d",
     "tempo_conformance": {
-      "atempo_factor": 1.014115,
-      "pre_conformance_seconds_per_mora": 0.1557,
-      "target_seconds_per_mora": 0.1535
-    },
-    "tts_input_text": "じゃあ、少し手伝います。私のは甘すぎるので、ちょうどいいです。 はい。",
-    "page_text": "じゃあ、少し手伝います。私のは甘すぎるので、ちょうどいいです。",
-    "seed_offset": 0,
-    "prosody": {
-      "median_f0": 269.7,
-      "baseline_f0": 248.71,
-      "f0_vs_baseline": 1.084,
-      "tail_f0": 317.2,
-      "tail_vs_median": 1.176,
-      "low_pitch": false,
-      "falling_tail": false,
-      "pass": true
-    },
-    "timbre": {
-      "distance": null,
-      "pass": true
-    },
-    "tail_cliff": {
-      "margin_db": -28.0,
-      "cliff_db": 3.3,
-      "pass": true,
-      "limit_db": -20.0
-    },
-    "tail_fade": {
-      "fade_ms": 220,
-      "max_step_db": 10.4,
-      "pass": true
+      "atempo_factor": 1.234568,
+      "pre_conformance_seconds_per_mora": 0.1533,
+      "target_seconds_per_mora": 0.1242
     },
     "sentence_asr": {
       "by_model": {
-        "small": "じゃあ、少し手伝います。私のは甘すぎるので、ちょうどいいです。",
-        "medium": "じゃあ、少し手伝います。私のは甘すぎるので、ちょうどいいです。"
+        "small": "じゃあ少し手伝います。私のは甘すぎるのでちょうどいいです。",
+        "medium": "じゃあ少し手伝います 私のは甘すぎるのでちょうどいいです"
       },
       "target": "じゃあすこしてつだいますわたしのはあますぎるのでちょうどいいです",
       "ratio": 1.0,
@@ -154,6 +126,9 @@
       "head_ratio": 1.0,
       "lead_filler": false,
       "pass": true
-    }
+    },
+    "tts_input_text": "じゃあ、少し手伝います。私のは甘すぎるので、ちょうどいいです。 はい。",
+    "page_text": "じゃあ、少し手伝います。私のは甘すぎるので、ちょうどいいです。",
+    "seed_offset": 0
   }
 }

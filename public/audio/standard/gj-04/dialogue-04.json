@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 4.0735,
-    "speech_seconds": 3.5,
+    "duration_seconds": 4.4534,
+    "speech_seconds": 3.87,
     "mora_count": 28,
-    "seconds_per_mora": 0.125,
-    "active_rms_dbfs": -23.96,
-    "peak_dbfs": -11.25,
+    "seconds_per_mora": 0.1382,
+    "active_rms_dbfs": -23.9,
+    "peak_dbfs": -11.32,
     "median_f0_hz": 258.06,
-    "voiced_f0_p10_hz": 220.8,
+    "voiced_f0_p10_hz": 221.41,
     "voiced_f0_p90_hz": 289.16,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -26.6
+    "tail_margin_db": -27.0
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,15 +43,15 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "553e4b54d99193609312864b8886c27a37323a60681f0488c00b3f0a38cd32a5",
+  "output_sha256": "bb07bf55a9bae1e4ff511070571df585b9553e49efcf996025928f19a185928f",
   "tempo_conformance": {
-    "atempo_factor": 1.259489,
-    "pre_conformance_seconds_per_mora": 0.1564,
-    "target_seconds_per_mora": 0.1242
+    "atempo_factor": 0.905797,
+    "pre_conformance_seconds_per_mora": 0.125,
+    "target_seconds_per_mora": 0.138
   },
   "sentence_asr": {
     "by_model": {
-      "small": "えらいですね 私は週末部屋の掃除をあまりしません",
+      "small": "えらいですね私は週末部屋の掃除をあまりしません",
       "medium": "偉いですね 私は週末部屋の掃除をあまりしません"
     },
     "target": "えらいですねわたしはしゅうまつへやのそうじをあまりしません",
@@ -84,18 +84,18 @@
       "max_new_tokens": 480
     },
     "metrics": {
-      "duration_seconds": 4.9609,
-      "speech_seconds": 4.38,
+      "duration_seconds": 4.0735,
+      "speech_seconds": 3.5,
       "mora_count": 28,
-      "seconds_per_mora": 0.1564,
-      "active_rms_dbfs": -23.88,
-      "peak_dbfs": -11.23,
-      "median_f0_hz": 256.69,
-      "voiced_f0_p10_hz": 220.18,
-      "voiced_f0_p90_hz": 293.04,
+      "seconds_per_mora": 0.125,
+      "active_rms_dbfs": -23.96,
+      "peak_dbfs": -11.25,
+      "median_f0_hz": 258.06,
+      "voiced_f0_p10_hz": 220.8,
+      "voiced_f0_p90_hz": 289.16,
       "sample_rate_hz": 24000,
       "channels": 1,
-      "tail_margin_db": -29.1
+      "tail_margin_db": -26.6
     },
     "quality_assessment": {
       "automatic_pass": true,
@@ -109,39 +109,11 @@
       "short_term_rule": false,
       "manual_review": "required"
     },
-    "output_sha256": "bb524d540faf5ae3b2a744ca729ff5732b83d90aefbface6601ad9fc198fba77",
+    "output_sha256": "553e4b54d99193609312864b8886c27a37323a60681f0488c00b3f0a38cd32a5",
     "tempo_conformance": {
-      "atempo_factor": 1.12,
-      "pre_conformance_seconds_per_mora": 0.1743,
-      "target_seconds_per_mora": 0.1535
-    },
-    "tts_input_text": "えらいですね。私は週末、部屋の掃除をあまりしません。 はい。",
-    "page_text": "えらいですね。私は週末、部屋の掃除をあまりしません。",
-    "seed_offset": 1,
-    "prosody": {
-      "median_f0": 258.1,
-      "baseline_f0": 248.71,
-      "f0_vs_baseline": 1.038,
-      "tail_f0": 250.0,
-      "tail_vs_median": 0.969,
-      "low_pitch": false,
-      "falling_tail": false,
-      "pass": true
-    },
-    "timbre": {
-      "distance": null,
-      "pass": true
-    },
-    "tail_cliff": {
-      "margin_db": -29.1,
-      "cliff_db": 7.2,
-      "pass": true,
-      "limit_db": -20.0
-    },
-    "tail_fade": {
-      "fade_ms": 60,
-      "max_step_db": 7.4,
-      "pass": true
+      "atempo_factor": 1.259489,
+      "pre_conformance_seconds_per_mora": 0.1564,
+      "target_seconds_per_mora": 0.1242
     },
     "sentence_asr": {
       "by_model": {
@@ -154,6 +126,9 @@
       "head_ratio": 1.0,
       "lead_filler": false,
       "pass": true
-    }
+    },
+    "tts_input_text": "えらいですね。私は週末、部屋の掃除をあまりしません。 はい。",
+    "page_text": "えらいですね。私は週末、部屋の掃除をあまりしません。",
+    "seed_offset": 1
   }
 }

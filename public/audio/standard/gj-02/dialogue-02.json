@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 3.1085,
-    "speech_seconds": 2.5,
+    "duration_seconds": 3.3844,
+    "speech_seconds": 2.76,
     "mora_count": 20,
-    "seconds_per_mora": 0.125,
-    "active_rms_dbfs": -23.95,
-    "peak_dbfs": -11.27,
-    "median_f0_hz": 248.71,
+    "seconds_per_mora": 0.138,
+    "active_rms_dbfs": -23.84,
+    "peak_dbfs": -11.29,
+    "median_f0_hz": 247.42,
     "voiced_f0_p10_hz": 205.13,
     "voiced_f0_p90_hz": 307.69,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -29.4
+    "tail_margin_db": -28.1
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,15 +43,15 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "161435290284b48b5cf05f00b8cda6c2d0558010ecb54e9e4e41106eb19a51ca",
+  "output_sha256": "cf230243d643b7d62d0bc4907767d89b18a3bed4e5d316eb1ead9e8d67dc8ade",
   "tempo_conformance": {
-    "atempo_factor": 1.23591,
-    "pre_conformance_seconds_per_mora": 0.1535,
-    "target_seconds_per_mora": 0.1242
+    "atempo_factor": 0.905797,
+    "pre_conformance_seconds_per_mora": 0.125,
+    "target_seconds_per_mora": 0.138
   },
   "sentence_asr": {
     "by_model": {
-      "small": "ええ、小さい釘なら使ってもいいですよ",
+      "small": "小さい釘なら使ってもいいですよ",
       "medium": "ええ、小さい釘なら使ってもいいですよ"
     },
     "target": "ええちーさいくぎならつかってもいいですよ",
@@ -84,18 +84,18 @@
       "max_new_tokens": 480
     },
     "metrics": {
-      "duration_seconds": 3.6745,
-      "speech_seconds": 3.07,
+      "duration_seconds": 3.1085,
+      "speech_seconds": 2.5,
       "mora_count": 20,
-      "seconds_per_mora": 0.1535,
-      "active_rms_dbfs": -23.82,
-      "peak_dbfs": -11.3,
-      "median_f0_hz": 247.42,
+      "seconds_per_mora": 0.125,
+      "active_rms_dbfs": -23.95,
+      "peak_dbfs": -11.27,
+      "median_f0_hz": 248.71,
       "voiced_f0_p10_hz": 205.13,
       "voiced_f0_p90_hz": 307.69,
       "sample_rate_hz": 24000,
       "channels": 1,
-      "tail_margin_db": -27.6
+      "tail_margin_db": -29.4
     },
     "quality_assessment": {
       "automatic_pass": true,
@@ -109,43 +109,15 @@
       "short_term_rule": false,
       "manual_review": "required"
     },
-    "output_sha256": "165830dc41cbb27e87237e9e7b5dc99067ec2f95f8edf471a76e94b0b3a073b8",
+    "output_sha256": "161435290284b48b5cf05f00b8cda6c2d0558010ecb54e9e4e41106eb19a51ca",
     "tempo_conformance": {
-      "atempo_factor": 0.996743,
-      "pre_conformance_seconds_per_mora": 0.153,
-      "target_seconds_per_mora": 0.1535
-    },
-    "tts_input_text": "ええ、小さい釘なら使ってもいいですよ。 はい。",
-    "page_text": "ええ、小さい釘なら使ってもいいですよ。",
-    "seed_offset": 0,
-    "prosody": {
-      "median_f0": 247.4,
-      "baseline_f0": 248.71,
-      "f0_vs_baseline": 0.995,
-      "tail_f0": 203.4,
-      "tail_vs_median": 0.822,
-      "low_pitch": false,
-      "falling_tail": false,
-      "pass": true
-    },
-    "timbre": {
-      "distance": null,
-      "pass": true
-    },
-    "tail_cliff": {
-      "margin_db": -27.6,
-      "cliff_db": 3.0,
-      "pass": true,
-      "limit_db": -20.0
-    },
-    "tail_fade": {
-      "fade_ms": 60,
-      "max_step_db": 6.7,
-      "pass": true
+      "atempo_factor": 1.23591,
+      "pre_conformance_seconds_per_mora": 0.1535,
+      "target_seconds_per_mora": 0.1242
     },
     "sentence_asr": {
       "by_model": {
-        "small": "小さい釘なら使ってもいいですよ",
+        "small": "ええ、小さい釘なら使ってもいいですよ",
         "medium": "ええ、小さい釘なら使ってもいいですよ"
       },
       "target": "ええちーさいくぎならつかってもいいですよ",
@@ -154,6 +126,9 @@
       "head_ratio": 1.0,
       "lead_filler": false,
       "pass": true
-    }
+    },
+    "tts_input_text": "ええ、小さい釘なら使ってもいいですよ。 はい。",
+    "page_text": "ええ、小さい釘なら使ってもいいですよ。",
+    "seed_offset": 0
   }
 }

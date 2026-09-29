@@ -18,36 +18,36 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 3.4585,
-    "speech_seconds": 2.88,
+    "duration_seconds": 3.771,
+    "speech_seconds": 3.19,
     "mora_count": 23,
-    "seconds_per_mora": 0.1252,
+    "seconds_per_mora": 0.1387,
     "active_rms_dbfs": -23.99,
-    "peak_dbfs": -8.89,
+    "peak_dbfs": -8.91,
     "median_f0_hz": 269.66,
-    "voiced_f0_p10_hz": 224.3,
-    "voiced_f0_p90_hz": 282.35,
+    "voiced_f0_p10_hz": 220.18,
+    "voiced_f0_p90_hz": 285.71,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -21.5
+    "tail_margin_db": -19.8
   },
   "quality_assessment": {
-    "automatic_pass": true,
+    "automatic_pass": false,
     "checks": {
       "speed": true,
       "pitch": true,
       "loudness": true,
       "peak": true,
-      "tail": true
+      "tail": false
     },
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "a826d7128bbc056990f85775709a85e5ac897651090b5cb10d1603f34c9e9324",
+  "output_sha256": "40f5ba7d209ec6299f5f72f9d4c065120fcb4da4e4e390cee6d4ee82b06d93c4",
   "tempo_conformance": {
-    "atempo_factor": 1.239235,
-    "pre_conformance_seconds_per_mora": 0.1539,
-    "target_seconds_per_mora": 0.1242
+    "atempo_factor": 0.907372,
+    "pre_conformance_seconds_per_mora": 0.1252,
+    "target_seconds_per_mora": 0.138
   },
   "sentence_asr": {
     "by_model": {
@@ -84,18 +84,18 @@
       "max_new_tokens": 480
     },
     "metrics": {
-      "duration_seconds": 4.1222,
-      "speech_seconds": 3.54,
+      "duration_seconds": 3.4585,
+      "speech_seconds": 2.88,
       "mora_count": 23,
-      "seconds_per_mora": 0.1539,
-      "active_rms_dbfs": -23.92,
-      "peak_dbfs": -8.88,
+      "seconds_per_mora": 0.1252,
+      "active_rms_dbfs": -23.99,
+      "peak_dbfs": -8.89,
       "median_f0_hz": 269.66,
-      "voiced_f0_p10_hz": 220.18,
+      "voiced_f0_p10_hz": 224.3,
       "voiced_f0_p90_hz": 282.35,
       "sample_rate_hz": 24000,
       "channels": 1,
-      "tail_margin_db": -29.7
+      "tail_margin_db": -21.5
     },
     "quality_assessment": {
       "automatic_pass": true,
@@ -109,43 +109,15 @@
       "short_term_rule": false,
       "manual_review": "required"
     },
-    "output_sha256": "6499b06765b0accc19f7bdc14952e58deaa8671b915754ae24fcf495d4754b21",
+    "output_sha256": "a826d7128bbc056990f85775709a85e5ac897651090b5cb10d1603f34c9e9324",
     "tempo_conformance": {
-      "atempo_factor": 1.056508,
-      "pre_conformance_seconds_per_mora": 0.1622,
-      "target_seconds_per_mora": 0.1535
-    },
-    "tts_input_text": "いいえ、一度もありません。写真を見せてください。 はい。",
-    "page_text": "いいえ、一度もありません。写真を見せてください。",
-    "seed_offset": 0,
-    "prosody": {
-      "median_f0": 269.7,
-      "baseline_f0": 248.71,
-      "f0_vs_baseline": 1.084,
-      "tail_f0": 222.2,
-      "tail_vs_median": 0.824,
-      "low_pitch": false,
-      "falling_tail": false,
-      "pass": true
-    },
-    "timbre": {
-      "distance": null,
-      "pass": true
-    },
-    "tail_cliff": {
-      "margin_db": -29.7,
-      "cliff_db": 7.0,
-      "pass": true,
-      "limit_db": -20.0
-    },
-    "tail_fade": {
-      "fade_ms": 60,
-      "max_step_db": 10.2,
-      "pass": true
+      "atempo_factor": 1.239235,
+      "pre_conformance_seconds_per_mora": 0.1539,
+      "target_seconds_per_mora": 0.1242
     },
     "sentence_asr": {
       "by_model": {
-        "small": "いいえ、一度もありません。写真を見せてください。",
+        "small": "いいえ一度もありません写真を見せてください",
         "medium": "いいえ、一度もありません。写真を見せて下さい。"
       },
       "target": "いいえいちどもありませんしゃしんをみせてください",
@@ -154,6 +126,9 @@
       "head_ratio": 1.0,
       "lead_filler": false,
       "pass": true
-    }
+    },
+    "tts_input_text": "いいえ、一度もありません。写真を見せてください。 はい。",
+    "page_text": "いいえ、一度もありません。写真を見せてください。",
+    "seed_offset": 0
   }
 }

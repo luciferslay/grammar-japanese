@@ -1,0 +1,50 @@
+[
+  {
+    "name": "s1",
+    "head_rest_distance": 0.944,
+    "cut_at": 0.3,
+    "gates_pass": true
+  },
+  {
+    "name": "s2",
+    "head_rest_distance": 0.1169,
+    "cut_at": 0.31,
+    "gates_pass": false
+  },
+  {
+    "name": "s3",
+    "head_rest_distance": 0.1356,
+    "cut_at": 0.29,
+    "gates_pass": true
+  },
+  {
+    "name": "s4",
+    "head_rest_distance": 0.9852,
+    "cut_at": 0.34,
+    "gates_pass": false
+  },
+  {
+    "name": "s5",
+    "head_rest_distance": 1.8244,
+    "cut_at": 0.29,
+    "gates_pass": true
+  },
+  {
+    "name": "s6",
+    "head_rest_distance": 1.7622,
+    "cut_at": 0.45,
+    "gates_pass": true
+  },
+  {
+    "name": "s7",
+    "head_rest_distance": 0.8761,
+    "cut_at": 0.31,
+    "gates_pass": true
+  },
+  {
+    "name": "s8",
+    "head_rest_distance": 1.7861,
+    "cut_at": 0.34,
+    "gates_pass": true
+  }
+]

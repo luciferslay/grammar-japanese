@@ -1,0 +1,96 @@
+{
+  "voice_id": "MALE_CALM_SLOW",
+  "text": "はい。僕も時々、音楽を聞きながら歩きますけど、画面は見ません。",
+  "seed": 202609232,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "61b7ceec5c5a01994440faf8f07d62398eb57d7f48ff821fd15bd566094c196d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 4.867,
+    "speech_seconds": 4.3,
+    "mora_count": 34,
+    "seconds_per_mora": 0.1265,
+    "active_rms_dbfs": -23.93,
+    "peak_dbfs": -8.02,
+    "median_f0_hz": 150.0,
+    "voiced_f0_p10_hz": 99.59,
+    "voiced_f0_p90_hz": 212.39,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -24.2
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "1f40e7993fb7c4d2da27a59ced86427137b4c447ccc18c59c249f4a41a78a672",
+  "tempo_conformance": {
+    "atempo_factor": 1.12,
+    "pre_conformance_seconds_per_mora": 0.1409,
+    "target_seconds_per_mora": 0.1237
+  },
+  "tts_input_text": "はい。僕も時々、音楽を聞きながら歩きますけど、画面は見ません。 はい。",
+  "page_text": "はい。僕も時々、音楽を聞きながら歩きますけど、画面は見ません。",
+  "seed_offset": 1106,
+  "prosody": {
+    "median_f0": 150.0,
+    "baseline_f0": 145.41,
+    "f0_vs_baseline": 1.032,
+    "tail_f0": 98.6,
+    "tail_vs_median": 0.657,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -24.2,
+    "cliff_db": 11.3,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 40,
+    "max_step_db": 8.5,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "はい 僕も時々音楽を聴きながら歩きますけど画面は見ません",
+      "medium": "はい 僕も時々音楽を聴きながら歩きますけど画面は見ません"
+    },
+    "target": "はいぼくもときどきおんがくをききながらあるきますけどがめんはみません",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  }
+}
