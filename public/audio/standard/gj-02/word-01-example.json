@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 2.6617,
-    "speech_seconds": 2.11,
+    "duration_seconds": 2.6139,
+    "speech_seconds": 2.02,
     "mora_count": 16,
-    "seconds_per_mora": 0.1319,
-    "active_rms_dbfs": -23.82,
-    "peak_dbfs": -10.05,
-    "median_f0_hz": 230.77,
-    "voiced_f0_p10_hz": 205.13,
-    "voiced_f0_p90_hz": 275.86,
+    "seconds_per_mora": 0.1263,
+    "active_rms_dbfs": -23.79,
+    "peak_dbfs": -10.63,
+    "median_f0_hz": 220.18,
+    "voiced_f0_p10_hz": 200.0,
+    "voiced_f0_p90_hz": 283.03,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,27 +41,27 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "853e34b9bf1cdf18212aaec8275f9b9cffcb839f00e3c08af997eaef916efd56",
+  "output_sha256": "02c3e11e5c4a94d1fb3bd1491d74c3c8814e27236cfb32b1e2fa2d09fe7d9462",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1181,
+    "pre_conformance_seconds_per_mora": 0.1131,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "おおやさんにやちんを払いました。",
+  "tts_input_text": "おおやさんにヤチンを払いました。",
   "page_text": "大家さんに家賃を払いました。",
-  "seed_offset": 1,
+  "seed_offset": 902,
   "prosody": {
-    "median_f0": 230.8,
+    "median_f0": 220.2,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.928,
-    "tail_f0": 234.2,
-    "tail_vs_median": 1.015,
-    "low_pitch": false,
+    "f0_vs_baseline": 0.885,
+    "tail_f0": 218.2,
+    "tail_vs_median": 0.991,
+    "low_pitch": true,
     "falling_tail": false,
-    "pass": true
+    "pass": false
   },
   "timbre": {
-    "distance": 0.0188,
+    "distance": 0.0243,
     "limit": 0.35,
     "pass": true
   },
@@ -80,5 +80,10 @@
   "internal_pause": {
     "gaps_ms": [],
     "pass": true
+  },
+  "picked_from_candidates": {
+    "candidate": "word-01-example/v3-s3",
+    "picked_at": "2026-09-29T23:10:47",
+    "by": "Luna 人耳（重音）"
   }
 }

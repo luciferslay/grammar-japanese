@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "家賃は月に七万円です。",
+  "text": "大家さんに家賃を払いました。",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 2.6587,
-    "speech_seconds": 2.0,
-    "mora_count": 15,
-    "seconds_per_mora": 0.1333,
-    "active_rms_dbfs": -23.58,
-    "peak_dbfs": -13.32,
-    "median_f0_hz": 252.63,
-    "voiced_f0_p10_hz": 210.53,
-    "voiced_f0_p90_hz": 308.89,
+    "duration_seconds": 2.6617,
+    "speech_seconds": 2.11,
+    "mora_count": 16,
+    "seconds_per_mora": 0.1319,
+    "active_rms_dbfs": -23.82,
+    "peak_dbfs": -10.05,
+    "median_f0_hz": 230.77,
+    "voiced_f0_p10_hz": 205.13,
+    "voiced_f0_p90_hz": 275.86,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,37 +41,37 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "43e2e06aeed1321c44a5efed2aef28515d44f323ef212756301a3b4764521804",
+  "output_sha256": "853e34b9bf1cdf18212aaec8275f9b9cffcb839f00e3c08af997eaef916efd56",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.12,
+    "pre_conformance_seconds_per_mora": 0.1181,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "ヤチンは月に七万円です。",
-  "page_text": "家賃は月に七万円です。",
-  "seed_offset": 902,
+  "tts_input_text": "おおやさんにやちんを払いました。",
+  "page_text": "大家さんに家賃を払いました。",
+  "seed_offset": 1,
   "prosody": {
-    "median_f0": 252.6,
+    "median_f0": 230.8,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.016,
-    "tail_f0": 213.3,
-    "tail_vs_median": 0.844,
+    "f0_vs_baseline": 0.928,
+    "tail_f0": 234.2,
+    "tail_vs_median": 1.015,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0555,
+    "distance": 0.0188,
     "limit": 0.35,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "家賃は靴に7万円です",
-      "medium": "家賃は靴に7万円です"
+      "small": "大屋さんにやちんを払いました",
+      "medium": "大屋さんに家賃を払いました"
     },
-    "target": "やちんはがつにしちまんえんです",
-    "ratio": 0.9091,
+    "target": "おおやさんにやちんをはらいました",
+    "ratio": 1.0,
     "tail_ratio": 1.0,
     "head_ratio": 1.0,
     "lead_filler": false,
@@ -80,10 +80,5 @@
   "internal_pause": {
     "gaps_ms": [],
     "pass": true
-  },
-  "picked_from_candidates": {
-    "candidate": "word-02-example/v3-s3",
-    "picked_at": "2026-09-29T23:10:47",
-    "by": "Luna 人耳（重音）"
   }
 }

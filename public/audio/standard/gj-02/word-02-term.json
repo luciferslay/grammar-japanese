@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 1.0395,
+    "duration_seconds": 1.0542,
     "speech_seconds": 0.47,
     "mora_count": 3,
     "seconds_per_mora": 0.1567,
-    "active_rms_dbfs": -23.78,
-    "peak_dbfs": -13.76,
-    "median_f0_hz": 250.0,
-    "voiced_f0_p10_hz": 228.57,
-    "voiced_f0_p90_hz": 290.59,
+    "active_rms_dbfs": -23.99,
+    "peak_dbfs": -11.72,
+    "median_f0_hz": 228.57,
+    "voiced_f0_p10_hz": 210.53,
+    "voiced_f0_p90_hz": 268.46,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,27 +41,27 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "da55babbb7f76abde4e312a785381c554f6a6c811461493bd3253c3e2ff814e5",
+  "output_sha256": "920cb24b14c623b8e0ea33791be77c802d38c60770d70ef486ae285729b5a6de",
   "tempo_conformance": {
-    "atempo_factor": 0.998914,
-    "pre_conformance_seconds_per_mora": 0.1533,
+    "atempo_factor": 1.042345,
+    "pre_conformance_seconds_per_mora": 0.16,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "やちん。",
+  "tts_input_text": "ヤチン。",
   "page_text": "家賃",
-  "seed_offset": 0,
+  "seed_offset": 902,
   "term_policy": {
-    "speech_seconds": 0.43,
-    "per_syllable": 0.1433,
+    "speech_seconds": 0.44,
+    "per_syllable": 0.1467,
     "too_short": false,
     "too_long": false,
     "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.0133,
+    "distance_to_target": 0.0167,
     "asr": {
       "by_model": {
-        "small": "やっちん",
+        "small": "やちん",
         "medium": "やちん"
       },
       "target": "やちん",
@@ -75,18 +75,23 @@
     "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 250.0,
+    "median_f0": 228.6,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.005,
-    "tail_f0": 251.3,
-    "tail_vs_median": 1.005,
+    "f0_vs_baseline": 0.919,
+    "tail_f0": 237.6,
+    "tail_vs_median": 1.04,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0482,
+    "distance": 0.0645,
     "limit": 0.35,
     "pass": true
+  },
+  "picked_from_candidates": {
+    "candidate": "word-02-term/v3-s3",
+    "picked_at": "2026-09-29T23:10:47",
+    "by": "Luna 人耳（重音）"
   }
 }

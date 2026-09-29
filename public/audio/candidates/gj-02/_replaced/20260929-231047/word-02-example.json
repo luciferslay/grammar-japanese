@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 2.6587,
+    "duration_seconds": 2.6773,
     "speech_seconds": 2.0,
     "mora_count": 15,
     "seconds_per_mora": 0.1333,
-    "active_rms_dbfs": -23.58,
-    "peak_dbfs": -13.32,
-    "median_f0_hz": 252.63,
-    "voiced_f0_p10_hz": 210.53,
-    "voiced_f0_p90_hz": 308.89,
+    "active_rms_dbfs": -23.73,
+    "peak_dbfs": -13.56,
+    "median_f0_hz": 242.42,
+    "voiced_f0_p10_hz": 198.35,
+    "voiced_f0_p90_hz": 275.86,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,37 +41,37 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "43e2e06aeed1321c44a5efed2aef28515d44f323ef212756301a3b4764521804",
+  "output_sha256": "769b5ed9883c81821ae3bbde9e1bd28301cccfd671648e7c5323ec0c7c59df22",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.12,
+    "pre_conformance_seconds_per_mora": 0.1193,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "ヤチンは月に七万円です。",
+  "tts_input_text": "やちんは月に七万円です。",
   "page_text": "家賃は月に七万円です。",
-  "seed_offset": 902,
+  "seed_offset": 0,
   "prosody": {
-    "median_f0": 252.6,
+    "median_f0": 242.4,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.016,
-    "tail_f0": 213.3,
-    "tail_vs_median": 0.844,
+    "f0_vs_baseline": 0.975,
+    "tail_f0": 204.3,
+    "tail_vs_median": 0.843,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0555,
+    "distance": 0.0355,
     "limit": 0.35,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "家賃は靴に7万円です",
-      "medium": "家賃は靴に7万円です"
+      "small": "やちんは月に7万円です",
+      "medium": "家賃は月に7万円です"
     },
     "target": "やちんはがつにしちまんえんです",
-    "ratio": 0.9091,
+    "ratio": 1.0,
     "tail_ratio": 1.0,
     "head_ratio": 1.0,
     "lead_filler": false,
@@ -80,10 +80,5 @@
   "internal_pause": {
     "gaps_ms": [],
     "pass": true
-  },
-  "picked_from_candidates": {
-    "candidate": "word-02-example/v3-s3",
-    "picked_at": "2026-09-29T23:10:47",
-    "by": "Luna 人耳（重音）"
   }
 }
