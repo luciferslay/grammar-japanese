@@ -1,0 +1,55 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>重音候选</title>
+<style>body{font-family:system-ui,sans-serif;max-width:980px;margin:24px auto;padding:0 16px;color:#222}h1{font-size:20px}
+.item{border:1px solid #ddd;border-radius:12px;padding:12px 14px;margin:16px 0}.ja{font-size:18px;margin:0 0 4px}.want{color:#a33;font-size:13px;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.c{border:1px solid #eee;border-radius:10px;padding:8px;font-size:12px;color:#555;cursor:pointer}
+.c.top{background:#fff8ec;border-color:#f0d9a8}.c.picked{outline:3px solid #2a7;background:#effaf3}.c b{color:#222;font-size:14px}audio{width:100%;margin-top:4px}
+#out{width:100%;height:90px;font-size:13px}button{font-size:14px;padding:6px 14px;margin-top:6px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}</style></head><body>
+<h1>第 2 课重音候选</h1>
+<p style="font-size:13px;color:#555">每条换了 3 种写法（汉字／平假名／片假名）× 4 个 seed。按「重音分」从高到低排：粗测目标词每个音拍的音高，越高越像你要的重音，<b>只是参考，以耳朵为准</b>。前 3 个标了底色。点一下卡片＝选中这一版（每条选一个），最下面会生成结果，复制贴给 Claude。</p>
+<div id="list">载入中…</div>
+<h2 style="font-size:16px">选择结果</h2>
+<textarea id="out" readonly></textarea><br><button onclick="navigator.clipboard.writeText(document.getElementById('out').value)">复制结果</button>
+<script>
+const LESSON = new URLSearchParams(location.search).get('lesson') || 'gj-02';
+const WANT = {
+  'dialogue-06': '二、三日：低高低，重音在「さん」',
+  'word-01-term': '大家さん（おおやさん）：头高，重音在第一拍',
+  'word-01-example': '大家さんに家賃を払いました：家賃（やちん）头高；大家さん 你说原来的就对',
+  'word-02-term': '家賃（やちん）：头高',
+  'word-02-example': '家賃は月に七万円です：家賃 头高',
+  'word-11-term': '隣の人：上次没录全 —— 挑一个完整的',
+};
+const picked = {};
+fetch(`/audio/candidates/${LESSON}/candidates.json`).then(r => r.json()).then(rows => {
+  const by = {};
+  rows.forEach(r => (by[r.item] ||= []).push(r));
+  const list = document.getElementById('list');
+  list.innerHTML = '';
+  for (const [item, rs] of Object.entries(by)) {
+    rs.sort((a, b) => (b.accent_score ?? -99) - (a.accent_score ?? -99));
+    const box = document.createElement('div');
+    box.className = 'item';
+    box.innerHTML = `<p class="ja">${rs[0].page_text}</p><p class="want">要的：${WANT[item] || ''}</p><div class="grid"></div>`;
+    const grid = box.querySelector('.grid');
+    rs.forEach((r, i) => {
+      const c = document.createElement('div');
+      c.className = 'c' + (i < 3 && r.accent_score != null ? ' top' : '');
+      const heard = (r.heard && (r.heard.medium || r.heard.small)) || '';
+      c.innerHTML = `<b>${r.name}</b>　${r.variant_label}${r.accent_score != null ? '　重音分 ' + r.accent_score : ''}<br>whisper 听到：${heard}
+        <audio controls preload="none" src="/audio/candidates/${LESSON}/${item}/${r.name}.m4a"></audio>`;
+      c.addEventListener('click', e => {
+        if (e.target.tagName === 'AUDIO') return;
+        grid.querySelectorAll('.c').forEach(x => x.classList.remove('picked'));
+        c.classList.add('picked');
+        picked[item] = r.name;
+        document.getElementById('out').value = '重音候选选择结果（' + LESSON + '）：\n' +
+          Object.entries(picked).map(([k, v]) => `${k} → ${v}`).join('\n');
+      });
+      grid.appendChild(c);
+    });
+    list.appendChild(box);
+  }
+});
+</script></body></html>

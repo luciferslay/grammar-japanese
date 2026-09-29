@@ -1,4 +1,5 @@
-/** 站名与口号集中在这里，改名只改这一处。Luna 2026-09-23 定名：先上商务日语板块，以后还会追加其他学习模式，所以站名和口号不带「商务」。 */
-export const SITE_NAME = 'ワンシーンで学ぶ日本語';
-export const SITE_TAGLINE = '每天一个实用日语场景';
-export const SITE_MARK = '日';
+/** 站名与口号集中在这里，改名只改这一处。Luna 2026-09-27 定名「一日一コマ」（日语语法站，和韩语站「하루한컷」对应）。
+ * 2026-09-29 发现这里还是从商务站复制来的站名，起步时漏改了，按 WORKLOG 9/27 的决定补上。 */
+export const SITE_NAME = '一日一コマ';
+export const SITE_TAGLINE = '每天一个日语语法场景';
+export const SITE_MARK = '一';

@@ -1,0 +1,92 @@
+{
+  "voice_id": "MALE_CALM_SLOW",
+  "text": "リンさん、明日から朝七時までに来なければなりません。大丈夫ですか。",
+  "seed": 202609232,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "61b7ceec5c5a01994440faf8f07d62398eb57d7f48ff821fd15bd566094c196d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 5.1038,
+    "speech_seconds": 4.55,
+    "mora_count": 35,
+    "seconds_per_mora": 0.13,
+    "active_rms_dbfs": -23.86,
+    "peak_dbfs": -6.41,
+    "median_f0_hz": 143.28,
+    "voiced_f0_p10_hz": 100.29,
+    "voiced_f0_p90_hz": 220.18,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -23.0
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "87af9d59e22cb20a75e8817fcb171046ef2d44a43b0bd926ad41bd7b47cd2c3b",
+  "tempo_conformance": {
+    "atempo_factor": 1.12,
+    "pre_conformance_seconds_per_mora": 0.1446,
+    "target_seconds_per_mora": 0.1237
+  },
+  "tts_input_text": "リンさん、明日から朝七時までに来なければなりません。大丈夫ですか。 はい。",
+  "page_text": "リンさん、明日から朝七時までに来なければなりません。大丈夫ですか。",
+  "seed_offset": 1,
+  "prosody": {
+    "median_f0": 145.9,
+    "baseline_f0": 145.41,
+    "f0_vs_baseline": 1.003,
+    "tail_f0": 126.9,
+    "tail_vs_median": 0.87,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -23.0,
+    "cliff_db": 17.7,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 30,
+    "max_step_db": 11.6,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "リンさん明日から朝7時までに来なければなりません 大丈夫ですか",
+      "medium": "リンさん、明日から朝7時までに来なければなりません。大丈夫ですか?"
+    },
+    "target": "りんさんあしたからあさしちじまでにこなければなりませんだいじょうぶですか",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  }
+}

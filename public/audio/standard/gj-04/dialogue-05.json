@@ -1,0 +1,92 @@
+{
+  "voice_id": "MALE_CALM_SLOW",
+  "text": "実は、ゲームをしたり寝たりしている時間のほうが長かったんです。",
+  "seed": 202609232,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "61b7ceec5c5a01994440faf8f07d62398eb57d7f48ff821fd15bd566094c196d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 4.2985,
+    "speech_seconds": 3.7,
+    "mora_count": 32,
+    "seconds_per_mora": 0.1156,
+    "active_rms_dbfs": -23.75,
+    "peak_dbfs": -8.53,
+    "median_f0_hz": 148.15,
+    "voiced_f0_p10_hz": 104.76,
+    "voiced_f0_p90_hz": 181.82,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -27.0
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "ba2e1becd978059d3c304eddd7546c609a198e030d1fceb697216348d39ed1d0",
+  "tempo_conformance": {
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.1041,
+    "target_seconds_per_mora": 0.1237
+  },
+  "tts_input_text": "実は、ゲームをしたり寝たりしている時間のほうが長かったんです。 はい。",
+  "page_text": "実は、ゲームをしたり寝たりしている時間のほうが長かったんです。",
+  "seed_offset": 2,
+  "prosody": {
+    "median_f0": 148.1,
+    "baseline_f0": 145.41,
+    "f0_vs_baseline": 1.019,
+    "tail_f0": 93.8,
+    "tail_vs_median": 0.633,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -27.0,
+    "cliff_db": 6.5,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 200,
+    "max_step_db": 6.9,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "実はゲームをしたり寝たりしている時間の方が長かったんです",
+      "medium": "実はゲームをしたり寝たりしている時間の方が長かったんです"
+    },
+    "target": "じつはげーむをしたりねたりしているじかんのほうがながかったんです",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  }
+}
