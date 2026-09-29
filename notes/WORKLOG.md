@@ -239,6 +239,20 @@
 - **Luna：大家さん、家賃 的单词和例句也都用 v3-s3**（片假名写法：オオヤさん／ヤチン，例句是「おおやさんにヤチンを払いました」「ヤチンは月に七万円です」）。已用 pick_candidate.py 换进课程；读音表改成 大家さん→オオヤさん、家賃→ヤチン。
   - 经验：假名写法会丢重音。平假名、片假名各有对有错，没有通用规律；遇到重音问题就用 accent_candidates.py 多录几种写法，让 Luna 挑。
 - Luna：「做完推送」→ 推送到 GitHub（这台第一次自己推）。
+
+### 2026-09-29 23:xx 插图到了；表外词不删；N3 两课开做
+
+- Luna：插图已经做好（Codex 在 Windows 上出图，放在 `C:\Users\lunac\Documents\Codex\2026-09-29\3-gj-03-developer-nihongo-grammar\outputs\`）。
+  - 有 4 张：cafe-part-time、weekend-talk、supermarket-noodles、phone-dinner。Claude 看过，没有可读文字或乱码，人物一致，已复制进 public/。
+  - **第 5、6 课（walk-and-phone、spicy-curry）的图还没做。**
+- 原因：插图命令写的是 Mac 路径，Codex 找不到项目，图只留在它自己的 outputs 里。
+  - Luna：以后在插图命令里写明路径。第 3〜8 课大纲里的插图命令都改了：存进 WSL 项目的 public（`\\wsl.localhost\Ubuntu\...\public\`），写不进就存 `C:\Users\lunac\Documents\Codex\ichinichi-illustrations\`（文件夹已建好）。
+  - 这条也写进了 WORD_RULES「工作方式」。
+- Luna：「表外」的词（まとめて、使い方、一日中、画面、大盛り、自炊、息抜き、割り勘 等）**不删**。
+- Luna：「N3 两课你可以先做」→ 照改过的大纲写好 `supermarket-noodles.ts`（gj-07）、`phone-dinner.ts`（gj-08）和路由，放在 pendingLessons 的 N3 段。
+  - 通过：shuffle、check_bonus、等级检查（没有太简单的词）、tsc。
+  - 两课音频（男女声）已开录。
+- 预览服务器又卡死一次（同样的 als-registry 栈溢出），重启就好了。
 - **句首「はい」像换了个人**（gj-03 对话 2 女声、gj-05 对话 3 男声；gj-05 上次重录过一次，没用）：
   - 新脚本 `scripts/consistent_redo.py`：每条录 8 版，按第一段停顿切开，算句首段和其余部分的音色距离（MFCC 余弦），闸门都过的里面取最小的。
   - gj-03 d02：8 版的距离是 0.37〜1.39，选了 s2（0.373）。

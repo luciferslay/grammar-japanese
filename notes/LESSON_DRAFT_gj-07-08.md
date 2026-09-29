@@ -1,13 +1,16 @@
 # 给 Codex 的插图命令（Luna 手动提交）
 
 > 画风、配色照本站前几课（`public/ramen-trip.png` 等）；拓也、リン 就是第 1 课那两个人。
+> **2026-09-29 起插图命令里写明保存位置**：Codex 在这台 Windows 上跑，要直接存进 `\\wsl.localhost\Ubuntu\home\lunafan716\nihongo\grammar-japanese\public\`（写不进就存 `C:\Users\lunac\Documents\Codex\ichinichi-illustrations\`）。以前写的是 Mac 路径 ~/Developer/…，Codex 找不到，图就只留在它自己的 outputs 里。
 
 ## 命令一（N3 第 1 课 · supermarket-noodles.png）
 
 ```text
-日语语法网站 N3 第 1 课插图（gj-07）。这次**只出图**，不需要改代码。项目在 ~/Developer/nihongo/grammar-japanese。
+日语语法网站 N3 第 1 课插图（gj-07）。这次**只出图**，不需要改代码。项目在这台 Windows 电脑的 WSL 里：`\\wsl.localhost\Ubuntu\home\lunafan716\nihongo\grammar-japanese`。
 
 ## 插图 `public/supermarket-noodles.png`（1536×1024）
+
+**保存位置（必须）**：直接存成 `\\wsl.localhost\Ubuntu\home\lunafan716\nihongo\grammar-japanese\public\supermarket-noodles.png`（有同名文件就覆盖）。如果写不进这个路径，就存到 `C:\Users\lunac\Documents\Codex\ichinichi-illustrations\supermarket-noodles.png`，Claude 会从那里拿。不要只放在 Codex 自己的 outputs 文件夹里。下面提到的参考图（ramen-trip.png 等）都在 `\\wsl.localhost\Ubuntu\home\lunafan716\nihongo\grammar-japanese\public\` 里。
 
 先看 public/ramen-trip.png 保持画风和人物：年轻男性是那张图里的男生（拓也），戴圆眼镜的女生是那张图里的女生（リン）。Prompt：
 
@@ -20,9 +23,11 @@ A bright neighborhood supermarket aisle in the evening. The same young Japanese 
 ## 命令二（N3 第 2 课 · phone-dinner.png）
 
 ```text
-日语语法网站 N3 第 2 课插图（gj-08）。这次**只出图**，不需要改代码。项目在 ~/Developer/nihongo/grammar-japanese。
+日语语法网站 N3 第 2 课插图（gj-08）。这次**只出图**，不需要改代码。项目在这台 Windows 电脑的 WSL 里：`\\wsl.localhost\Ubuntu\home\lunafan716\nihongo\grammar-japanese`。
 
 ## 插图 `public/phone-dinner.png`（1536×1024）
+
+**保存位置（必须）**：直接存成 `\\wsl.localhost\Ubuntu\home\lunafan716\nihongo\grammar-japanese\public\phone-dinner.png`（有同名文件就覆盖）。如果写不进这个路径，就存到 `C:\Users\lunac\Documents\Codex\ichinichi-illustrations\phone-dinner.png`，Claude 会从那里拿。不要只放在 Codex 自己的 outputs 文件夹里。下面提到的参考图（ramen-trip.png 等）都在 `\\wsl.localhost\Ubuntu\home\lunafan716\nihongo\grammar-japanese\public\` 里。
 
 先看 public/ramen-trip.png 保持画风和人物（拓也、リン）。Prompt：
 

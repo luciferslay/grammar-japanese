@@ -1,7 +1,9 @@
 import { cafePartTime } from './cafe-part-time';
+import { phoneDinner } from './phone-dinner';
 import { ramenTrip } from './ramen-trip';
 import { roomViewing } from './room-viewing';
 import { spicyCurry } from './spicy-curry';
+import { supermarketNoodles } from './supermarket-noodles';
 import { walkAndPhone } from './walk-and-phone';
 import { weekendTalk } from './weekend-talk';
 import type { Lesson } from './types';
@@ -27,6 +29,8 @@ export const pendingLessons: Lesson[] = [
   walkAndPhone,
   spicyCurry,
   // —— JLPT N3 ——（N4 后面的课做好了往上面插，课号顺延）
+  supermarketNoodles,
+  phoneDinner,
 ];
 
 /** 课序号（第 X 课）：按 lessons 的排列顺序，未注册的课接在后面编号。 */

@@ -30,3 +30,4 @@
 ## 工作方式
 
 每课大纲写好后在聊天侧边栏展开给 Luna 看和改；插图命令放在大纲最前面，Luna 自己贴给 Codex。
+**插图命令里必须写明保存位置**（Luna 2026-09-29）：Codex 在 Windows 这台上跑，直接存进 `\\wsl.localhost\Ubuntu\home\lunafan716\nihongo\grammar-japanese\public\<文件名>.png`；写不进就存 `C:\Users\lunac\Documents\Codex\ichinichi-illustrations\<文件名>.png`，Claude 从那里拿进项目。参考图也写这个 public 路径，不写 Mac 的 ~/Developer/…。
