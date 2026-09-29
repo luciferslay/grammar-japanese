@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 6.626,
-    "speech_seconds": 3.46,
+    "duration_seconds": 3.9272,
+    "speech_seconds": 3.31,
     "mora_count": 23,
-    "seconds_per_mora": 0.1504,
-    "active_rms_dbfs": -23.64,
-    "peak_dbfs": -8.89,
-    "median_f0_hz": 250.0,
-    "voiced_f0_p10_hz": 206.9,
-    "voiced_f0_p90_hz": 292.68,
+    "seconds_per_mora": 0.1439,
+    "active_rms_dbfs": -23.67,
+    "peak_dbfs": -8.86,
+    "median_f0_hz": 263.74,
+    "voiced_f0_p10_hz": 209.06,
+    "voiced_f0_p90_hz": 285.71,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,34 +41,34 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "eef4547fa92cb0e3ec81e2618f13b18e13626e6f43888b28c421c116cc6c63dd",
+  "output_sha256": "70932e51094e6b5a5aef14f149a533b0c7bb046ba61ae8b0ea8ce5ca6ebfb223",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1352,
+    "pre_conformance_seconds_per_mora": 0.1296,
     "target_seconds_per_mora": 0.1535
   },
   "tts_input_text": "授業中だったので、電話に出られませんでした。",
   "page_text": "授業中だったので、電話に出られませんでした。",
-  "seed_offset": 0,
+  "seed_offset": 1,
   "prosody": {
-    "median_f0": 252.6,
+    "median_f0": 263.7,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.016,
-    "tail_f0": 224.3,
-    "tail_vs_median": 0.888,
+    "f0_vs_baseline": 1.06,
+    "tail_f0": 228.6,
+    "tail_vs_median": 0.867,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0908,
+    "distance": 0.1419,
     "limit": 0.35,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
       "small": "授業中だったので電話に出られませんでした",
-      "medium": "授業中だったので、電話に出られませんでした。"
+      "medium": "授業中だったので電話に出られませんでした"
     },
     "target": "じゅぎょうちゅうだったのででんわにでられませんでした",
     "ratio": 1.0,
@@ -78,9 +78,11 @@
     "pass": true
   },
   "internal_pause": {
-    "gaps_ms": [
-      930
-    ],
+    "gaps_ms": [],
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.1,
     "pass": true
   }
 }

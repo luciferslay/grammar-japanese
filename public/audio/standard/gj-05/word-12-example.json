@@ -80,5 +80,9 @@
   "internal_pause": {
     "gaps_ms": [],
     "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.12,
+    "pass": true
   }
 }

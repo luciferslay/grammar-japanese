@@ -1,6 +1,6 @@
 {
   "voice_id": "MALE_CALM_SLOW",
-  "text": "うわ、このカレー、辛すぎます。水、水…。",
+  "text": "それに、大盛りも多すぎました。全部は食べられません。",
   "seed": 202609232,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,23 +18,23 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 4.1129,
-    "speech_seconds": 3.55,
-    "mora_count": 17,
-    "seconds_per_mora": 0.2088,
-    "active_rms_dbfs": -23.81,
-    "peak_dbfs": -7.58,
-    "median_f0_hz": 136.36,
-    "voiced_f0_p10_hz": 112.2,
-    "voiced_f0_p90_hz": 149.91,
+    "duration_seconds": 3.9745,
+    "speech_seconds": 3.39,
+    "mora_count": 26,
+    "seconds_per_mora": 0.1304,
+    "active_rms_dbfs": -23.66,
+    "peak_dbfs": -9.72,
+    "median_f0_hz": 162.16,
+    "voiced_f0_p10_hz": 138.89,
+    "voiced_f0_p90_hz": 214.29,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -26.7
+    "tail_margin_db": -25.6
   },
   "quality_assessment": {
-    "automatic_pass": false,
+    "automatic_pass": true,
     "checks": {
-      "speed": false,
+      "speed": true,
       "pitch": true,
       "loudness": true,
       "peak": true,
@@ -43,21 +43,21 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "d5233ad7fcee271beabe891ec6a551bb694e9e1a0091e82d241370ba9df012ba",
+  "output_sha256": "560a0d9115c080836b651aa5c6d39dcbeb77f7bf102421788f0c9420e287246c",
   "tempo_conformance": {
     "atempo_factor": 1.12,
-    "pre_conformance_seconds_per_mora": 0.2318,
+    "pre_conformance_seconds_per_mora": 0.1454,
     "target_seconds_per_mora": 0.1237
   },
-  "tts_input_text": "うわ、このカレー、辛すぎます。水、水…。 はい。",
-  "page_text": "うわ、このカレー、辛すぎます。水、水…。",
-  "seed_offset": 7,
+  "tts_input_text": "それに、大盛りも多すぎました。全部は食べられません。 はい。",
+  "page_text": "それに、大盛りも多すぎました。全部は食べられません。",
+  "seed_offset": 0,
   "prosody": {
-    "median_f0": 136.4,
+    "median_f0": 167.3,
     "baseline_f0": 145.41,
-    "f0_vs_baseline": 0.938,
-    "tail_f0": 112.7,
-    "tail_vs_median": 0.826,
+    "f0_vs_baseline": 1.151,
+    "tail_f0": 156.9,
+    "tail_vs_median": 0.937,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
@@ -67,23 +67,23 @@
     "pass": true
   },
   "tail_cliff": {
-    "margin_db": -26.7,
-    "cliff_db": 5.6,
+    "margin_db": -25.6,
+    "cliff_db": 13.5,
     "pass": true,
     "limit_db": -20.0
   },
   "tail_fade": {
-    "fade_ms": 40,
-    "max_step_db": 9.9,
+    "fade_ms": 30,
+    "max_step_db": 11.5,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "うわこのカレー辛すぎます 水水",
-      "medium": "うわ、このカレー、辛すぎます。水、水。"
+      "small": "それに大盛りも押すぎました 全部は食べられません",
+      "medium": "それに、大盛りも薄ぎました。全部は食べられません。"
     },
-    "target": "うわこのかれーつらすぎますみずみず",
-    "ratio": 1.0,
+    "target": "それにおおもりもおおすぎましたぜんぶはたべられません",
+    "ratio": 0.9831,
     "tail_ratio": 1.0,
     "head_ratio": 1.0,
     "lead_filler": false,
