@@ -1,5 +1,7 @@
+import { cafePartTime } from './cafe-part-time';
 import { ramenTrip } from './ramen-trip';
 import { roomViewing } from './room-viewing';
+import { weekendTalk } from './weekend-talk';
 import type { Lesson } from './types';
 
 export type { Lesson, Word } from './types';
@@ -18,6 +20,8 @@ export const pendingLessons: Lesson[] = [
   // —— JLPT N4 ——
   ramenTrip,
   roomViewing,
+  cafePartTime,
+  weekendTalk,
 ];
 
 /** 课序号（第 X 课）：按 lessons 的排列顺序，未注册的课接在后面编号。 */
