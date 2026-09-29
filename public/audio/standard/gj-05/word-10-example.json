@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "車に気をつけて帰ってください。",
+  "text": "信号が青になってから渡ります。",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 2.782,
-    "speech_seconds": 2.16,
-    "mora_count": 17,
-    "seconds_per_mora": 0.1271,
-    "active_rms_dbfs": -23.9,
-    "peak_dbfs": -10.77,
-    "median_f0_hz": 240.0,
-    "voiced_f0_p10_hz": 216.22,
-    "voiced_f0_p90_hz": 266.67,
+    "duration_seconds": 3.0246,
+    "speech_seconds": 2.31,
+    "mora_count": 18,
+    "seconds_per_mora": 0.1283,
+    "active_rms_dbfs": -23.76,
+    "peak_dbfs": -11.36,
+    "median_f0_hz": 248.71,
+    "voiced_f0_p10_hz": 202.19,
+    "voiced_f0_p90_hz": 296.3,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,36 +41,36 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "3a91d9647e77bb34666768a003000d9676c28bc1a8191c9ea1664925744c4e85",
+  "output_sha256": "11cd1f371360d38f3720f153cc8255799dce78c9f22fc3f5588b590b7b0fe883",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1141,
+    "pre_conformance_seconds_per_mora": 0.1156,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "車に気をつけて帰ってください。",
-  "page_text": "車に気をつけて帰ってください。",
-  "seed_offset": 0,
+  "tts_input_text": "信号が青になってから渡ります。",
+  "page_text": "信号が青になってから渡ります。",
+  "seed_offset": 3,
   "prosody": {
-    "median_f0": 240.0,
+    "median_f0": 247.4,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.965,
-    "tail_f0": 226.4,
-    "tail_vs_median": 0.943,
+    "f0_vs_baseline": 0.995,
+    "tail_f0": 222.2,
+    "tail_vs_median": 0.898,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0737,
+    "distance": 0.0089,
     "limit": 0.35,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "車に気をつけて帰ってください",
-      "medium": "車に気をつけて帰ってください"
+      "small": "信号が青になってから渡ります",
+      "medium": "信号が青になってから渡ります"
     },
-    "target": "くるまにきをつけてかえってください",
+    "target": "しんごうがあおになってからわたります",
     "ratio": 1.0,
     "tail_ratio": 1.0,
     "head_ratio": 1.0,

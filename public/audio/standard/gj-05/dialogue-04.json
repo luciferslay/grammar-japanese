@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 5.0389,
-    "speech_seconds": 4.29,
+    "duration_seconds": 4.3481,
+    "speech_seconds": 3.62,
     "mora_count": 29,
-    "seconds_per_mora": 0.1479,
-    "active_rms_dbfs": -23.93,
-    "peak_dbfs": -9.96,
-    "median_f0_hz": 247.42,
-    "voiced_f0_p10_hz": 202.19,
+    "seconds_per_mora": 0.1248,
+    "active_rms_dbfs": -23.92,
+    "peak_dbfs": -9.97,
+    "median_f0_hz": 250.0,
+    "voiced_f0_p10_hz": 203.39,
     "voiced_f0_p90_hz": 279.07,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -28.9
+    "tail_margin_db": -28.8
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,44 +43,16 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "a3fe8e2066f22862606e8b89ed006bd2779b6430e784b0b8d3c3a475e1fc5b50",
+  "output_sha256": "89fd5560d630da0a79267a222801a59abcc4bab0ef88d9324fe4e1884a01f084",
   "tempo_conformance": {
-    "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1328,
-    "target_seconds_per_mora": 0.1535
-  },
-  "tts_input_text": "私は勉強するときも、いつも音楽を聞きながらします。 はい。",
-  "page_text": "私は勉強するときも、いつも音楽を聞きながらします。",
-  "seed_offset": 0,
-  "prosody": {
-    "median_f0": 248.7,
-    "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.0,
-    "tail_f0": 199.2,
-    "tail_vs_median": 0.801,
-    "low_pitch": false,
-    "falling_tail": false,
-    "pass": true
-  },
-  "timbre": {
-    "distance": null,
-    "pass": true
-  },
-  "tail_cliff": {
-    "margin_db": -28.9,
-    "cliff_db": 2.4,
-    "pass": true,
-    "limit_db": -20.0
-  },
-  "tail_fade": {
-    "fade_ms": 170,
-    "max_step_db": 8.9,
-    "pass": true
+    "atempo_factor": 1.191071,
+    "pre_conformance_seconds_per_mora": 0.1479,
+    "target_seconds_per_mora": 0.1242
   },
   "sentence_asr": {
     "by_model": {
       "small": "私は勉強する時も、いつも音楽を聴きながらします。",
-      "medium": "私は勉強する時も、いつも音楽を聴きながらします。"
+      "medium": "私は勉強する時もいつも音楽を聴きながらします"
     },
     "target": "わたしはべんきょうするときもいつもおんがくをききながらします",
     "ratio": 1.0,
@@ -88,5 +60,100 @@
     "head_ratio": 1.0,
     "lead_filler": false,
     "pass": true
+  },
+  "tts_input_text": "私は勉強するときも、いつも音楽を聞きながらします。 はい。",
+  "page_text": "私は勉強するときも、いつも音楽を聞きながらします。",
+  "seed_offset": 0,
+  "previous": {
+    "voice_id": "FEMALE_ONO_ANNA_CLONE",
+    "text": "私は勉強するときも、いつも音楽を聞きながらします。",
+    "seed": 202609221,
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+    "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+    "generation": {
+      "do_sample": true,
+      "top_k": 50,
+      "top_p": 1.0,
+      "temperature": 0.9,
+      "repetition_penalty": 1.05,
+      "subtalker_dosample": true,
+      "subtalker_top_k": 50,
+      "subtalker_top_p": 1.0,
+      "subtalker_temperature": 0.9,
+      "max_new_tokens": 480
+    },
+    "metrics": {
+      "duration_seconds": 5.0389,
+      "speech_seconds": 4.29,
+      "mora_count": 29,
+      "seconds_per_mora": 0.1479,
+      "active_rms_dbfs": -23.93,
+      "peak_dbfs": -9.96,
+      "median_f0_hz": 247.42,
+      "voiced_f0_p10_hz": 202.19,
+      "voiced_f0_p90_hz": 279.07,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "tail_margin_db": -28.9
+    },
+    "quality_assessment": {
+      "automatic_pass": true,
+      "checks": {
+        "speed": true,
+        "pitch": true,
+        "loudness": true,
+        "peak": true,
+        "tail": true
+      },
+      "short_term_rule": false,
+      "manual_review": "required"
+    },
+    "output_sha256": "a3fe8e2066f22862606e8b89ed006bd2779b6430e784b0b8d3c3a475e1fc5b50",
+    "tempo_conformance": {
+      "atempo_factor": 0.9,
+      "pre_conformance_seconds_per_mora": 0.1328,
+      "target_seconds_per_mora": 0.1535
+    },
+    "tts_input_text": "私は勉強するときも、いつも音楽を聞きながらします。 はい。",
+    "page_text": "私は勉強するときも、いつも音楽を聞きながらします。",
+    "seed_offset": 0,
+    "prosody": {
+      "median_f0": 248.7,
+      "baseline_f0": 248.71,
+      "f0_vs_baseline": 1.0,
+      "tail_f0": 199.2,
+      "tail_vs_median": 0.801,
+      "low_pitch": false,
+      "falling_tail": false,
+      "pass": true
+    },
+    "timbre": {
+      "distance": null,
+      "pass": true
+    },
+    "tail_cliff": {
+      "margin_db": -28.9,
+      "cliff_db": 2.4,
+      "pass": true,
+      "limit_db": -20.0
+    },
+    "tail_fade": {
+      "fade_ms": 170,
+      "max_step_db": 8.9,
+      "pass": true
+    },
+    "sentence_asr": {
+      "by_model": {
+        "small": "私は勉強する時も、いつも音楽を聴きながらします。",
+        "medium": "私は勉強する時も、いつも音楽を聴きながらします。"
+      },
+      "target": "わたしはべんきょうするときもいつもおんがくをききながらします",
+      "ratio": 1.0,
+      "tail_ratio": 1.0,
+      "head_ratio": 1.0,
+      "lead_filler": false,
+      "pass": true
+    }
   }
 }

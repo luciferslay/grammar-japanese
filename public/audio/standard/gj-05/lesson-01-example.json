@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "夜の山は危ないです。",
+  "text": "スマホの画面が暗くて、よく見えません。",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 2.3655,
-    "speech_seconds": 1.6,
-    "mora_count": 12,
-    "seconds_per_mora": 0.1333,
-    "active_rms_dbfs": -23.72,
-    "peak_dbfs": -9.82,
-    "median_f0_hz": 234.15,
-    "voiced_f0_p10_hz": 198.35,
-    "voiced_f0_p90_hz": 279.73,
+    "duration_seconds": 3.5772,
+    "speech_seconds": 2.93,
+    "mora_count": 19,
+    "seconds_per_mora": 0.1542,
+    "active_rms_dbfs": -23.76,
+    "peak_dbfs": -10.46,
+    "median_f0_hz": 242.42,
+    "voiced_f0_p10_hz": 204.26,
+    "voiced_f0_p90_hz": 289.16,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,36 +41,36 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "c097d3dabf921b38d56663e2ed140c688ba33c1d909f0af50e839d9b2667c606",
+  "output_sha256": "818d355d0f2a6e069b2a2744b4504603ab3c98bc2248739a82de448f6c50950e",
   "tempo_conformance": {
-    "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.12,
+    "atempo_factor": 1.008058,
+    "pre_conformance_seconds_per_mora": 0.1547,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "夜の山は危ないです。",
-  "page_text": "夜の山は危ないです。",
-  "seed_offset": 1,
+  "tts_input_text": "スマホの画面が暗くて、よく見えません。",
+  "page_text": "スマホの画面が暗くて、よく見えません。",
+  "seed_offset": 0,
   "prosody": {
-    "median_f0": 233.0,
+    "median_f0": 242.4,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.937,
-    "tail_f0": 230.8,
-    "tail_vs_median": 0.99,
+    "f0_vs_baseline": 0.975,
+    "tail_f0": 235.3,
+    "tail_vs_median": 0.971,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0351,
+    "distance": 0.0478,
     "limit": 0.35,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "夜の山は危ないです",
-      "medium": "夜の山は危ないです"
+      "small": "スマホの画面が暗くてよく見えません",
+      "medium": "スマホの画面が暗くてよく見えません"
     },
-    "target": "よるのやまはあぶないです",
+    "target": "すまほのがめんがくらくてよくみえません",
     "ratio": 1.0,
     "tail_ratio": 1.0,
     "head_ratio": 1.0,
@@ -78,7 +78,9 @@
     "pass": true
   },
   "internal_pause": {
-    "gaps_ms": [],
+    "gaps_ms": [
+      310
+    ],
     "pass": true
   }
 }

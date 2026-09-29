@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "飲み物は何にしますか。",
+  "text": "多かったので、少し残しました。",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 2.4289,
-    "speech_seconds": 1.83,
-    "mora_count": 12,
-    "seconds_per_mora": 0.1525,
-    "active_rms_dbfs": -23.62,
-    "peak_dbfs": -10.18,
-    "median_f0_hz": 246.16,
-    "voiced_f0_p10_hz": 212.39,
-    "voiced_f0_p90_hz": 296.3,
+    "duration_seconds": 3.0349,
+    "speech_seconds": 2.46,
+    "mora_count": 16,
+    "seconds_per_mora": 0.1537,
+    "active_rms_dbfs": -23.99,
+    "peak_dbfs": -9.63,
+    "median_f0_hz": 247.42,
+    "voiced_f0_p10_hz": 206.9,
+    "voiced_f0_p90_hz": 333.33,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,36 +41,36 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "36637a9372c087cd88fcb4aa4c62b5f5c0893dbaa89292462c3a786eac0ec517",
+  "output_sha256": "1fcd5f471a31e127be8f1ccc1a9d0ce2fd640355ec959464016d423c47900d9e",
   "tempo_conformance": {
-    "atempo_factor": 0.928339,
-    "pre_conformance_seconds_per_mora": 0.1425,
+    "atempo_factor": 0.924267,
+    "pre_conformance_seconds_per_mora": 0.1419,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "飲み物は何にしますか。",
-  "page_text": "飲み物は何にしますか。",
+  "tts_input_text": "多かったので、少し残しました。",
+  "page_text": "多かったので、少し残しました。",
   "seed_offset": 0,
   "prosody": {
-    "median_f0": 244.9,
+    "median_f0": 258.1,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.985,
-    "tail_f0": 201.7,
-    "tail_vs_median": 0.824,
+    "f0_vs_baseline": 1.038,
+    "tail_f0": 258.1,
+    "tail_vs_median": 1.0,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0309,
+    "distance": 0.0429,
     "limit": 0.35,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "飲み物は何にしますか",
-      "medium": "飲み物は何にしますか?"
+      "small": "多かったので少し残しました",
+      "medium": "多かったので少し残しました"
     },
-    "target": "のみものはなににしますか",
+    "target": "おおかったのですこしのこしました",
     "ratio": 1.0,
     "tail_ratio": 1.0,
     "head_ratio": 1.0,

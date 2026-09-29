@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "頼む",
+  "text": "おなかがすく",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 1.0552,
-    "speech_seconds": 0.47,
-    "mora_count": 3,
-    "seconds_per_mora": 0.1567,
-    "active_rms_dbfs": -23.73,
-    "peak_dbfs": -13.61,
-    "median_f0_hz": 255.32,
-    "voiced_f0_p10_hz": 226.89,
-    "voiced_f0_p90_hz": 285.71,
+    "duration_seconds": 1.4942,
+    "speech_seconds": 0.92,
+    "mora_count": 6,
+    "seconds_per_mora": 0.1533,
+    "active_rms_dbfs": -23.99,
+    "peak_dbfs": -12.68,
+    "median_f0_hz": 263.74,
+    "voiced_f0_p10_hz": 221.41,
+    "voiced_f0_p90_hz": 287.09,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,51 +41,51 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "2af22eb8993a1b0c3c2246d7960d1cf88e2b4e3fe27acc257150c9338ca047c4",
+  "output_sha256": "692e8a264af42307c7f910279efd3737a766b7843de3460cfa4faf2a129cbdde",
   "tempo_conformance": {
-    "atempo_factor": 1.042345,
-    "pre_conformance_seconds_per_mora": 0.16,
+    "atempo_factor": 0.912052,
+    "pre_conformance_seconds_per_mora": 0.14,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "頼む。",
-  "page_text": "頼む",
-  "seed_offset": 4,
+  "tts_input_text": "おなかがすく。",
+  "page_text": "おなかがすく",
+  "seed_offset": 1,
   "term_policy": {
-    "speech_seconds": 0.45,
-    "per_syllable": 0.15,
+    "speech_seconds": 0.8,
+    "per_syllable": 0.1333,
     "too_short": false,
     "too_long": false,
-    "pass": false,
+    "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.02,
+    "distance_to_target": 0.0033,
     "asr": {
       "by_model": {
-        "small": "たよむ",
-        "medium": "たよむ"
+        "small": "お腹がすく",
+        "medium": "おなかがすく"
       },
-      "target": "たのむ",
-      "ratio": 0.6667,
-      "exact": false,
+      "target": "おなかがすく",
+      "ratio": 1.0,
+      "exact": true,
       "lead_filler": false,
       "tail_extra": false,
       "incomplete": false,
-      "pass": false
+      "pass": true
     },
-    "ratio": 0.6667
+    "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 255.3,
+    "median_f0": 261.0,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.027,
-    "tail_f0": 251.4,
-    "tail_vs_median": 0.985,
+    "f0_vs_baseline": 1.049,
+    "tail_f0": 275.9,
+    "tail_vs_median": 1.057,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0311,
+    "distance": 0.0394,
     "limit": 0.35,
     "pass": true
   }

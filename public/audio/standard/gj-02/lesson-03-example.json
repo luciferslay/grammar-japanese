@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "子どものころ、犬を飼っていました。",
+  "text": "週末、友達を家に泊めました。",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 3.1067,
-    "speech_seconds": 2.47,
-    "mora_count": 16,
-    "seconds_per_mora": 0.1544,
-    "active_rms_dbfs": -23.75,
-    "peak_dbfs": -11.71,
-    "median_f0_hz": 255.32,
-    "voiced_f0_p10_hz": 210.34,
-    "voiced_f0_p90_hz": 315.79,
+    "duration_seconds": 3.2445,
+    "speech_seconds": 2.63,
+    "mora_count": 17,
+    "seconds_per_mora": 0.1547,
+    "active_rms_dbfs": -23.83,
+    "peak_dbfs": -11.28,
+    "median_f0_hz": 269.66,
+    "voiced_f0_p10_hz": 216.22,
+    "voiced_f0_p90_hz": 308.49,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,27 +41,27 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "273b48b8f94ed619b3c5202e88a4bec6a8dbf976c22b2bafb518a0ba1846862a",
+  "output_sha256": "6fccd1e5c1be3864274fb34b6a140684c193094aaa62c4ee7afc8beb1eef9d79",
   "tempo_conformance": {
-    "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1381,
+    "atempo_factor": 0.969534,
+    "pre_conformance_seconds_per_mora": 0.1488,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "子どものころ、犬を飼っていました。",
-  "page_text": "子どものころ、犬を飼っていました。",
+  "tts_input_text": "週末、友達を家に泊めました。",
+  "page_text": "週末、友達を家に泊めました。",
   "seed_offset": 0,
   "prosody": {
-    "median_f0": 252.6,
+    "median_f0": 266.7,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.016,
-    "tail_f0": 213.4,
-    "tail_vs_median": 0.845,
+    "f0_vs_baseline": 1.072,
+    "tail_f0": 238.8,
+    "tail_vs_median": 0.896,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0171,
+    "distance": 0.0849,
     "limit": 0.35,
     "pass": true
   },

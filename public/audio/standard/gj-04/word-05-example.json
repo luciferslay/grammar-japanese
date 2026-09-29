@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "夕方、犬と公園を散歩します。",
+  "text": "健康のために毎日運動しています。",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,22 +18,22 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 3.4598,
-    "speech_seconds": 2.76,
-    "mora_count": 18,
-    "seconds_per_mora": 0.1533,
-    "active_rms_dbfs": -23.74,
-    "peak_dbfs": -10.98,
-    "median_f0_hz": 247.42,
-    "voiced_f0_p10_hz": 228.57,
-    "voiced_f0_p90_hz": 266.67,
+    "duration_seconds": 3.2139,
+    "speech_seconds": 2.56,
+    "mora_count": 21,
+    "seconds_per_mora": 0.1219,
+    "active_rms_dbfs": -23.66,
+    "peak_dbfs": -13.4,
+    "median_f0_hz": 237.62,
+    "voiced_f0_p10_hz": 209.06,
+    "voiced_f0_p90_hz": 263.74,
     "sample_rate_hz": 24000,
     "channels": 1
   },
   "quality_assessment": {
-    "automatic_pass": true,
+    "automatic_pass": false,
     "checks": {
-      "speed": true,
+      "speed": false,
       "pitch": true,
       "loudness": true,
       "peak": true
@@ -41,36 +41,36 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "7aa9f54416cfc1a5869187ed5b2c3cdc2e4726d6290f92e70f43bd0de23b2342",
+  "output_sha256": "b82b6fa0f3724108e6ccc940230616e2fea931de77e3fa18b47d4c24d7c972be",
   "tempo_conformance": {
-    "atempo_factor": 0.92291,
-    "pre_conformance_seconds_per_mora": 0.1417,
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.11,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "夕方、犬と公園を散歩します。",
-  "page_text": "夕方、犬と公園を散歩します。",
-  "seed_offset": 0,
+  "tts_input_text": "健康のために毎日運動しています。",
+  "page_text": "健康のために毎日運動しています。",
+  "seed_offset": 4,
   "prosody": {
-    "median_f0": 247.4,
+    "median_f0": 237.6,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.995,
-    "tail_f0": 244.9,
+    "f0_vs_baseline": 0.955,
+    "tail_f0": 235.3,
     "tail_vs_median": 0.99,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0205,
+    "distance": 0.0259,
     "limit": 0.35,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "夕方、犬と公園を散歩します。",
-      "medium": "夕方、犬と公園を散歩します。"
+      "small": "健康のために毎日運動しています",
+      "medium": "健康のために毎日運動しています"
     },
-    "target": "ゆうがたいぬとこうえんをさんぽします",
+    "target": "けんこうのためにまいにちうんどうしています",
     "ratio": 1.0,
     "tail_ratio": 1.0,
     "head_ratio": 1.0,
@@ -78,9 +78,7 @@
     "pass": true
   },
   "internal_pause": {
-    "gaps_ms": [
-      320
-    ],
+    "gaps_ms": [],
     "pass": true
   }
 }

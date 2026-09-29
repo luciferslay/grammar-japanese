@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "洗濯する",
+  "text": "えらい",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 1.4492,
-    "speech_seconds": 0.8,
-    "mora_count": 6,
-    "seconds_per_mora": 0.1333,
-    "active_rms_dbfs": -24.2,
-    "peak_dbfs": -13.64,
-    "median_f0_hz": 244.9,
-    "voiced_f0_p10_hz": 229.01,
-    "voiced_f0_p90_hz": 260.87,
+    "duration_seconds": 0.9491,
+    "speech_seconds": 0.38,
+    "mora_count": 3,
+    "seconds_per_mora": 0.1267,
+    "active_rms_dbfs": -23.78,
+    "peak_dbfs": -12.79,
+    "median_f0_hz": 258.06,
+    "voiced_f0_p10_hz": 231.26,
+    "voiced_f0_p90_hz": 279.07,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,30 +41,30 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "b6119518625c459023e479be16dd6a15eb26d4a95966cbb20966f56f121e41e1",
+  "output_sha256": "6b175db127f98ad7156db7fa5c0e058c3f6b81ace88f535ed5b4b3e00cf4e57e",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1183,
+    "pre_conformance_seconds_per_mora": 0.11,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "洗濯する。",
-  "page_text": "洗濯する",
-  "seed_offset": 0,
+  "tts_input_text": "えらい。",
+  "page_text": "えらい",
+  "seed_offset": 2,
   "term_policy": {
-    "speech_seconds": 0.69,
-    "per_syllable": 0.115,
+    "speech_seconds": 0.3,
+    "per_syllable": 0.1,
     "too_short": false,
     "too_long": false,
     "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.015,
+    "distance_to_target": 0.03,
     "asr": {
       "by_model": {
-        "small": "選択する",
-        "medium": "選択する"
+        "small": "えらい",
+        "medium": "えらい"
       },
-      "target": "せんたくする",
+      "target": "えらい",
       "ratio": 1.0,
       "exact": true,
       "lead_filler": false,
@@ -75,17 +75,17 @@
     "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 246.2,
+    "median_f0": 258.1,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.99,
-    "tail_f0": 250.0,
-    "tail_vs_median": 1.016,
+    "f0_vs_baseline": 1.038,
+    "tail_f0": 258.1,
+    "tail_vs_median": 1.0,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.1046,
+    "distance": 0.1446,
     "limit": 0.35,
     "pass": true
   }

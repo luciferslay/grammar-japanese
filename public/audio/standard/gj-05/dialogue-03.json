@@ -88,5 +88,9 @@
     "head_ratio": 1.0,
     "lead_filler": false,
     "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.1,
+    "pass": true
   }
 }

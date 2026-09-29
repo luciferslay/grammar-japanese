@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "実は",
+  "text": "一日中",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 1.1738,
-    "speech_seconds": 0.49,
-    "mora_count": 3,
-    "seconds_per_mora": 0.1633,
-    "active_rms_dbfs": -24.22,
-    "peak_dbfs": -13.38,
-    "median_f0_hz": 240.0,
-    "voiced_f0_p10_hz": 213.42,
-    "voiced_f0_p90_hz": 288.12,
+    "duration_seconds": 1.5762,
+    "speech_seconds": 0.9,
+    "mora_count": 6,
+    "seconds_per_mora": 0.15,
+    "active_rms_dbfs": -23.83,
+    "peak_dbfs": -15.01,
+    "median_f0_hz": 275.86,
+    "voiced_f0_p10_hz": 244.9,
+    "voiced_f0_p90_hz": 289.16,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,30 +41,30 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "ec7011e6023202aab4b3bcae23004cc2316e9c0081e90d84bea8f476e764ff19",
+  "output_sha256": "1ca588a1b3f51d6dc29a8b1fa1c6d2eac4f28898a028232bd527df12d3f6f51f",
   "tempo_conformance": {
-    "atempo_factor": 1.085776,
-    "pre_conformance_seconds_per_mora": 0.1667,
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.135,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "実は。",
-  "page_text": "実は",
-  "seed_offset": 1,
+  "tts_input_text": "一日中。",
+  "page_text": "一日中",
+  "seed_offset": 0,
   "term_policy": {
-    "speech_seconds": 0.48,
-    "per_syllable": 0.16,
+    "speech_seconds": 0.78,
+    "per_syllable": 0.13,
     "too_short": false,
     "too_long": false,
     "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.03,
+    "distance_to_target": 0.0,
     "asr": {
       "by_model": {
-        "small": "実は",
-        "medium": "実は"
+        "small": "いちにちじゅう",
+        "medium": "1日中"
       },
-      "target": "じつは",
+      "target": "いちにちじゅう",
       "ratio": 1.0,
       "exact": true,
       "lead_filler": false,
@@ -75,17 +75,17 @@
     "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 241.2,
+    "median_f0": 275.9,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.97,
-    "tail_f0": 252.7,
-    "tail_vs_median": 1.048,
+    "f0_vs_baseline": 1.109,
+    "tail_f0": 275.9,
+    "tail_vs_median": 1.0,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0218,
+    "distance": 0.1026,
     "limit": 0.35,
     "pass": true
   }

@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "日帰りで温泉に行きました。",
+  "text": "午後は市内を観光します。",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,22 +18,22 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 2.5413,
-    "speech_seconds": 1.87,
-    "mora_count": 15,
-    "seconds_per_mora": 0.1247,
-    "active_rms_dbfs": -23.74,
-    "peak_dbfs": -9.7,
-    "median_f0_hz": 252.63,
-    "voiced_f0_p10_hz": 198.35,
-    "voiced_f0_p90_hz": 269.66,
+    "duration_seconds": 2.6028,
+    "speech_seconds": 1.89,
+    "mora_count": 14,
+    "seconds_per_mora": 0.135,
+    "active_rms_dbfs": -23.89,
+    "peak_dbfs": -10.63,
+    "median_f0_hz": 242.42,
+    "voiced_f0_p10_hz": 219.78,
+    "voiced_f0_p90_hz": 279.07,
     "sample_rate_hz": 24000,
     "channels": 1
   },
   "quality_assessment": {
-    "automatic_pass": false,
+    "automatic_pass": true,
     "checks": {
-      "speed": false,
+      "speed": true,
       "pitch": true,
       "loudness": true,
       "peak": true
@@ -41,27 +41,27 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "a9f51ae2e48eb58ea905249a5e95274133c61f9de0b2c10c30827f46a90a07cf",
+  "output_sha256": "6ea7dc22b33625d9d96221e2d904c3f50f87ae7d719b17d207890075bc058e67",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1127,
+    "pre_conformance_seconds_per_mora": 0.1207,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "日帰りで温泉に行きました。",
-  "page_text": "日帰りで温泉に行きました。",
-  "seed_offset": 5,
+  "tts_input_text": "午後は市内を観光します。",
+  "page_text": "午後は市内を観光します。",
+  "seed_offset": 0,
   "prosody": {
-    "median_f0": 252.6,
+    "median_f0": 242.4,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.016,
-    "tail_f0": 244.9,
-    "tail_vs_median": 0.969,
+    "f0_vs_baseline": 0.975,
+    "tail_f0": 242.4,
+    "tail_vs_median": 1.0,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0409,
+    "distance": 0.0343,
     "limit": 0.35,
     "pass": true
   },

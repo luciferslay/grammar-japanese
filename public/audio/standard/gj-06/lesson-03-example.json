@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "朝ご飯を食べなかったので、おなかがすきました。",
+  "text": "引っ越しを友達に手伝ってもらいました。",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 4.0217,
-    "speech_seconds": 3.45,
-    "mora_count": 23,
-    "seconds_per_mora": 0.15,
+    "duration_seconds": 3.2861,
+    "speech_seconds": 2.68,
+    "mora_count": 21,
+    "seconds_per_mora": 0.1276,
     "active_rms_dbfs": -23.93,
-    "peak_dbfs": -10.73,
-    "median_f0_hz": 242.42,
-    "voiced_f0_p10_hz": 208.7,
-    "voiced_f0_p90_hz": 286.06,
+    "peak_dbfs": -9.59,
+    "median_f0_hz": 258.06,
+    "voiced_f0_p10_hz": 214.48,
+    "voiced_f0_p90_hz": 282.02,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,41 +41,41 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "d1881d214f5e108af3ec7f30dfa88a4c83cb1607d86bd33b7c2b449602d8a7bf",
+  "output_sha256": "eaa84b774d291ed3a3fb604de6f0cca29557a79d45338b4a27ff2a5916d5d632",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1348,
+    "pre_conformance_seconds_per_mora": 0.1148,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "朝ご飯を食べなかったので、おなかがすきました。",
-  "page_text": "朝ご飯を食べなかったので、おなかがすきました。",
-  "seed_offset": 4,
+  "tts_input_text": "引っ越しを友達に手伝ってもらいました。",
+  "page_text": "引っ越しを友達に手伝ってもらいました。",
+  "seed_offset": 0,
   "prosody": {
-    "median_f0": 242.4,
+    "median_f0": 258.1,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.975,
-    "tail_f0": 246.2,
-    "tail_vs_median": 1.015,
+    "f0_vs_baseline": 1.038,
+    "tail_f0": 224.3,
+    "tail_vs_median": 0.869,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0209,
+    "distance": 0.0096,
     "limit": 0.35,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "朝ごはんを食べなかったのでお腹がすきました",
-      "medium": "朝ごはんを食べなかったのでお腹が空きました"
+      "small": "引っ越しを友達に手伝ってもらいました",
+      "medium": "引っ越しを友達に手伝ってもらいました"
     },
-    "target": "あさごめしをたべなかったのでおなかがすきました",
-    "ratio": 0.8519,
+    "target": "ひっこしをともだちにてつだってもらいました",
+    "ratio": 1.0,
     "tail_ratio": 1.0,
     "head_ratio": 1.0,
     "lead_filler": false,
-    "pass": false
+    "pass": true
   },
   "internal_pause": {
     "gaps_ms": [],

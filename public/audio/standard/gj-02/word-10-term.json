@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "鍵をかける",
+  "text": "禁止",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 1.4673,
-    "speech_seconds": 0.89,
-    "mora_count": 6,
-    "seconds_per_mora": 0.1483,
-    "active_rms_dbfs": -24.1,
-    "peak_dbfs": -10.1,
-    "median_f0_hz": 237.62,
-    "voiced_f0_p10_hz": 210.17,
-    "voiced_f0_p90_hz": 307.69,
+    "duration_seconds": 1.065,
+    "speech_seconds": 0.48,
+    "mora_count": 3,
+    "seconds_per_mora": 0.16,
+    "active_rms_dbfs": -24.13,
+    "peak_dbfs": -13.28,
+    "median_f0_hz": 240.0,
+    "voiced_f0_p10_hz": 212.45,
+    "voiced_f0_p90_hz": 245.4,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,30 +41,30 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "70107b7c1ccc7e27b2083cb5fa03a0e69c943eb69079755b4fd489bee9196492",
+  "output_sha256": "c4850b1e7ff40c43d30d419d5021da95568ff49533301db9b032c020d9970e60",
   "tempo_conformance": {
-    "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.13,
+    "atempo_factor": 1.107492,
+    "pre_conformance_seconds_per_mora": 0.17,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "鍵をかける。",
-  "page_text": "鍵をかける",
+  "tts_input_text": "禁止。",
+  "page_text": "禁止",
   "seed_offset": 0,
   "term_policy": {
-    "speech_seconds": 0.76,
-    "per_syllable": 0.1267,
+    "speech_seconds": 0.47,
+    "per_syllable": 0.1567,
     "too_short": false,
     "too_long": false,
     "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.0033,
+    "distance_to_target": 0.0267,
     "asr": {
       "by_model": {
-        "small": "鍵をかける",
-        "medium": "鍵をかける"
+        "small": "禁止",
+        "medium": "禁止"
       },
-      "target": "かぎをかける",
+      "target": "きんし",
       "ratio": 1.0,
       "exact": true,
       "lead_filler": false,
@@ -75,17 +75,17 @@
     "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 237.6,
+    "median_f0": 241.2,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.955,
-    "tail_f0": 226.4,
-    "tail_vs_median": 0.953,
+    "f0_vs_baseline": 0.97,
+    "tail_f0": 240.0,
+    "tail_vs_median": 0.995,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0948,
+    "distance": 0.0253,
     "limit": 0.35,
     "pass": true
   }

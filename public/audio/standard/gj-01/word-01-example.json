@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "夏休みに家族で旅行しました。",
+  "text": "この町の名物は焼きそばです。",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 2.9809,
-    "speech_seconds": 2.4,
-    "mora_count": 17,
-    "seconds_per_mora": 0.1412,
-    "active_rms_dbfs": -23.91,
-    "peak_dbfs": -8.18,
-    "median_f0_hz": 237.62,
-    "voiced_f0_p10_hz": 203.39,
-    "voiced_f0_p90_hz": 292.68,
+    "duration_seconds": 2.8615,
+    "speech_seconds": 2.2,
+    "mora_count": 16,
+    "seconds_per_mora": 0.1375,
+    "active_rms_dbfs": -23.7,
+    "peak_dbfs": -12.32,
+    "median_f0_hz": 285.71,
+    "voiced_f0_p10_hz": 255.32,
+    "voiced_f0_p90_hz": 311.69,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,27 +41,27 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "ed5719b5e9878adf5bf84416e5cb0ec68db6bdeebdd7578c56b119786b480f24",
+  "output_sha256": "3a77c122297a22d4bc68446fc9482f13c83ee8c2f196f4bd4697e57f85add0e2",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1265,
+    "pre_conformance_seconds_per_mora": 0.1237,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "夏休みに家族で旅行しました。",
-  "page_text": "夏休みに家族で旅行しました。",
+  "tts_input_text": "この町の名物は焼きそばです。",
+  "page_text": "この町の名物は焼きそばです。",
   "seed_offset": 0,
   "prosody": {
-    "median_f0": 240.0,
+    "median_f0": 285.7,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.965,
-    "tail_f0": 233.0,
-    "tail_vs_median": 0.971,
+    "f0_vs_baseline": 1.149,
+    "tail_f0": 300.2,
+    "tail_vs_median": 1.051,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0197,
+    "distance": 0.146,
     "limit": 0.35,
     "pass": true
   },

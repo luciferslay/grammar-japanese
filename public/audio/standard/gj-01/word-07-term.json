@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "日帰り",
+  "text": "観光",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 1.2465,
-    "speech_seconds": 0.59,
+    "duration_seconds": 1.1915,
+    "speech_seconds": 0.6,
     "mora_count": 4,
-    "seconds_per_mora": 0.1475,
-    "active_rms_dbfs": -23.76,
-    "peak_dbfs": -10.74,
+    "seconds_per_mora": 0.15,
+    "active_rms_dbfs": -23.96,
+    "peak_dbfs": -12.83,
     "median_f0_hz": 244.9,
-    "voiced_f0_p10_hz": 194.49,
-    "voiced_f0_p90_hz": 275.86,
+    "voiced_f0_p10_hz": 239.06,
+    "voiced_f0_p90_hz": 255.87,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,30 +41,30 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "0cb126e7e39c58e6f9ce4e8732fb9ee496486a37214b0b29e3c8ccf722b35d90",
+  "output_sha256": "c93734d249ec76cd8ae10114288790f66bb0c66c66fa4de75b0cd24db07ef86d",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.13,
+    "pre_conformance_seconds_per_mora": 0.135,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "日帰り。",
-  "page_text": "日帰り",
+  "tts_input_text": "観光。",
+  "page_text": "観光",
   "seed_offset": 0,
   "term_policy": {
-    "speech_seconds": 0.5,
-    "per_syllable": 0.125,
+    "speech_seconds": 0.52,
+    "per_syllable": 0.13,
     "too_short": false,
     "too_long": false,
     "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.005,
+    "distance_to_target": 0.0,
     "asr": {
       "by_model": {
-        "small": "日替えり",
-        "medium": "日帰り"
+        "small": "観光",
+        "medium": "観光"
       },
-      "target": "ひがえり",
+      "target": "かんこう",
       "ratio": 1.0,
       "exact": true,
       "lead_filler": false,
@@ -75,17 +75,17 @@
     "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 244.9,
+    "median_f0": 242.4,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.985,
-    "tail_f0": 258.1,
-    "tail_vs_median": 1.054,
+    "f0_vs_baseline": 0.975,
+    "tail_f0": 243.7,
+    "tail_vs_median": 1.005,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0644,
+    "distance": 0.0931,
     "limit": 0.35,
     "pass": true
   }

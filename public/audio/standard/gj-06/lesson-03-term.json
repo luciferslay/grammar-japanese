@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "おなかがすく",
+  "text": "手伝う",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 1.4942,
-    "speech_seconds": 0.92,
-    "mora_count": 6,
-    "seconds_per_mora": 0.1533,
-    "active_rms_dbfs": -23.99,
-    "peak_dbfs": -12.68,
-    "median_f0_hz": 263.74,
-    "voiced_f0_p10_hz": 221.41,
-    "voiced_f0_p90_hz": 287.09,
+    "duration_seconds": 1.1558,
+    "speech_seconds": 0.61,
+    "mora_count": 4,
+    "seconds_per_mora": 0.1525,
+    "active_rms_dbfs": -23.98,
+    "peak_dbfs": -9.79,
+    "median_f0_hz": 250.0,
+    "voiced_f0_p10_hz": 208.7,
+    "voiced_f0_p90_hz": 292.68,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,30 +41,30 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "692e8a264af42307c7f910279efd3737a766b7843de3460cfa4faf2a129cbdde",
+  "output_sha256": "7767cf80883b7876652b3c9ef2e50eb25b21c453642081f6e47381267b17a7f9",
   "tempo_conformance": {
-    "atempo_factor": 0.912052,
-    "pre_conformance_seconds_per_mora": 0.14,
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.135,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "おなかがすく。",
-  "page_text": "おなかがすく",
-  "seed_offset": 1,
+  "tts_input_text": "手伝う。",
+  "page_text": "手伝う",
+  "seed_offset": 0,
   "term_policy": {
-    "speech_seconds": 0.8,
-    "per_syllable": 0.1333,
+    "speech_seconds": 0.5,
+    "per_syllable": 0.125,
     "too_short": false,
     "too_long": false,
     "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.0033,
+    "distance_to_target": 0.005,
     "asr": {
       "by_model": {
-        "small": "お腹がすく",
-        "medium": "おなかがすく"
+        "small": "鉄弾",
+        "medium": "手伝う"
       },
-      "target": "おなかがすく",
+      "target": "てつだう",
       "ratio": 1.0,
       "exact": true,
       "lead_filler": false,
@@ -75,17 +75,17 @@
     "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 261.0,
+    "median_f0": 252.6,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.049,
-    "tail_f0": 275.9,
-    "tail_vs_median": 1.057,
+    "f0_vs_baseline": 1.016,
+    "tail_f0": 262.4,
+    "tail_vs_median": 1.039,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0394,
+    "distance": 0.0219,
     "limit": 0.35,
     "pass": true
   }

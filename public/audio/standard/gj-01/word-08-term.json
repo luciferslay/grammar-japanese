@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "お土産",
+  "text": "景色",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 1.2067,
-    "speech_seconds": 0.61,
-    "mora_count": 4,
-    "seconds_per_mora": 0.1525,
-    "active_rms_dbfs": -23.57,
-    "peak_dbfs": -14.53,
-    "median_f0_hz": 252.63,
-    "voiced_f0_p10_hz": 230.77,
-    "voiced_f0_p90_hz": 263.74,
+    "duration_seconds": 1.066,
+    "speech_seconds": 0.48,
+    "mora_count": 3,
+    "seconds_per_mora": 0.16,
+    "active_rms_dbfs": -24.21,
+    "peak_dbfs": -11.73,
+    "median_f0_hz": 279.07,
+    "voiced_f0_p10_hz": 214.13,
+    "voiced_f0_p90_hz": 298.89,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,17 +41,17 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "71151362a4a881188095a816de0b696d9f8f209284861b333eb7051763a4e12f",
+  "output_sha256": "dbaf12202ff86e97759bd62a4c295a7423f43447a09bd84861195fd8b9f7fe27",
   "tempo_conformance": {
-    "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1375,
+    "atempo_factor": 0.912052,
+    "pre_conformance_seconds_per_mora": 0.14,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "お土産。",
-  "page_text": "お土産",
+  "tts_input_text": "景色。",
+  "page_text": "景色",
   "seed_offset": 0,
   "term_policy": {
-    "speech_seconds": 0.52,
+    "speech_seconds": 0.39,
     "per_syllable": 0.13,
     "too_short": false,
     "too_long": false,
@@ -61,10 +61,10 @@
     "distance_to_target": 0.0,
     "asr": {
       "by_model": {
-        "small": "お土産",
-        "medium": "お土産"
+        "small": "景色",
+        "medium": "景色"
       },
-      "target": "おみやげ",
+      "target": "けしき",
       "ratio": 1.0,
       "exact": true,
       "lead_filler": false,
@@ -75,17 +75,17 @@
     "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 252.6,
+    "median_f0": 279.1,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.016,
-    "tail_f0": 256.7,
-    "tail_vs_median": 1.016,
+    "f0_vs_baseline": 1.122,
+    "tail_f0": 268.3,
+    "tail_vs_median": 0.961,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.043,
+    "distance": 0.1562,
     "limit": 0.35,
     "pass": true
   }

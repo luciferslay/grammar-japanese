@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 5.3152,
-    "speech_seconds": 4.61,
+    "duration_seconds": 4.4257,
+    "speech_seconds": 3.73,
     "mora_count": 30,
-    "seconds_per_mora": 0.1537,
-    "active_rms_dbfs": -23.83,
-    "peak_dbfs": -10.69,
-    "median_f0_hz": 240.0,
-    "voiced_f0_p10_hz": 203.74,
-    "voiced_f0_p90_hz": 314.97,
+    "seconds_per_mora": 0.1243,
+    "active_rms_dbfs": -23.91,
+    "peak_dbfs": -10.72,
+    "median_f0_hz": 242.42,
+    "voiced_f0_p10_hz": 205.13,
+    "voiced_f0_p90_hz": 323.89,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -29.9
+    "tail_margin_db": -29.3
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,43 +43,15 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "0b87f74f31ea90bfac4c64b5f0c15fd2a3ecb7ee913f543d5947c0cf894a92a2",
+  "output_sha256": "fcb1c2dc2dfed2e575590966d13a3a36e23fd73db1f9ebfbd971bce3e7099b45",
   "tempo_conformance": {
-    "atempo_factor": 1.107492,
-    "pre_conformance_seconds_per_mora": 0.17,
-    "target_seconds_per_mora": 0.1535
-  },
-  "tts_input_text": "すみません。地図を見ながら歩いていました。駅はこっちですよね。 はい。",
-  "page_text": "すみません。地図を見ながら歩いていました。駅はこっちですよね。",
-  "seed_offset": 0,
-  "prosody": {
-    "median_f0": 242.4,
-    "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.975,
-    "tail_f0": 212.4,
-    "tail_vs_median": 0.876,
-    "low_pitch": false,
-    "falling_tail": false,
-    "pass": true
-  },
-  "timbre": {
-    "distance": null,
-    "pass": true
-  },
-  "tail_cliff": {
-    "margin_db": -29.9,
-    "cliff_db": 2.0,
-    "pass": true,
-    "limit_db": -20.0
-  },
-  "tail_fade": {
-    "fade_ms": 50,
-    "max_step_db": 8.2,
-    "pass": true
+    "atempo_factor": 1.237252,
+    "pre_conformance_seconds_per_mora": 0.1537,
+    "target_seconds_per_mora": 0.1242
   },
   "sentence_asr": {
     "by_model": {
-      "small": "すみません、地図を見ながら歩いていました。 駅はこっちですよね。",
+      "small": "すみません地図を見ながら歩いていました 駅はこっちですよね",
       "medium": "すみません地図を見ながら歩いていました 駅はこっちですよね"
     },
     "target": "すみませんちずをみながらあるいていましたえきはこっちですよね",
@@ -88,5 +60,100 @@
     "head_ratio": 1.0,
     "lead_filler": false,
     "pass": true
+  },
+  "tts_input_text": "すみません。地図を見ながら歩いていました。駅はこっちですよね。 はい。",
+  "page_text": "すみません。地図を見ながら歩いていました。駅はこっちですよね。",
+  "seed_offset": 0,
+  "previous": {
+    "voice_id": "FEMALE_ONO_ANNA_CLONE",
+    "text": "すみません。地図を見ながら歩いていました。駅はこっちですよね。",
+    "seed": 202609221,
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+    "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+    "generation": {
+      "do_sample": true,
+      "top_k": 50,
+      "top_p": 1.0,
+      "temperature": 0.9,
+      "repetition_penalty": 1.05,
+      "subtalker_dosample": true,
+      "subtalker_top_k": 50,
+      "subtalker_top_p": 1.0,
+      "subtalker_temperature": 0.9,
+      "max_new_tokens": 480
+    },
+    "metrics": {
+      "duration_seconds": 5.3152,
+      "speech_seconds": 4.61,
+      "mora_count": 30,
+      "seconds_per_mora": 0.1537,
+      "active_rms_dbfs": -23.83,
+      "peak_dbfs": -10.69,
+      "median_f0_hz": 240.0,
+      "voiced_f0_p10_hz": 203.74,
+      "voiced_f0_p90_hz": 314.97,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "tail_margin_db": -29.9
+    },
+    "quality_assessment": {
+      "automatic_pass": true,
+      "checks": {
+        "speed": true,
+        "pitch": true,
+        "loudness": true,
+        "peak": true,
+        "tail": true
+      },
+      "short_term_rule": false,
+      "manual_review": "required"
+    },
+    "output_sha256": "0b87f74f31ea90bfac4c64b5f0c15fd2a3ecb7ee913f543d5947c0cf894a92a2",
+    "tempo_conformance": {
+      "atempo_factor": 1.107492,
+      "pre_conformance_seconds_per_mora": 0.17,
+      "target_seconds_per_mora": 0.1535
+    },
+    "tts_input_text": "すみません。地図を見ながら歩いていました。駅はこっちですよね。 はい。",
+    "page_text": "すみません。地図を見ながら歩いていました。駅はこっちですよね。",
+    "seed_offset": 0,
+    "prosody": {
+      "median_f0": 242.4,
+      "baseline_f0": 248.71,
+      "f0_vs_baseline": 0.975,
+      "tail_f0": 212.4,
+      "tail_vs_median": 0.876,
+      "low_pitch": false,
+      "falling_tail": false,
+      "pass": true
+    },
+    "timbre": {
+      "distance": null,
+      "pass": true
+    },
+    "tail_cliff": {
+      "margin_db": -29.9,
+      "cliff_db": 2.0,
+      "pass": true,
+      "limit_db": -20.0
+    },
+    "tail_fade": {
+      "fade_ms": 50,
+      "max_step_db": 8.2,
+      "pass": true
+    },
+    "sentence_asr": {
+      "by_model": {
+        "small": "すみません、地図を見ながら歩いていました。 駅はこっちですよね。",
+        "medium": "すみません地図を見ながら歩いていました 駅はこっちですよね"
+      },
+      "target": "すみませんちずをみながらあるいていましたえきはこっちですよね",
+      "ratio": 1.0,
+      "tail_ratio": 1.0,
+      "head_ratio": 1.0,
+      "lead_filler": false,
+      "pass": true
+    }
   }
 }
