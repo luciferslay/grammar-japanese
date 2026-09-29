@@ -154,13 +154,25 @@ def normalize_active_rms(audio: np.ndarray, target_dbfs: float, threshold_dbfs: 
     return normalized * min(1.0, peak_limit / peak)
 
 
+def baseline_for(voice: dict, output: Path) -> dict:
+    """这一条音频用的基准。对话句可以单独指定语速：声线配置里的 dialogue_seconds_per_mora
+    （2026-09-29 Luna：课文里女生明显比男生慢，对话要和男声一样快；单词、例句不变）。"""
+    base = dict(voice["baseline"])
+    if output.name.startswith("dialogue-") and voice.get("dialogue_seconds_per_mora"):
+        base["seconds_per_mora"] = voice["dialogue_seconds_per_mora"]
+    return base
+
+
 def conform_existing(voice_id: str, text: str, output: Path) -> dict:
     config = load_config()
     voice = config["voices"][voice_id]
     before = analyze_audio(output, text, config["quality"]["active_threshold_dbfs"])
-    target_duration = mora_count(text) * voice["baseline"]["seconds_per_mora"]
+    base = baseline_for(voice, output)
+    target_duration = mora_count(text) * base["seconds_per_mora"]
     q = config["quality"]
-    tempo = float(np.clip(before.get("speech_seconds", before["duration_seconds"]) / target_duration, q.get("tempo_min", 0.9), q.get("tempo_max", 1.12)))
+    # 对话单独提速时变速幅度会超过默认上限 1.12，声线可以自带 dialogue_tempo_max
+    tempo_max = voice.get("dialogue_tempo_max", q.get("tempo_max", 1.12)) if output.name.startswith("dialogue-") else q.get("tempo_max", 1.12)
+    tempo = float(np.clip(before.get("speech_seconds", before["duration_seconds"]) / target_duration, q.get("tempo_min", 0.9), tempo_max))
     with tempfile.TemporaryDirectory(prefix="course-tts-") as temp_dir:
         stretched = Path(temp_dir) / "stretched.wav"
         subprocess.run(
@@ -187,7 +199,7 @@ def conform_existing(voice_id: str, text: str, output: Path) -> dict:
     manifest["tempo_conformance"] = {
         "atempo_factor": round(tempo, 6),
         "pre_conformance_seconds_per_mora": before["seconds_per_mora"],
-        "target_seconds_per_mora": voice["baseline"]["seconds_per_mora"],
+        "target_seconds_per_mora": base["seconds_per_mora"],
     }
     output.with_suffix(".json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
@@ -249,7 +261,7 @@ def audit_output(voice_id: str, text: str, output: Path) -> dict:
         "reference_sha256": voice["reference_sha256"],
         "generation": generation_kwargs(config),
         "metrics": metrics,
-        "quality_assessment": assess(metrics, voice["baseline"], config["quality"]),
+        "quality_assessment": assess(metrics, baseline_for(voice, output), config["quality"]),
         "output_sha256": sha256(output),
     }
     # 对话行加测「句尾悬崖」：模型有时会把最后一个音节直接吞掉（까/어/죠），

@@ -50,7 +50,10 @@
         "voiced_f0_p90_hz": 289.19
       },
       "chosen": "Luna 2026-09-29 从第三轮试听里选 c（克隆 Ono_Anna 平读样音）。语速取试听里两句对话变速前的中位数（她自己的语速）；音高取 4 句中位数；音量沿用原女声，和男声一致。",
-      "note": "voice_clone 模式没有 instruct 参数；语气稳靠参考音的平读 + generation_override 的低随机性（对话也用，和单词卡同一套）。"
+      "note": "voice_clone 模式没有 instruct 参数；语气稳靠参考音的平读 + generation_override 的低随机性（对话也用，和单词卡同一套）。",
+      "dialogue_seconds_per_mora": 0.1242,
+      "dialogue_tempo_max": 1.35,
+      "dialogue_speed_note": "2026-09-29 Luna：课文里女生明显比男生慢，对话要和男声一样快；单词、例句不变。0.1242 = 第 1〜5 课男声对话实测秒/音拍的中位数。女声原本约 0.154，要提速约 1.24 倍，超过默认上限 1.12，所以对话单独放宽到 1.35。"
     },
     "FEMALE_CLEAR_SOFT": {
       "role": null,

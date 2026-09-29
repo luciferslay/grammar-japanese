@@ -353,10 +353,17 @@ def generate_one(model, voice_id: str, filename: str, text: str, config: dict, c
             max_gap = max((ms for _, ms in gaps), default=0)
             pause_ok = len(gaps) <= allowed_pauses(text)
             manifest["internal_pause"] = {"gaps_ms": [int(ms) for _, ms in gaps], "pass": pause_ok}
+        # 句首空白：-55dB 的裁切阈值以上、-40dB 的有声阈值以下的底噪不会被裁掉，会变成一段「没声音」
+        # （2026-09-29 Luna 人耳：gj-05「授業中だったので…」前面空了 2.7 秒）
+        sr_out = config["output"]["sample_rate_hz"]
+        voiced = np.flatnonzero(np.abs(np.asarray(final_audio, dtype=np.float64)) >= 10 ** (-40 / 20))
+        lead_s = float(voiced[0] / sr_out) if len(voiced) else 0.0
+        lead_ok = lead_s <= config["output"]["leading_silence_ms"] / 1000 + 0.4
+        manifest["leading_blank"] = {"seconds": round(lead_s, 2), "pass": lead_ok}
         tempo = abs(manifest.get("tempo_conformance", {}).get("atempo_factor", 1.0) - 1.0)
         manifest_text = json.dumps(manifest, ensure_ascii=False, indent=2) + "\n"
         ok = (manifest["quality_assessment"]["automatic_pass"] and term_ok
-              and pros["pass"] and timb["pass"] and tail_ok and pause_ok)
+              and pros["pass"] and timb["pass"] and tail_ok and pause_ok and lead_ok)
         dur = manifest["metrics"]["duration_seconds"]
         why = "" if ok else " <- " + ",".join(
             k for k, v in (("quality", not manifest["quality_assessment"]["automatic_pass"]),
@@ -365,7 +372,7 @@ def generate_one(model, voice_id: str, filename: str, text: str, config: dict, c
                            ("句尾电平", cliff is not None and not cliff["pass"]),
                            ("句尾断崖", fade is not None and not fade["pass"]),
                            ("句子ASR", sent is not None and not sent["pass"]),
-                           ("句中停顿", not pause_ok)) if v
+                           ("句中停顿", not pause_ok), ("句首空白", not lead_ok)) if v
         )
         print(f"[{'PASS' if ok else 'CHECK'}] {voice_id}: {filename} ({dur}s, seed+{attempt}, "
               f"f0={pros['median_f0']}/{pros['baseline_f0']}, tail={pros['tail_vs_median']}, "

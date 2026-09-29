@@ -31,4 +31,8 @@ for p in picks:
                                       "by": "Luna 人耳（重音）"}
     (std / f"{item}.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"[PICK] {lesson}/{item} ← {name}（{meta.get('tts_input_text')}）")
+# 候选是按旧的女声语速录的；对话句换进来后按现在的目标语速（dialogue_seconds_per_mora）再对齐一次
+dialogue = [p.split("=")[0] for p in picks if p.startswith("dialogue-")]
+if dialogue:
+    subprocess.run(["uv", "run", "--script", str(ROOT / "scripts" / "reconform_items.py"), lesson, *dialogue], check=True)
 subprocess.run([sys.executable, str(ROOT / "scripts" / "publish_audio.py"), lesson], check=True)

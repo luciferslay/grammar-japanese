@@ -1,0 +1,84 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "今日は宿題がたくさんあります。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 2.654,
+    "speech_seconds": 1.98,
+    "mora_count": 18,
+    "seconds_per_mora": 0.11,
+    "active_rms_dbfs": -23.67,
+    "peak_dbfs": -10.03,
+    "median_f0_hz": 266.67,
+    "voiced_f0_p10_hz": 228.57,
+    "voiced_f0_p90_hz": 296.3,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": false,
+    "checks": {
+      "speed": false,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "7b2ded4a96bb32bf941d2622ffff7285df532e9e2159f1706d8b9c32c6026262",
+  "tempo_conformance": {
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.0989,
+    "target_seconds_per_mora": 0.1535
+  },
+  "tts_input_text": "今日は宿題がたくさんあります。",
+  "page_text": "今日は宿題がたくさんあります。",
+  "seed_offset": 4,
+  "prosody": {
+    "median_f0": 266.7,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.072,
+    "tail_f0": 275.9,
+    "tail_vs_median": 1.034,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.0199,
+    "limit": 0.35,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "今日は宿題がたくさんあります",
+      "medium": "今日は宿題がたくさんあります"
+    },
+    "target": "こんにちはしゅくだいがたくさんあります",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "internal_pause": {
+    "gaps_ms": [],
+    "pass": true
+  }
+}
