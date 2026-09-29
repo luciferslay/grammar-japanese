@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 2.6664,
-    "speech_seconds": 1.98,
+    "duration_seconds": 2.6773,
+    "speech_seconds": 2.0,
     "mora_count": 15,
-    "seconds_per_mora": 0.132,
-    "active_rms_dbfs": -23.59,
-    "peak_dbfs": -12.27,
-    "median_f0_hz": 244.9,
-    "voiced_f0_p10_hz": 201.68,
-    "voiced_f0_p90_hz": 307.69,
+    "seconds_per_mora": 0.1333,
+    "active_rms_dbfs": -23.73,
+    "peak_dbfs": -13.56,
+    "median_f0_hz": 242.42,
+    "voiced_f0_p10_hz": 198.35,
+    "voiced_f0_p90_hz": 275.86,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,28 +41,40 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "ebcf3791dfe52025d68c49de11612b556d582eb3e58cc4e772d24242a541b968",
+  "output_sha256": "769b5ed9883c81821ae3bbde9e1bd28301cccfd671648e7c5323ec0c7c59df22",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.118,
+    "pre_conformance_seconds_per_mora": 0.1193,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "家賃は月に七万円です。",
+  "tts_input_text": "やちんは月に七万円です。",
   "page_text": "家賃は月に七万円です。",
   "seed_offset": 0,
   "prosody": {
-    "median_f0": 244.9,
+    "median_f0": 242.4,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.985,
-    "tail_f0": 201.7,
-    "tail_vs_median": 0.824,
+    "f0_vs_baseline": 0.975,
+    "tail_f0": 204.3,
+    "tail_vs_median": 0.843,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.035,
+    "distance": 0.0355,
     "limit": 0.35,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "やちんは月に7万円です",
+      "medium": "家賃は月に7万円です"
+    },
+    "target": "やちんはがつにしちまんえんです",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
     "pass": true
   },
   "internal_pause": {

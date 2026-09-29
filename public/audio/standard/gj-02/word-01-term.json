@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 1.3643,
-    "speech_seconds": 0.81,
+    "duration_seconds": 1.2824,
+    "speech_seconds": 0.7,
     "mora_count": 5,
-    "seconds_per_mora": 0.162,
-    "active_rms_dbfs": -23.84,
-    "peak_dbfs": -13.51,
-    "median_f0_hz": 269.66,
-    "voiced_f0_p10_hz": 207.63,
-    "voiced_f0_p90_hz": 286.4,
+    "seconds_per_mora": 0.14,
+    "active_rms_dbfs": -23.43,
+    "peak_dbfs": -11.79,
+    "median_f0_hz": 287.44,
+    "voiced_f0_p10_hz": 242.67,
+    "voiced_f0_p90_hz": 307.69,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,51 +41,51 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "b65a035c37ad4914101addc7a09dd45143429d78f77dac1abd079b53c50772b2",
+  "output_sha256": "81032ceca7d8cc41d8de13be00ae528a74471898ee2952473e1c0ec3754b2abe",
   "tempo_conformance": {
-    "atempo_factor": 1.12,
-    "pre_conformance_seconds_per_mora": 0.176,
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.126,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "大家さん。",
+  "tts_input_text": "おおやさん。",
   "page_text": "大家さん",
-  "seed_offset": 3,
+  "seed_offset": 5,
   "term_policy": {
-    "speech_seconds": 0.84,
-    "per_syllable": 0.168,
+    "speech_seconds": 0.6,
+    "per_syllable": 0.12,
     "too_short": false,
     "too_long": false,
-    "pass": false,
+    "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.038,
+    "distance_to_target": 0.01,
     "asr": {
       "by_model": {
-        "small": "アイカーさん",
-        "medium": "あいかさん"
+        "small": "大屋さん",
+        "medium": "おーやさん"
       },
       "target": "おおやさん",
-      "ratio": 0.4,
-      "exact": false,
-      "lead_filler": true,
+      "ratio": 1.0,
+      "exact": true,
+      "lead_filler": false,
       "tail_extra": false,
       "incomplete": false,
-      "pass": false
+      "pass": true
     },
-    "ratio": 0.4
+    "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 269.7,
+    "median_f0": 287.4,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.084,
-    "tail_f0": 271.2,
-    "tail_vs_median": 1.006,
+    "f0_vs_baseline": 1.156,
+    "tail_f0": 294.5,
+    "tail_vs_median": 1.025,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.2472,
+    "distance": 0.1531,
     "limit": 0.35,
     "pass": true
   }

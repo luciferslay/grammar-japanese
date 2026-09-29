@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 2.8647,
-    "speech_seconds": 2.28,
+    "duration_seconds": 2.6617,
+    "speech_seconds": 2.11,
     "mora_count": 16,
-    "seconds_per_mora": 0.1425,
-    "active_rms_dbfs": -23.99,
-    "peak_dbfs": -11.17,
-    "median_f0_hz": 224.3,
+    "seconds_per_mora": 0.1319,
+    "active_rms_dbfs": -23.82,
+    "peak_dbfs": -10.05,
+    "median_f0_hz": 230.77,
     "voiced_f0_p10_hz": 205.13,
-    "voiced_f0_p90_hz": 272.73,
+    "voiced_f0_p90_hz": 275.86,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,28 +41,40 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "ffe77fc99cac95714b272dc81977b87877866ffa2cce5ce04f0cf5e85984ff0a",
+  "output_sha256": "853e34b9bf1cdf18212aaec8275f9b9cffcb839f00e3c08af997eaef916efd56",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1275,
+    "pre_conformance_seconds_per_mora": 0.1181,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "大家さんに家賃を払いました。",
+  "tts_input_text": "おおやさんにやちんを払いました。",
   "page_text": "大家さんに家賃を払いました。",
-  "seed_offset": 0,
+  "seed_offset": 1,
   "prosody": {
-    "median_f0": 224.3,
+    "median_f0": 230.8,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.902,
-    "tail_f0": 230.8,
-    "tail_vs_median": 1.029,
+    "f0_vs_baseline": 0.928,
+    "tail_f0": 234.2,
+    "tail_vs_median": 1.015,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0495,
+    "distance": 0.0188,
     "limit": 0.35,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "大屋さんにやちんを払いました",
+      "medium": "大屋さんに家賃を払いました"
+    },
+    "target": "おおやさんにやちんをはらいました",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
     "pass": true
   },
   "internal_pause": {

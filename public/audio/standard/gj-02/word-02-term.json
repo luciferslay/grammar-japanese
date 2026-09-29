@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 1.165,
-    "speech_seconds": 0.6,
+    "duration_seconds": 1.0395,
+    "speech_seconds": 0.47,
     "mora_count": 3,
-    "seconds_per_mora": 0.2,
-    "active_rms_dbfs": -23.58,
-    "peak_dbfs": -12.14,
-    "median_f0_hz": 275.86,
-    "voiced_f0_p10_hz": 200.67,
-    "voiced_f0_p90_hz": 347.83,
+    "seconds_per_mora": 0.1567,
+    "active_rms_dbfs": -23.78,
+    "peak_dbfs": -13.76,
+    "median_f0_hz": 250.0,
+    "voiced_f0_p10_hz": 228.57,
+    "voiced_f0_p90_hz": 290.59,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,28 +41,28 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "b163b1727303e2fd7507fc108ad2651afe22e4f6f5ede296b3888f3777c66a0a",
+  "output_sha256": "da55babbb7f76abde4e312a785381c554f6a6c811461493bd3253c3e2ff814e5",
   "tempo_conformance": {
-    "atempo_factor": 1.12,
-    "pre_conformance_seconds_per_mora": 0.22,
+    "atempo_factor": 0.998914,
+    "pre_conformance_seconds_per_mora": 0.1533,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "家賃。",
+  "tts_input_text": "やちん。",
   "page_text": "家賃",
-  "seed_offset": 5,
+  "seed_offset": 0,
   "term_policy": {
-    "speech_seconds": 0.62,
-    "per_syllable": 0.2067,
+    "speech_seconds": 0.43,
+    "per_syllable": 0.1433,
     "too_short": false,
     "too_long": false,
     "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.0767,
+    "distance_to_target": 0.0133,
     "asr": {
       "by_model": {
-        "small": "いえちん",
-        "medium": "家賃"
+        "small": "やっちん",
+        "medium": "やちん"
       },
       "target": "やちん",
       "ratio": 1.0,
@@ -75,17 +75,17 @@
     "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 279.1,
+    "median_f0": 250.0,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 1.122,
-    "tail_f0": 272.9,
-    "tail_vs_median": 0.978,
+    "f0_vs_baseline": 1.005,
+    "tail_f0": 251.3,
+    "tail_vs_median": 1.005,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.1427,
+    "distance": 0.0482,
     "limit": 0.35,
     "pass": true
   }

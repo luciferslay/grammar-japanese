@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 5.9777,
-    "speech_seconds": 5.4,
+    "duration_seconds": 5.9648,
+    "speech_seconds": 5.38,
     "mora_count": 35,
-    "seconds_per_mora": 0.1543,
-    "active_rms_dbfs": -23.87,
-    "peak_dbfs": -10.49,
-    "median_f0_hz": 237.62,
-    "voiced_f0_p10_hz": 208.7,
-    "voiced_f0_p90_hz": 291.27,
+    "seconds_per_mora": 0.1537,
+    "active_rms_dbfs": -23.79,
+    "peak_dbfs": -10.55,
+    "median_f0_hz": 260.87,
+    "voiced_f0_p10_hz": 205.66,
+    "voiced_f0_p90_hz": 311.69,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -29.2
+    "tail_margin_db": -28.9
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,21 +43,21 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "210dce6b72f611acc3a4e97a579acf343c88aacf2193dbc02cf71ba1e21f95d4",
+  "output_sha256": "ea7dcf6d1d9a34d621ecd85ed9e8faa9cbc9f3092be5b2172adc34aba5110a19",
   "tempo_conformance": {
-    "atempo_factor": 1.016287,
-    "pre_conformance_seconds_per_mora": 0.156,
+    "atempo_factor": 0.925081,
+    "pre_conformance_seconds_per_mora": 0.142,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "二、三日ならかまいませんよ。それより長かったらちょっと困りますけどね。 はい。",
+  "tts_input_text": "にさんにちならかまいませんよ。それより長かったらちょっと困りますけどね。 はい。",
   "page_text": "二、三日ならかまいませんよ。それより長かったらちょっと困りますけどね。",
   "seed_offset": 0,
   "prosody": {
-    "median_f0": 237.6,
+    "median_f0": 260.9,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.955,
-    "tail_f0": 208.7,
-    "tail_vs_median": 0.878,
+    "f0_vs_baseline": 1.049,
+    "tail_f0": 200.8,
+    "tail_vs_median": 0.77,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
@@ -67,20 +67,20 @@
     "pass": true
   },
   "tail_cliff": {
-    "margin_db": -29.2,
-    "cliff_db": 2.4,
+    "margin_db": -28.9,
+    "cliff_db": 4.2,
     "pass": true,
     "limit_db": -20.0
   },
   "tail_fade": {
-    "fade_ms": 60,
-    "max_step_db": 5.9,
+    "fade_ms": 70,
+    "max_step_db": 6.2,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "2、三日なら構いませんよ。それより長かったらちょっと困りますけどね。",
-      "medium": "に3日なら構いませんよ それより長かったらちょっと困りますけどね"
+      "small": "2、3日なら構いませんよ。それより長かったらちょっと困りますけどね。",
+      "medium": "二三日なら構いませんよ それより長かったらちょっと困りますけどね"
     },
     "target": "にさんにちならかまいませんよそれよりながかったらちょっとこまりますけどね",
     "ratio": 1.0,
