@@ -18,7 +18,13 @@ export type { Lesson, Word } from './types';
  * 课程顺序 = 网站上的课号。按 JLPT N4 → N3 → N2 分块、块内从易到难排（顺序表见 ~/Developer/nihongo/grammar/LESSON_ORDER.md）。
  * 新课按等级插入对应位置，插入点之后的课号顺延。课程 id 用 gj-NN（与网站课号无关，只是文件标识）。
  */
-export const lessons: Lesson[] = [];
+export const lessons: Lesson[] = [
+  // —— JLPT N4 ——（2026-09-30 Luna：插图、音频都齐了、人耳听过的先上首页）
+  ramenTrip,
+  roomViewing,
+  cafePartTime,
+  weekendTalk,
+];
 
 /**
  * 已写好但音频与插图还没做完的课。放在这里不会出现在首页与姊妹课链接里
@@ -26,10 +32,6 @@ export const lessons: Lesson[] = [];
  */
 export const pendingLessons: Lesson[] = [
   // —— JLPT N4 ——
-  ramenTrip,
-  roomViewing,
-  cafePartTime,
-  weekendTalk,
   walkAndPhone,
   spicyCurry,
   // —— JLPT N3 ——（N4 后面的课做好了往上面插，课号顺延）

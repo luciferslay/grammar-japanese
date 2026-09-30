@@ -346,3 +346,10 @@
 - 都是重音问题 → accent_candidates.py 加 gj-04 两条（汉字／平假名／片假名 × 4 seed），排在第 9〜12 课录音后面。
 - 重音候选页原来标题写死「第 2 课」、「要的」说明只有 gj-02 的，改成按课显示（gj-04、gj-06 的说明也补上）。
 - 13:13 Luna 在音色候选页挑了 **s7**（句首距离 0.379，比 s2 的 0.373 略大 —— 这个指标分不出她听到的差别）。已换进课程：m4a、json 直接用候选的；WSL 里的 wav 母带要另外复制一次（s7.wav → dialogue-02.wav）。被换掉的 s2 本来就在候选文件夹里。
+
+### 2026-09-30 14:0x 候选换进课程；第 1〜4 课上首页
+
+- 14:03 Luna 在 WSL 跑了 `_claude/resume.sh`：用 pick_candidate.py 换进 gj-06 word-01-example=v2-s4（平假名 ぎょうざ）、word-07-example=v1-s2（汉字）、gj-04 word-02-example=v3-s4（片假名 ナニモ）、word-06-term=v1-s1（汉字）；gj-03 对话 2 的 wav 母带换成 s7；然后接着录第 9〜12 课。
+- 为什么要 resume：13:0x 以后 Ubuntu 窗口全关了，**WSL 自己停了**，第 9 课录到一半的录音和预览服务器都断了。以后录音时 Ubuntu 窗口不能关（最小化可以）。
+- Luna 问「已经通过的课上线 GitHub 了吗」：GitHub main 已经在 759e4ba（到 gj-03 s7 为止都推了），但 12 课全在 pendingLessons，首页看不到。
+- **Luna：「好」→ 第 1〜4 课挪进 `lessons`，上首页**（插图、音频齐，人耳复核过；gj-03 对话 2、gj-04 两条刚换，请 Luna 再听）。第 5、6 课差插图，第 7、8 课音频 Luna 还没听，其余还在录。

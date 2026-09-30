@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 3.143,
-    "speech_seconds": 2.52,
+    "duration_seconds": 3.1239,
+    "speech_seconds": 2.49,
     "mora_count": 19,
-    "seconds_per_mora": 0.1326,
+    "seconds_per_mora": 0.1311,
     "active_rms_dbfs": -23.7,
-    "peak_dbfs": -12.86,
-    "median_f0_hz": 230.77,
-    "voiced_f0_p10_hz": 203.39,
-    "voiced_f0_p90_hz": 260.87,
+    "peak_dbfs": -13.06,
+    "median_f0_hz": 263.74,
+    "voiced_f0_p10_hz": 207.27,
+    "voiced_f0_p90_hz": 287.09,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,27 +41,27 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "1a47a544b6d825b034692c4b8367d4e14568be3764d2e5cadf6255c34523a235",
+  "output_sha256": "f5762a09df399d339abf936cb173637696ff5816b7865eba52791e96eddd9b0e",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1195,
+    "pre_conformance_seconds_per_mora": 0.1179,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "今週末は何も予定がありません。",
+  "tts_input_text": "今週末はナニモ予定がありません。",
   "page_text": "今週末は何も予定がありません。",
-  "seed_offset": 0,
+  "seed_offset": 903,
   "prosody": {
-    "median_f0": 229.7,
+    "median_f0": 263.7,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.923,
-    "tail_f0": 233.0,
-    "tail_vs_median": 1.015,
+    "f0_vs_baseline": 1.06,
+    "tail_f0": 269.7,
+    "tail_vs_median": 1.022,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0374,
+    "distance": 0.035,
     "limit": 0.35,
     "pass": true
   },
@@ -80,5 +80,14 @@
   "internal_pause": {
     "gaps_ms": [],
     "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  },
+  "picked_from_candidates": {
+    "candidate": "word-02-example/v3-s4",
+    "picked_at": "2026-09-30T14:03:48",
+    "by": "Luna 人耳（重音）"
   }
 }

@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "ラーメンとギョーザを注文しました。",
+  "text": "ラーメンと餃子を注文しました。",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 2.9965,
-    "speech_seconds": 2.4,
+    "duration_seconds": 2.8464,
+    "speech_seconds": 2.27,
     "mora_count": 17,
-    "seconds_per_mora": 0.1412,
-    "active_rms_dbfs": -23.79,
-    "peak_dbfs": -11.4,
-    "median_f0_hz": 237.62,
-    "voiced_f0_p10_hz": 208.7,
-    "voiced_f0_p90_hz": 275.86,
+    "seconds_per_mora": 0.1335,
+    "active_rms_dbfs": -23.84,
+    "peak_dbfs": -11.44,
+    "median_f0_hz": 247.42,
+    "voiced_f0_p10_hz": 216.22,
+    "voiced_f0_p90_hz": 286.06,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,27 +41,27 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "6f52cf294ac8b7af695aa505ef3d4d5d03744656ae2df12c0c896ed2e5263022",
+  "output_sha256": "5de9ae1a9410131a68b344ed3e5463977343dff53c7dd0d5a1711070af7f37d5",
   "tempo_conformance": {
     "atempo_factor": 0.9,
-    "pre_conformance_seconds_per_mora": 0.1271,
+    "pre_conformance_seconds_per_mora": 0.12,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "ラーメンとギョーザを注文しました。",
-  "page_text": "ラーメンとギョーザを注文しました。",
-  "seed_offset": 0,
+  "tts_input_text": "ラーメンとぎょうざを注文しました。",
+  "page_text": "ラーメンと餃子を注文しました。",
+  "seed_offset": 903,
   "prosody": {
-    "median_f0": 237.6,
+    "median_f0": 244.9,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.955,
-    "tail_f0": 224.3,
-    "tail_vs_median": 0.944,
+    "f0_vs_baseline": 0.985,
+    "tail_f0": 230.8,
+    "tail_vs_median": 0.942,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0362,
+    "distance": 0.0191,
     "limit": 0.35,
     "pass": true
   },
@@ -70,8 +70,8 @@
       "small": "ラーメンと餃子を注文しました",
       "medium": "ラーメンと餃子を注文しました"
     },
-    "target": "らーめんとぎょーざをちゅうもんしました",
-    "ratio": 0.9524,
+    "target": "らーめんとぎょうざをちゅうもんしました",
+    "ratio": 1.0,
     "tail_ratio": 1.0,
     "head_ratio": 1.0,
     "lead_filler": false,
@@ -80,5 +80,14 @@
   "internal_pause": {
     "gaps_ms": [],
     "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  },
+  "picked_from_candidates": {
+    "candidate": "word-01-example/v2-s4",
+    "picked_at": "2026-09-30T14:03:47",
+    "by": "Luna 人耳（重音）"
   }
 }
