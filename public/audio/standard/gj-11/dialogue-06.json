@@ -1,0 +1,101 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "そう。つまり、給料をもらいながら、日本語の特訓を受けてたわけ。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 5.048,
+    "speech_seconds": 4.43,
+    "mora_count": 32,
+    "seconds_per_mora": 0.1384,
+    "active_rms_dbfs": -24.0,
+    "peak_dbfs": -10.21,
+    "median_f0_hz": 258.06,
+    "voiced_f0_p10_hz": 205.13,
+    "voiced_f0_p90_hz": 304.58,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -24.5
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "a3f12ef66f28fb4dddbd685942718b2288e7708c1073f0cff847d94d598fbbd8",
+  "tempo_conformance": {
+    "atempo_factor": 1.329257,
+    "pre_conformance_seconds_per_mora": 0.1834,
+    "target_seconds_per_mora": 0.138
+  },
+  "tts_input_text": "そう。つまり、給料をもらいながら、日本語の特訓を受けてたわけ。 はい。",
+  "page_text": "そう。つまり、給料をもらいながら、日本語の特訓を受けてたわけ。",
+  "seed_offset": 7,
+  "prosody": {
+    "median_f0": 258.1,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.038,
+    "tail_f0": 200.0,
+    "tail_vs_median": 0.775,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -24.5,
+    "cliff_db": 8.8,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 70,
+    "max_step_db": 8.5,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "そう つまり給料をもらいながら日本語の特訓を受けてたわけ",
+      "medium": "そう つまり給料をもらいながら日本語の特訓を受けてたわけ"
+    },
+    "target": "そうつまりきゅうりょうをもらいながらにほんごのとっくんをうけてたわけ",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.11,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.6201,
+    "limit": 0.7,
+    "pass": true
+  }
+}

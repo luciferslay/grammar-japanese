@@ -1,0 +1,101 @@
+{
+  "voice_id": "MALE_CALM_SLOW",
+  "text": "なるほど。一か月ずっと、敬語で接客してたわけか。",
+  "seed": 202609232,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "61b7ceec5c5a01994440faf8f07d62398eb57d7f48ff821fd15bd566094c196d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 4.0275,
+    "speech_seconds": 3.47,
+    "mora_count": 26,
+    "seconds_per_mora": 0.1335,
+    "active_rms_dbfs": -24.18,
+    "peak_dbfs": -7.91,
+    "median_f0_hz": 171.43,
+    "voiced_f0_p10_hz": 110.09,
+    "voiced_f0_p90_hz": 224.3,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -21.6
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "7211143ad2416735fbc89a8973c6eb0c3c69d11b4bcea08f42afc35c10214adb",
+  "tempo_conformance": {
+    "atempo_factor": 1.12,
+    "pre_conformance_seconds_per_mora": 0.1481,
+    "target_seconds_per_mora": 0.1237
+  },
+  "tts_input_text": "なるほど。一か月ずっと、敬語で接客してたわけか。 はい。",
+  "page_text": "なるほど。一か月ずっと、敬語で接客してたわけか。",
+  "seed_offset": 1,
+  "prosody": {
+    "median_f0": 172.7,
+    "baseline_f0": 145.41,
+    "f0_vs_baseline": 1.187,
+    "tail_f0": 129.0,
+    "tail_vs_median": 0.747,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -21.6,
+    "cliff_db": 11.9,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 20,
+    "max_step_db": 11.3,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "なるほど1ヶ月ずっと敬語で接客してたわけか",
+      "medium": "なるほど、1ヶ月ずっと敬語で接客してたわけか"
+    },
+    "target": "なるほどいちかがつずっとけいごでせっきゃくしてたわけか",
+    "ratio": 0.9375,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.0566,
+    "limit": 0.7,
+    "pass": true
+  }
+}

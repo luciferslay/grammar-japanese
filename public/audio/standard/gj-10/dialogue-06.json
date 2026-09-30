@@ -1,0 +1,101 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "早いね。買ったばかりなんだから、今度は段差に気をつけてね。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 4.6322,
+    "speech_seconds": 4.02,
+    "mora_count": 29,
+    "seconds_per_mora": 0.1386,
+    "active_rms_dbfs": -23.89,
+    "peak_dbfs": -9.77,
+    "median_f0_hz": 252.63,
+    "voiced_f0_p10_hz": 201.85,
+    "voiced_f0_p90_hz": 320.0,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -26.5
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "7fba9abb206a4a5f42c5786b8efc43e55820f64a9a78b80ac5603e88a3fd7da3",
+  "tempo_conformance": {
+    "atempo_factor": 1.171914,
+    "pre_conformance_seconds_per_mora": 0.1617,
+    "target_seconds_per_mora": 0.138
+  },
+  "tts_input_text": "早いね。買ったばかりなんだから、今度は段差に気をつけてね。 はい。",
+  "page_text": "早いね。買ったばかりなんだから、今度は段差に気をつけてね。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 250.0,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.005,
+    "tail_f0": 225.4,
+    "tail_vs_median": 0.901,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -26.5,
+    "cliff_db": 5.4,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 50,
+    "max_step_db": 7.5,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "早いね買ったばかりなんだから今度は段差に気をつけてね",
+      "medium": "早いね 買ったばかりなんだから今度は段差に気をつけてね"
+    },
+    "target": "はやいねかったばかりなんだからこんどはだんさにきをつけてね",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.11,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.3083,
+    "limit": 0.7,
+    "pass": true
+  }
+}
