@@ -1,0 +1,88 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "食事代は割り勘にしました。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 2.7064,
+    "speech_seconds": 2.1,
+    "mora_count": 15,
+    "seconds_per_mora": 0.14,
+    "active_rms_dbfs": -23.86,
+    "peak_dbfs": -9.74,
+    "median_f0_hz": 269.66,
+    "voiced_f0_p10_hz": 208.7,
+    "voiced_f0_p90_hz": 289.16,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "68e8395fdd35e0bd9430d196cea36c3eb51d578da3d5c133481f0888640ab768",
+  "tempo_conformance": {
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.126,
+    "target_seconds_per_mora": 0.1535
+  },
+  "tts_input_text": "食事代は割り勘にしました。",
+  "page_text": "食事代は割り勘にしました。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 268.2,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.078,
+    "tail_f0": 268.2,
+    "tail_vs_median": 1.0,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.0264,
+    "limit": 0.35,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "食事代は割管にしました",
+      "medium": "食事台は割り換にしました"
+    },
+    "target": "しょくじだいはわりかんにしました",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "internal_pause": {
+    "gaps_ms": [],
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.11,
+    "pass": true
+  }
+}

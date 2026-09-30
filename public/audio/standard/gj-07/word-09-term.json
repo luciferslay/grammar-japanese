@@ -1,6 +1,6 @@
 {
   "voice_id": "FEMALE_ONO_ANNA_CLONE",
-  "text": "栄養",
+  "text": "反省する",
   "seed": 202609221,
   "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
   "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
@@ -18,15 +18,15 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 1.2663,
-    "speech_seconds": 0.62,
-    "mora_count": 4,
-    "seconds_per_mora": 0.155,
-    "active_rms_dbfs": -23.74,
-    "peak_dbfs": -13.3,
-    "median_f0_hz": 247.42,
-    "voiced_f0_p10_hz": 237.62,
-    "voiced_f0_p90_hz": 263.74,
+    "duration_seconds": 1.4471,
+    "speech_seconds": 0.83,
+    "mora_count": 6,
+    "seconds_per_mora": 0.1383,
+    "active_rms_dbfs": -24.0,
+    "peak_dbfs": -13.86,
+    "median_f0_hz": 242.42,
+    "voiced_f0_p10_hz": 220.18,
+    "voiced_f0_p90_hz": 255.32,
     "sample_rate_hz": 24000,
     "channels": 1
   },
@@ -41,56 +41,56 @@
     "short_term_rule": true,
     "manual_review": "required"
   },
-  "output_sha256": "419d7cf08d4124cb8a440df3c6d170ed0f15b59d2e2e04e84ec798a01ffc4974",
+  "output_sha256": "7031b4c014f9c6ca35f0b2d1a5ae41325a727e3141bd53c5045d6e379ad8103f",
   "tempo_conformance": {
-    "atempo_factor": 0.928339,
-    "pre_conformance_seconds_per_mora": 0.1425,
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.1233,
     "target_seconds_per_mora": 0.1535
   },
-  "tts_input_text": "栄養。",
-  "page_text": "栄養",
-  "seed_offset": 5,
+  "tts_input_text": "反省する。",
+  "page_text": "反省する",
+  "seed_offset": 0,
   "term_policy": {
-    "speech_seconds": 0.55,
-    "per_syllable": 0.1375,
+    "speech_seconds": 0.7,
+    "per_syllable": 0.1167,
     "too_short": false,
     "too_long": false,
-    "pass": false,
+    "pass": true,
     "cut_applied": false,
     "lead_filler_cut": false,
-    "distance_to_target": 0.0075,
+    "distance_to_target": 0.0133,
     "asr": {
       "by_model": {
-        "small": "ええよ",
-        "medium": "ええよ"
+        "small": "反省する",
+        "medium": "反省する"
       },
-      "target": "えいよう",
-      "ratio": 0.5714,
-      "exact": false,
+      "target": "はんせいする",
+      "ratio": 1.0,
+      "exact": true,
       "lead_filler": false,
       "tail_extra": false,
-      "incomplete": true,
-      "pass": false
+      "incomplete": false,
+      "pass": true
     },
-    "ratio": 0.5714
+    "ratio": 1.0
   },
   "prosody": {
-    "median_f0": 247.4,
+    "median_f0": 242.4,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.995,
-    "tail_f0": 252.6,
-    "tail_vs_median": 1.021,
+    "f0_vs_baseline": 0.975,
+    "tail_f0": 244.9,
+    "tail_vs_median": 1.01,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
   },
   "timbre": {
-    "distance": 0.0408,
+    "distance": 0.0685,
     "limit": 0.35,
     "pass": true
   },
   "leading_blank": {
-    "seconds": 0.09,
+    "seconds": 0.12,
     "pass": true
   }
 }

@@ -1,0 +1,88 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "忙しい日は、つい外食になります。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 3.3739,
+    "speech_seconds": 2.75,
+    "mora_count": 19,
+    "seconds_per_mora": 0.1447,
+    "active_rms_dbfs": -23.9,
+    "peak_dbfs": -11.77,
+    "median_f0_hz": 244.9,
+    "voiced_f0_p10_hz": 214.29,
+    "voiced_f0_p90_hz": 285.71,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "dd8ea35456722ca52bd7c345a47ff8645b9c623846929aee5f60b7e04b205229",
+  "tempo_conformance": {
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.1295,
+    "target_seconds_per_mora": 0.1535
+  },
+  "tts_input_text": "忙しい日は、つい外食になります。",
+  "page_text": "忙しい日は、つい外食になります。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 244.9,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 0.985,
+    "tail_f0": 243.7,
+    "tail_vs_median": 0.995,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.0328,
+    "limit": 0.35,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "忙しい日はつい外食になります",
+      "medium": "忙しい日は、つい外食になります。"
+    },
+    "target": "いそがしいにちはついがいしょくになります",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "internal_pause": {
+    "gaps_ms": [],
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  }
+}
