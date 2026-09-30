@@ -1,5 +1,5 @@
 import AudioReview from '@/components/audio-review';
-import { lessons, pendingLessons } from '@/lib/lessons';
+import { lessonNumber, lessons, levelOf, pendingLessons } from '@/lib/lessons';
 import { SITE_NAME } from '@/lib/site';
 
 export const metadata = { title: `音频人耳确认 · ${SITE_NAME}`, robots: { index: false } };
@@ -8,7 +8,9 @@ export const metadata = { title: `音频人耳确认 · ${SITE_NAME}`, robots: {
 export default function Page() {
   const all = [...lessons, ...pendingLessons].map((lesson, i) => ({
     id: lesson.id,
-    number: i + 1,
+    // 课号按等级各自从 1 数起（2026-09-30），复制结果里写成「中级第 1 课（gj-07）」
+    number: lessonNumber(lesson.id),
+    level: levelOf(lesson).label,
     pending: i >= lessons.length,
     title: lesson.listTitle,
     grammar: lesson.grammar.title,

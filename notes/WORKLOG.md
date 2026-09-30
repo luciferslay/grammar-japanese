@@ -353,3 +353,15 @@
 - 为什么要 resume：13:0x 以后 Ubuntu 窗口全关了，**WSL 自己停了**，第 9 课录到一半的录音和预览服务器都断了。以后录音时 Ubuntu 窗口不能关（最小化可以）。
 - Luna 问「已经通过的课上线 GitHub 了吗」：GitHub main 已经在 759e4ba（到 gj-03 s7 为止都推了），但 12 课全在 pendingLessons，首页看不到。
 - **Luna：「好」→ 第 1〜4 课挪进 `lessons`，上首页**（插图、音频齐，人耳复核过；gj-03 对话 2、gj-04 两条刚换，请 Luna 再听）。第 5、6 课差插图，第 7、8 课音频 Luna 还没听，其余还在录。
+
+### 2026-09-30 14:2x Luna：首页标题左下角分 初级／中级／高级（照韩语站）
+
+- 看了韩语站 하루한컷 线上版：header 下面一排圆角按钮「初级 TOPIK 1～2／中级 TOPIK 3～4／高级 TOPIK 5～6」，网址 `/level/beginner|intermediate|advanced`，每一级的课号从第 1 课数起。
+- 本站照做：
+  - `lib/lessons/levels.ts`：初级＝JLPT N4、中级＝JLPT N3、高级＝JLPT N2，按每课的 badge 归级。
+  - `components/level-home.tsx`：首页和等级页共用；「/」显示默认等级（初级），`app/level/<slug>/page.tsx` 三个等级页。某一级还没有上架的课时显示「正在准备中」。
+  - 课号改成**每一级里从 1 数起**（`lessonNumber`）：中级的 gj-07 在网站上是「中级 · 第 1 课」。课程页左下角的课号标签加上等级名。
+  - 上一课／下一课只在同一级里走；「返回主页」改成「返回X级课程列表」。
+  - /review 的课程下拉和复制结果也写成「中级第 1 课（gj-07）」。
+- 注意：WORKLOG、LESSON_ORDER 里一直用的是**全站连续课号**（第 7 课＝gj-07），以后说课时以 gj 编号为准，避免和网站上的分级课号混淆。
+- tsc 在 WSL 推送前跑（推送脚本 tsc 不过就不推）。

@@ -11,8 +11,10 @@ import { supermarketNoodles } from './supermarket-noodles';
 import { walkAndPhone } from './walk-and-phone';
 import { weekendTalk } from './weekend-talk';
 import type { Lesson } from './types';
+import { levelOf, type LevelSlug } from './levels';
 
 export type { Lesson, Word } from './types';
+export { LEVELS, DEFAULT_LEVEL, levelOf, levelBySlug, type Level, type LevelSlug } from './levels';
 
 /**
  * 课程顺序 = 网站上的课号。按 JLPT N4 → N3 → N2 分块、块内从易到难排（顺序表见 ~/Developer/nihongo/grammar/LESSON_ORDER.md）。
@@ -43,12 +45,24 @@ export const pendingLessons: Lesson[] = [
   drinkingPartyInvite,
 ];
 
-/** 课序号（第 X 课）：按 lessons 的排列顺序，未注册的课接在后面编号。 */
+/** 某一级里已上架的课（首页、上一课／下一课用）。 */
+export function lessonsInLevel(slug: LevelSlug): Lesson[] {
+  return lessons.filter((lesson) => levelOf(lesson).slug === slug);
+}
+
+/**
+ * 课序号（第 X 课）：在**每一级里**从 1 数起（2026-09-30 照韩语站分级）。
+ * 已上架的按 lessons 的顺序；未上架的接在同一级已上架的后面编号。
+ */
 export function lessonNumber(id: string): number {
-  const index = lessons.findIndex((lesson) => lesson.id === id);
+  const lesson = findLesson(id);
+  if (!lesson) return 0;
+  const slug = levelOf(lesson).slug;
+  const live = lessonsInLevel(slug);
+  const index = live.findIndex((item) => item.id === id);
   if (index >= 0) return index + 1;
-  const pending = pendingLessons.findIndex((lesson) => lesson.id === id);
-  return pending >= 0 ? lessons.length + pending + 1 : 0;
+  const pending = pendingLessons.filter((item) => levelOf(item).slug === slug).findIndex((item) => item.id === id);
+  return pending >= 0 ? live.length + pending + 1 : 0;
 }
 
 export function getLesson(id: string): Lesson | undefined {

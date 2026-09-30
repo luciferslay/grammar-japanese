@@ -18,6 +18,8 @@ import {
   findLesson,
   getLesson,
   lessonNumber,
+  lessonsInLevel,
+  levelOf,
   lessons,
   type Lesson,
   type Word,
@@ -387,15 +389,19 @@ function RelatedLessonsLight({ lesson }: { lesson: Lesson }) {
 }
 
 function LessonNav({ id }: { id: string }) {
-  const current = lessons.findIndex((item) => item.id === id);
-  const previous = current > 0 ? lessons[current - 1] : undefined;
-  const next = current >= 0 ? lessons[current + 1] : undefined;
+  // 上一课／下一课只在同一级里走（2026-09-30 分级）；返回按钮回到这一级的课程列表
+  const self = findLesson(id);
+  const level = self ? levelOf(self) : undefined;
+  const list = level ? lessonsInLevel(level.slug) : lessons;
+  const current = list.findIndex((item) => item.id === id);
+  const previous = current > 0 ? list[current - 1] : undefined;
+  const next = current >= 0 ? list[current + 1] : undefined;
   const style =
     'rounded-full border border-ink/10 bg-white/70 px-3 py-1.5 text-xs font-semibold';
   return (
     <nav className="mx-auto mb-4 flex max-w-6xl flex-wrap items-center gap-2">
-      <a href="/" className={style}>
-        返回主页
+      <a href={level ? `/level/${level.slug}` : '/'} className={style}>
+        返回{level ? level.label : ''}课程列表
       </a>
       {previous ? (
         <a href={`/lesson/${previous.id}`} className={style}>
@@ -1047,7 +1053,7 @@ function LessonFlow({
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/75 to-ink/15" />
             <div className="relative mt-auto p-6 text-white sm:p-8">
               <span className="rounded-full bg-mint px-3 py-1 text-xs font-bold text-ink">
-                第 {lessonNumber(lesson.id)} 课
+                {levelOf(lesson).label} · 第 {lessonNumber(lesson.id)} 课
               </span>
               <p className="mt-4 text-sm tracking-[.16em] text-white/65">
                 本课语法

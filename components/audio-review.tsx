@@ -6,6 +6,7 @@ type Clip = { kind: string; ja: string; zh: string; src: string };
 type LessonItem = {
   id: string;
   number: number;
+  level: string;
   pending: boolean;
   title: string;
   grammar: string;
@@ -205,7 +206,7 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
     const v = verdicts[c.src];
     const t = ISSUE_TYPES.find((x) => x.n === v?.type);
     const tag = t ? `[${t.n} ${t.label}] ` : '[未分类] ';
-    return `${tag}第 ${lesson.number} 课（${lesson.id}）${c.kind}：${c.ja}${v?.note ? ` —— ${v.note}` : ''}`;
+    return `${tag}${lesson.level}第 ${lesson.number} 课（${lesson.id}）${c.kind}：${c.ja}${v?.note ? ` —— ${v.note}` : ''}`;
   });
   const unclassified = badClips.filter((c) => !verdicts[c.src]?.type).length;
   const missingNote = badClips.filter((c) => {
@@ -234,7 +235,7 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
             const bad = badLeft(l);
             return (
               <option key={l.id} value={l.id}>
-                第 {l.number} 课{l.pending ? '（待上线）' : ''} {l.title}
+                {l.level}第 {l.number} 课{l.pending ? '（待上线）' : ''} {l.title}
                 {left ? `（${left} 条没听）` : ' ✓'}
                 {bad ? `（${bad} 条问题没复制）` : ''}
               </option>
@@ -359,7 +360,7 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
       <div className="fixed inset-x-0 bottom-0 border-t border-ink/10 bg-cream/95 px-4 py-3 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center gap-3">
           <span className="text-sm font-semibold">
-            第 {lesson.number} 课 标了有问题、还没复制的：{badList.length} 条
+            {lesson.level}第 {lesson.number} 课 标了有问题、还没复制的：{badList.length} 条
             {unclassified > 0 && <span className="ml-2 text-xs text-coral">{unclassified} 条还没选问题类型</span>}
             {missingNote > 0 && <span className="ml-2 text-xs text-coral">{missingNote} 条「其他／读音」还没写具体细节</span>}
           </span>
