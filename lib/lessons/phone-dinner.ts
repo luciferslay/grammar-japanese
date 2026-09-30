@@ -249,4 +249,7 @@ export const phoneDinner: Lesson = {
     placeholder: '例：ちょうど今、家に帰ってきたところです。',
   },
   sentenceTitle: '用 〜ところだ 说说你现在在干嘛',
+  related: [
+    { id: 'gj-10', note: '〜たばかり 按心里的感觉，上周、上个月也能用；〜たところ 只说「就在刚才那一刻」' },
+  ],
 };

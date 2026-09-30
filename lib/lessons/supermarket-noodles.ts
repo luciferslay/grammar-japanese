@@ -249,4 +249,7 @@ export const supermarketNoodles: Lesson = {
     placeholder: '例：弟は毎日ゲームをしてばかりいる。',
   },
   sentenceTitle: '用 〜ばかり 吐槽一下',
+  related: [
+    { id: 'gj-10', note: 'た形 + ばかり 是「刚……」（第 10 课）；本课 名词／て形 + ばかり 是「净是、老是」' },
+  ],
 };
