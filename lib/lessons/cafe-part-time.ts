@@ -35,7 +35,7 @@ export const cafePartTime: Lesson = {
     {
       role: 'A',
       text: 'リンさん、明日から朝七時までに来なければなりません。大丈夫ですか。',
-      zh: '小林，从明天开始，早上七点之前必须到。没问题吧？',
+      zh: '小粼，从明天开始，早上七点之前必须到。没问题吧？',
       audio: `${AUDIO}/dialogue-01.m4a`,
     },
     {

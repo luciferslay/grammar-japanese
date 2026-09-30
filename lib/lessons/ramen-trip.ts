@@ -34,7 +34,7 @@ export const ramenTrip: Lesson = {
     {
       role: 'A',
       text: 'リンさんは北海道に行ったことがありますか。',
-      zh: '小林，你去过北海道吗？',
+      zh: '小粼，你去过北海道吗？',
       audio: `${AUDIO}/dialogue-01.m4a`,
     },
     {

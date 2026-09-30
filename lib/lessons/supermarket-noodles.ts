@@ -35,7 +35,7 @@ export const supermarketNoodles: Lesson = {
     {
       role: 'A',
       text: 'リン、見て。今週はカップラーメンが安いんだ。',
-      zh: '小林你看，这周杯面便宜。',
+      zh: '小粼你看，这周杯面便宜。',
       audio: `${AUDIO}/dialogue-01.m4a`,
     },
     {
@@ -59,7 +59,7 @@ export const supermarketNoodles: Lesson = {
     {
       role: 'A',
       text: 'それは……息抜きだよ。リンだって、最近スマホばかり見てるよ。',
-      zh: '那是……放松一下嘛。小林你最近不也光看手机。',
+      zh: '那是……放松一下嘛。小粼你最近不也光看手机。',
       audio: `${AUDIO}/dialogue-05.m4a`,
     },
     {

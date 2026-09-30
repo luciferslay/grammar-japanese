@@ -35,7 +35,7 @@ export const phoneDinner: Lesson = {
     {
       role: 'A',
       text: 'もしもし、リン？ 今、何してる？',
-      zh: '喂，小林？在干嘛呢？',
+      zh: '喂，小粼？在干嘛呢？',
       audio: `${AUDIO}/dialogue-01.m4a`,
     },
     {

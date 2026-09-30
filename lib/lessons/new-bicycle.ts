@@ -34,7 +34,7 @@ export const newBicycle: Lesson = {
     {
       role: 'A',
       text: 'リン、見てよ。この自転車、先週買ったばかりなのに、もうパンクしたんだ。',
-      zh: '小林你看。这辆自行车上周才买的，就已经爆胎了。',
+      zh: '小粼你看。这辆自行车上周才买的，就已经爆胎了。',
       audio: `${AUDIO}/dialogue-01.m4a`,
     },
     {

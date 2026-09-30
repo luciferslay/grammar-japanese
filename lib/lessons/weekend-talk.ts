@@ -35,7 +35,7 @@ export const weekendTalk: Lesson = {
     {
       role: 'A',
       text: 'リンさん、週末は何をしましたか。',
-      zh: '小林，周末干什么了？',
+      zh: '小粼，周末干什么了？',
       audio: `${AUDIO}/dialogue-01.m4a`,
     },
     {

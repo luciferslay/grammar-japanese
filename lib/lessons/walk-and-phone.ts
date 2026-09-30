@@ -35,7 +35,7 @@ export const walkAndPhone: Lesson = {
     {
       role: 'A',
       text: 'リンさん、危ないですよ。歩きながらスマホを見てはいけません。',
-      zh: '小林，危险！不能边走边看手机。',
+      zh: '小粼，危险！不能边走边看手机。',
       audio: `${AUDIO}/dialogue-01.m4a`,
     },
     {

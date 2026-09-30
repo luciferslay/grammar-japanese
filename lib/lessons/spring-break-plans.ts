@@ -34,7 +34,7 @@ export const springBreakPlans: Lesson = {
     {
       role: 'A',
       text: 'やっと試験が終わった！ リン、春休みはどうするの？',
-      zh: '考试终于结束了！小林，春假打算干嘛？',
+      zh: '考试终于结束了！小粼，春假打算干嘛？',
       audio: `${AUDIO}/dialogue-01.m4a`,
     },
     {
@@ -58,7 +58,7 @@ export const springBreakPlans: Lesson = {
     {
       role: 'A',
       text: '今度は本当に決心したんだ。寝る前はスマホを触らないことにしたし。リンは、毎日続けてることある？',
-      zh: '这次是真下决心了。我还决定睡前不碰手机。小林，你有每天坚持做的事吗？',
+      zh: '这次是真下决心了。我还决定睡前不碰手机。小粼，你有每天坚持做的事吗？',
       audio: `${AUDIO}/dialogue-05.m4a`,
     },
     {
