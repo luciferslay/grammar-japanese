@@ -327,3 +327,10 @@
 - リン 的中文翻译统一 ~~小林~~ ~~小琳~~ → **小粼**：全部课程文件（zh 字段）和所有大纲一起改了，WORD_RULES「人物」记了这条。
   - 12:34 另一个对话先把 小林 改成了「小琳」（未提交），这边在它的基础上改成 Luna 这次说的「小粼」。
   - 只改中文翻译，日文课文和音频都不受影响，不用重录。
+
+### 2026-09-30 12:4x Luna：「做」→ 第 11、12 课开做
+
+- 大纲原样落成 `lib/lessons/back-from-ryokan.ts`（gj-11 〜わけだ）、`drinking-party-invite.ts`（gj-12 〜わけではない）和路由，放在 pendingLessons 的 N3 段、gj-10 后面。两课互加 related。
+- 通过：shuffle_answers、check_bonus_in_dialogue。tsc 留到 WSL 录音时跑。
+- 大纲里又发现两处 shuffle_draft_answers.py 吃字：选项以「「」开头、圆圈数字后没空格（gj-12 T2 ②、T3 ①），已补回。规矩重申：大纲选项的圆圈数字后面一律加空格。
+- 录音排在第 9、10 课后面。

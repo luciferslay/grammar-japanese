@@ -1,4 +1,6 @@
+import { backFromRyokan } from './back-from-ryokan';
 import { cafePartTime } from './cafe-part-time';
+import { drinkingPartyInvite } from './drinking-party-invite';
 import { newBicycle } from './new-bicycle';
 import { phoneDinner } from './phone-dinner';
 import { ramenTrip } from './ramen-trip';
@@ -35,6 +37,8 @@ export const pendingLessons: Lesson[] = [
   phoneDinner,
   springBreakPlans,
   newBicycle,
+  backFromRyokan,
+  drinkingPartyInvite,
 ];
 
 /** 课序号（第 X 课）：按 lessons 的排列顺序，未注册的课接在后面编号。 */

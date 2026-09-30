@@ -18,8 +18,8 @@
 | 8（N3-2） | gj-08 | 〜ところだ（三态） | ちょうど今、鍋で材料を煮ているところ | 课程文件写好（pendingLessons，`phone-dinner.ts`），音频已录（38 条），插图已入库；等 Luna 人耳复核（9/30） |
 | 9（N3-3） | gj-09 | 〜ことにする | 今年は国に帰らないことにしたんだ | 大纲 Luna 确认（9/30）；课程文件写好（pendingLessons，`spring-break-plans.ts`），音频待录，插图等 Codex |
 | 10（N3-4） | gj-10 | 〜たばかり | 先週買ったばかりなのに | 大纲 Luna 确认（9/30）；课程文件写好（pendingLessons，`new-bicycle.ts`），音频待录，插图等 Codex |
-| 11（N3-5） | gj-11 | 〜わけだ | それじゃ、疲れてるわけだ | 大纲 Luna 批准（`LESSON_DRAFT_gj-11-12.md`，9/30），待做课 |
-| 12（N3-6） | gj-12 | 〜わけではない | 嫌いなわけじゃないよ | 大纲 Luna 批准（`LESSON_DRAFT_gj-11-12.md`，9/30），待做课 |
+| 11（N3-5） | gj-11 | 〜わけだ | それじゃ、疲れてるわけだ | 大纲 Luna 批准（9/30）；课程文件写好（pendingLessons），音频待录，插图等 Codex |
+| 12（N3-6） | gj-12 | 〜わけではない | 嫌いなわけじゃないよ | 大纲 Luna 批准（9/30）；课程文件写好（pendingLessons），音频待录，插图等 Codex |
 
 ## 顺序表初稿（做的时候再调）
 
