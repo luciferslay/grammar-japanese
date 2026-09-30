@@ -18,46 +18,46 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 5.1863,
-    "speech_seconds": 4.6,
+    "duration_seconds": 4.9965,
+    "speech_seconds": 4.42,
     "mora_count": 34,
-    "seconds_per_mora": 0.1353,
-    "active_rms_dbfs": -23.83,
-    "peak_dbfs": -6.51,
+    "seconds_per_mora": 0.13,
+    "active_rms_dbfs": -23.73,
+    "peak_dbfs": -9.13,
     "median_f0_hz": 151.9,
-    "voiced_f0_p10_hz": 98.52,
-    "voiced_f0_p90_hz": 206.9,
+    "voiced_f0_p10_hz": 101.31,
+    "voiced_f0_p90_hz": 208.7,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -29.6
+    "tail_margin_db": -19.7
   },
   "quality_assessment": {
-    "automatic_pass": true,
+    "automatic_pass": false,
     "checks": {
       "speed": true,
       "pitch": true,
       "loudness": true,
       "peak": true,
-      "tail": true
+      "tail": false
     },
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "26a0f03c4079672ed006a3bb3b877f32c9a09dacb0b3ffdd089b095661615948",
+  "output_sha256": "13cb8fe66e56d638e9b56c0d4541c96f7cf4c52d1f3c241869a5c186360bf416",
   "tempo_conformance": {
     "atempo_factor": 1.12,
-    "pre_conformance_seconds_per_mora": 0.1512,
+    "pre_conformance_seconds_per_mora": 0.1447,
     "target_seconds_per_mora": 0.1237
   },
   "tts_input_text": "はい。僕も時々、音楽を聞きながら歩きますけど、画面は見ません。 はい。",
   "page_text": "はい。僕も時々、音楽を聞きながら歩きますけど、画面は見ません。",
-  "seed_offset": 1102,
+  "seed_offset": 1101,
   "prosody": {
-    "median_f0": 151.9,
+    "median_f0": 152.9,
     "baseline_f0": 145.41,
-    "f0_vs_baseline": 1.045,
-    "tail_f0": 102.6,
-    "tail_vs_median": 0.675,
+    "f0_vs_baseline": 1.051,
+    "tail_f0": 128.3,
+    "tail_vs_median": 0.84,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
@@ -67,19 +67,19 @@
     "pass": true
   },
   "tail_cliff": {
-    "margin_db": -29.6,
-    "cliff_db": 6.3,
-    "pass": true,
+    "margin_db": -19.7,
+    "cliff_db": 12.1,
+    "pass": false,
     "limit_db": -20.0
   },
   "tail_fade": {
-    "fade_ms": 40,
-    "max_step_db": 8.4,
+    "fade_ms": 30,
+    "max_step_db": 6.8,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "はい、僕も時々音楽を聴きながら歩きますけど、 画面は見ません",
+      "small": "はい僕も時々音楽を聴きながら歩 けますけど画面は見ません",
       "medium": "はい、僕も時々音楽を聴きながら歩きますけど、画面は見ません。"
     },
     "target": "はいぼくもときどきおんがくをききながらあるきますけどがめんはみません",
@@ -92,5 +92,11 @@
   "leading_blank": {
     "seconds": 0.1,
     "pass": true
+  },
+  "picked_from_candidates": {
+    "candidate": "dialogue-03-consistency/s2",
+    "picked_at": "2026-09-30T05:25:19",
+    "by": "Luna 人耳（音色：像同一个人）",
+    "replaced": "s3"
   }
 }
