@@ -11,16 +11,24 @@ type LessonItem = {
   grammar: string;
   clips: Clip[];
 };
-type Verdict = { v: 'ok' | 'bad'; type?: number; note?: string; sha?: string };
+/** reported：已经复制给 Claude 了（Luna 2026-09-30：复制过的不再显示、不再重复复制；重录后指纹变了会重新出现）。 */
+type Verdict = { v: 'ok' | 'bad'; type?: number; note?: string; sha?: string; reported?: boolean };
 
-/** 问题分类（Luna 2026-09-21）。1～4 由 Claude 以同课没问题的音频为基准重录；5 需要写具体问题。 */
+/** 问题分类（Luna 2026-09-21）。1～4 由 Claude 以同课没问题的音频为基准重录；5、6 必须写具体细节（6 是 2026-09-30 加的）。 */
 const ISSUE_TYPES = [
   { n: 1, label: '没录全' },
   { n: 2, label: '有多余杂音' },
   { n: 3, label: '语气不自然' },
   { n: 4, label: '语速不自然' },
   { n: 5, label: '其他' },
+  { n: 6, label: '读音' },
 ] as const;
+/** 这几类必须写具体细节，没写不让复制。 */
+const NEED_NOTE = new Set([5, 6]);
+const NOTE_HINT: Record<number, string> = {
+  5: '请写具体问题（例：写成餃子）',
+  6: '请写正确读音或重音（例：冷める 读 さめる；無料 重音在后）',
+};
 type Auto = { pass: boolean; why: string[]; sha?: string };
 
 const STORE = 'audio-review-v1';
@@ -102,8 +110,9 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
   const shown = useMemo(
     () =>
       lesson.clips.filter((c) => {
-        if (touched.has(c.src)) return true;
         const s = status(c);
+        if (s.v?.reported) return false;
+        if (touched.has(c.src)) return true;
         if (filter === 'todo') return !s.v;
         if (filter === 'flag') return s.a && !s.a.pass;
         if (filter === 'bad') return s.v?.v === 'bad';
@@ -136,7 +145,7 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
   const pickType = (c: Clip, n: number) => {
     mark(c, 'bad', { type: n });
     setPicking(false);
-    if (n === 5) setTimeout(() => noteRefs.current[c.src]?.focus(), 0);
+    if (NEED_NOTE.has(n)) setTimeout(() => noteRefs.current[c.src]?.focus(), 0);
   };
 
   const play = (i: number) => {
@@ -153,7 +162,7 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
       if ((e.target as HTMLElement).tagName === 'INPUT') return;
       const c = shown[current];
       if (picking && c) {
-        if (/^[1-5]$/.test(e.key)) {
+        if (/^[1-6]$/.test(e.key)) {
           e.preventDefault();
           pickType(c, Number(e.key));
           return;
@@ -173,8 +182,8 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
       } else if (e.key === 'ArrowUp' || e.key === 'k') {
         e.preventDefault();
         play(Math.max(current - 1, 0));
-      } else if (/^[1-5]$/.test(e.key) && c) {
-        // 不标就是没问题；按 1～5 直接把当前这条标成对应的问题类型
+      } else if (/^[1-6]$/.test(e.key) && c) {
+        // 不标就是没问题；按 1～6 直接把当前这条标成对应的问题类型
         e.preventDefault();
         pickType(c, Number(e.key));
       } else if ((e.key === 'Backspace' || e.key === '0') && c && verdicts[c.src]?.v === 'bad') {
@@ -187,23 +196,31 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
     return () => window.removeEventListener('keydown', onKey);
   });
 
-  const badList = lessons.flatMap((l) =>
-    l.clips
-      .filter((c) => status(c).v?.v === 'bad')
-      .map((c) => {
-        const v = verdicts[c.src];
-        const t = ISSUE_TYPES.find((x) => x.n === v?.type);
-        const tag = t ? `[${t.n} ${t.label}] ` : '[未分类] ';
-        return `${tag}第 ${l.number} 课（${l.id}）${c.kind}：${c.ja}${v?.note ? ` —— ${v.note}` : ''}`;
-      }),
-  );
+  // 复制按课来：只复制当前这一课、还没复制过的问题条目
+  const badClips = lesson.clips.filter((c) => {
+    const v = status(c).v;
+    return v?.v === 'bad' && !v.reported;
+  });
+  const badList = badClips.map((c) => {
+    const v = verdicts[c.src];
+    const t = ISSUE_TYPES.find((x) => x.n === v?.type);
+    const tag = t ? `[${t.n} ${t.label}] ` : '[未分类] ';
+    return `${tag}第 ${lesson.number} 课（${lesson.id}）${c.kind}：${c.ja}${v?.note ? ` —— ${v.note}` : ''}`;
+  });
+  const unclassified = badClips.filter((c) => !verdicts[c.src]?.type).length;
+  const missingNote = badClips.filter((c) => {
+    const v = verdicts[c.src];
+    return v?.type && NEED_NOTE.has(v.type) && !v.note?.trim();
+  }).length;
+  const reportedCount = lesson.clips.filter((c) => status(c).v?.reported).length;
+  const badLeft = (l: LessonItem) => l.clips.filter((c) => status(c).v?.v === 'bad' && !status(c).v?.reported).length;
   const doneCount = lesson.clips.filter((c) => status(c).v).length;
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-6 pb-40 text-ink">
       <h1 className="font-display text-2xl font-bold">音频人耳确认</h1>
       <p className="mt-1 text-sm text-ink/60">
-        <b>不标就是没问题</b>（听完自动记为已听）· 空格 播放/暂停 · ↓/J 下一条 · ↑/K 上一条 · R 重听 · 有问题直接按 <b>1～5</b> 选类型 · 标错了按 0 取消
+        <b>不标就是没问题</b>（听完自动记为已听）· 空格 播放/暂停 · ↓/J 下一条 · ↑/K 上一条 · R 重听 · 有问题直接按 <b>1～6</b> 选类型（5 其他、6 读音 要写具体细节） · 标错了按 0 取消
       </p>
 
       <div className="sticky top-0 z-10 -mx-4 mt-4 flex flex-wrap items-center gap-2 border-b border-ink/10 bg-cream/95 px-4 py-3 backdrop-blur">
@@ -214,10 +231,12 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
         >
           {lessons.map((l) => {
             const left = l.clips.filter((c) => !status(c).v).length;
+            const bad = badLeft(l);
             return (
               <option key={l.id} value={l.id}>
-                {l.pending ? '待上线' : `第 ${l.number} 课`} {l.title}
+                第 {l.number} 课{l.pending ? '（待上线）' : ''} {l.title}
                 {left ? `（${left} 条没听）` : ' ✓'}
+                {bad ? `（${bad} 条问题没复制）` : ''}
               </option>
             );
           })}
@@ -244,6 +263,7 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
 
       <p className="mt-3 flex items-center gap-2 text-xs text-ink/55">
         {lesson.grammar} · 本课 {lesson.clips.length} 条，已确认 {doneCount} 条 · 当前筛选 {shown.length} 条
+        {reportedCount > 0 && ` · 已复制给 Claude ${reportedCount} 条（等重录，重录后会重新出现）`}
         <button
           onClick={() => {
             const next = { ...verdicts };
@@ -312,9 +332,9 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
                         {t.n} {t.label}
                       </button>
                     ))}
-                    {active && picking && <span className="self-center text-[11px] text-ink/50">按 1～5 选择，Esc 取消</span>}
+                    {active && picking && <span className="self-center text-[11px] text-ink/50">按 1～6 选择，Esc 取消</span>}
                   </div>
-                  {(s.v?.type === 5 || s.v?.note) && (
+                  {((s.v?.type && NEED_NOTE.has(s.v.type)) || s.v?.note) && (
                     <input
                       ref={(el) => {
                         noteRefs.current[c.src] = el;
@@ -324,8 +344,8 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
                       onKeyDown={(e) => {
                         if (e.key === 'Enter') (e.target as HTMLInputElement).blur();
                       }}
-                      placeholder={s.v?.type === 5 ? '请写具体问题（例：把 네 读成了 내）' : '补充说明（可不填）'}
-                      className="w-full rounded-xl border border-coral/40 bg-cream px-3 py-2 text-sm"
+                      placeholder={s.v?.type && NOTE_HINT[s.v.type] ? `${NOTE_HINT[s.v.type]}（必填）` : '补充说明（可不填）'}
+                      className={`w-full rounded-xl border bg-cream px-3 py-2 text-sm ${s.v?.type && NEED_NOTE.has(s.v.type) && !s.v.note?.trim() ? 'border-coral ring-2 ring-coral/30' : 'border-coral/40'}`}
                     />
                   )}
                 </div>
@@ -339,21 +359,26 @@ export default function AudioReview({ lessons }: { lessons: LessonItem[] }) {
       <div className="fixed inset-x-0 bottom-0 border-t border-ink/10 bg-cream/95 px-4 py-3 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center gap-3">
           <span className="text-sm font-semibold">
-            标了有问题的：{badList.length} 条
-            {badList.some((b) => b.startsWith('[未分类]')) && <span className="ml-2 text-xs text-coral">有几条还没选问题类型</span>}
+            第 {lesson.number} 课 标了有问题、还没复制的：{badList.length} 条
+            {unclassified > 0 && <span className="ml-2 text-xs text-coral">{unclassified} 条还没选问题类型</span>}
+            {missingNote > 0 && <span className="ml-2 text-xs text-coral">{missingNote} 条「其他／读音」还没写具体细节</span>}
           </span>
           <button
-            disabled={!badList.length}
+            disabled={!badList.length || unclassified > 0 || missingNote > 0}
             onClick={async () => {
               try {
                 await navigator.clipboard.writeText(`音频人耳确认结果：\n${badList.join('\n')}`);
+                // 复制成功才记为「已复制」，这些条目从列表里收起，下次不会重复复制
+                const next = { ...verdicts };
+                for (const c of badClips) next[c.src] = { ...next[c.src], reported: true };
+                save(next);
                 setCopied(true);
                 setTimeout(() => setCopied(false), 2000);
               } catch {}
             }}
             className="ml-auto rounded-full bg-ink px-4 py-2 text-xs font-bold text-cream disabled:opacity-30"
           >
-            {copied ? '已复制 ✓' : '复制结果，贴给 Claude'}
+            {copied ? '已复制 ✓' : '复制本课结果，贴给 Claude'}
           </button>
         </div>
       </div>

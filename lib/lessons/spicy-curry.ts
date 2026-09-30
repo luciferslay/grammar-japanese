@@ -211,7 +211,7 @@ export const spicyCurry: Lesson = {
     },
   ],
   bonusWords: [
-    { ja: '注文する', zh: '点菜；订购', example: 'ラーメンとギョーザを注文しました。', audio: `${AUDIO}/word-01-example.m4a`, termAudio: `${AUDIO}/word-01-term.m4a`, quiz: '店で料理や品物を頼むことを「___」と言う。' },
+    { ja: '注文する', zh: '点菜；订购', example: 'ラーメンと餃子を注文しました。', audio: `${AUDIO}/word-01-example.m4a`, termAudio: `${AUDIO}/word-01-term.m4a`, quiz: '店で料理や品物を頼むことを「___」と言う。' },
     { ja: 'メニュー', zh: '菜单', example: 'メニューを見せてください。', audio: `${AUDIO}/word-02-example.m4a`, termAudio: `${AUDIO}/word-02-term.m4a`, quiz: '店の料理の名前と値段が書いてある物を「___」と言う。' },
     { ja: '定食', zh: '套餐', example: '昼はいつも魚の定食を食べます。', audio: `${AUDIO}/word-03-example.m4a`, termAudio: `${AUDIO}/word-03-term.m4a`, quiz: 'ご飯とみそ汁とおかずがセットになった食事を「___」と言う。' },
     { ja: '食べ放題', zh: '自助餐；随便吃', example: 'この店は二千円で食べ放題です。', audio: `${AUDIO}/word-04-example.m4a`, termAudio: `${AUDIO}/word-04-term.m4a`, quiz: '決まったお金で好きなだけ食べられることを「___」と言う。' },
