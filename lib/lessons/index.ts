@@ -17,7 +17,7 @@ export type { Lesson, Word } from './types';
 export { LEVELS, DEFAULT_LEVEL, levelOf, levelBySlug, type Level, type LevelSlug } from './levels';
 
 /**
- * 课程顺序 = 网站上的课号。按 JLPT N4 → N3 → N2 分块、块内从易到难排（顺序表见 ~/Developer/nihongo/grammar/LESSON_ORDER.md）。
+ * 课程顺序 = 网站上的课号。按 JLPT N5 → N4 → N3 → N2 → N1 分块（网站上 初级＝N5～N4、中级＝N3～N2、高级＝N1）、块内从易到难排（顺序表见 ~/Developer/nihongo/grammar/LESSON_ORDER.md）。
  * 新课按等级插入对应位置，插入点之后的课号顺延。课程 id 用 gj-NN（与网站课号无关，只是文件标识）。
  */
 export const lessons: Lesson[] = [

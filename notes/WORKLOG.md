@@ -378,3 +378,11 @@
 - 判断：Cloudflare 的 GitHub 应用（Cloudflare Workers and Pages）只授权了选定的仓库，不含 grammar-japanese。Luna 在 GitHub 应用设置里加上仓库、Cloudflare 里 Manage 重新连接后，「disconnected」提示消失。
 - 构建配置核对过：Build `npm run build`，Deploy `npx wrangler deploy --config dist/server/wrangler.json`，Root `/`，分支 `main`，Include `*`。
 - dadcfc2 是在修好连接**之前**推送的，Cloudflare 收不到那次通知 → 用这条 WORKLOG 提交再推一次，触发第一次自动构建。
+
+### 2026-09-30 14:3x Luna：加 N5 和 N1；初级＝N5～N4、中级＝N3～N2、高级＝N1
+
+- 范围从 ~~N4 → N2~~ 扩到 **N5 → N1**。
+- 网站分级改成：初级 JLPT N5～N4、中级 JLPT N3～N2、高级 JLPT N1（`lib/lessons/levels.ts`，一级可以对应多个 badge）。
+  - ~~14:2x 版：初级＝N4、中级＝N3、高级＝N2~~。现在做好的课不受影响：gj-01〜06 仍在初级，gj-07〜12 仍在中级；以后的 N2 课也归中级，高级留给 N1。
+- LESSON_ORDER 加了 N5（约 20 课）、N1（约 30 课）的顺序初稿。N5 排在现有 N4 课前面，gj 编号接着往后排（gj-13 起），网站上的初级课号会顺延。
+- WORD_RULES：N5 课配 N5 词、N1 课配 N1 词；N5 课文沿用 N4 的「一律です・ます」—— 待 Luna 确认。
