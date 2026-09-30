@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>音色候选</title>
+<style>body{font-family:system-ui,sans-serif;max-width:980px;margin:24px auto;padding:0 16px;color:#222;background:#fff}h1{font-size:20px}
+.box{border:1px solid #ddd;border-radius:12px;padding:12px 14px;margin:16px 0}.ref{background:#f6f8ff;border-color:#cdd6f5}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.c{border:1px solid #eee;border-radius:10px;padding:8px;font-size:12px;color:#555;cursor:pointer}
+.c.cur{background:#fff8ec;border-color:#f0d9a8}.c.picked{outline:3px solid #2a7;background:#effaf3}.c b{color:#222;font-size:14px}audio{width:100%;margin-top:4px}
+#out{width:100%;height:70px;font-size:13px}button{font-size:14px;padding:6px 14px;margin-top:6px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}</style></head><body>
+<h1 id="title">音色候选</h1>
+<p style="font-size:13px;color:#555">同一句录了几版。先听上面蓝框里<b>同一课别的句子</b>（同一个人的声音），再在下面挑一版<b>听起来是同一个人</b>的。「句首距离」是机器粗测的开头和后半句的音色差（越小越像同一个人），<b>只是参考，以耳朵为准</b>。黄底的是现在课程里用的那版。都不行就在结果里写「都不像」，我再录一批。</p>
+<div class="box ref"><b>对照：同一课、同一个人的其他句子</b><div id="refs"></div></div>
+<div class="box"><p id="ja" style="font-size:18px;margin:0 0 10px"></p><div class="grid" id="grid">载入中…</div></div>
+<h2 style="font-size:16px">选择结果</h2>
+<textarea id="out" readonly></textarea><br><button onclick="navigator.clipboard.writeText(document.getElementById('out').value)">复制结果</button>
+<script>
+// 用法：/voice-candidates.html?lesson=gj-03&item=dialogue-02&ref=dialogue-04,dialogue-06（Luna 2026-09-30：gj-03 对话 2「不是一个人的声音」）
+const q = new URLSearchParams(location.search);
+const LESSON = q.get('lesson'), ITEM = q.get('item'), REFS = (q.get('ref') || '').split(',').filter(Boolean);
+const DIR = `/audio/candidates/${LESSON}/${ITEM}-consistency`;
+document.getElementById('title').textContent = `音色候选：${LESSON} ${ITEM}`;
+const refs = document.getElementById('refs');
+REFS.forEach(r => fetch(`/audio/standard/${LESSON}/${r}.json`).then(x => x.json()).then(m => {
+  const d = document.createElement('div'); d.style.marginTop = '8px';
+  d.innerHTML = `<span style="font-size:13px">${r}：${m.page_text || m.text}</span><audio controls preload="none" src="/audio/standard/${LESSON}/${r}.m4a"></audio>`;
+  refs.appendChild(d);
+}));
+Promise.all([fetch(`${DIR}/candidates.json`).then(r => r.json()), fetch(`/audio/standard/${LESSON}/${ITEM}.json`).then(r => r.json())]).then(([rows, cur]) => {
+  document.getElementById('ja').textContent = cur.page_text || cur.text;
+  const grid = document.getElementById('grid'); grid.innerHTML = '';
+  rows.forEach(r => fetch(`${DIR}/${r.name}.json`).then(x => x.json()).catch(() => ({})).then(m => {
+    const c = document.createElement('div');
+    const isCur = m.output_sha256 && m.output_sha256 === cur.output_sha256;
+    c.className = 'c' + (isCur ? ' cur' : '');
+    c.innerHTML = `<b>${r.name}</b>${isCur ? '　（现在用的）' : ''}　句首距离 ${r.head_rest_distance ?? '—'}　闸门${r.gates_pass ? '过' : '没过'}
+      <audio controls preload="none" src="${DIR}/${r.name}.m4a"></audio>`;
+    c.addEventListener('click', e => {
+      if (e.target.tagName === 'AUDIO') return;
+      grid.querySelectorAll('.c').forEach(x => x.classList.remove('picked'));
+      c.classList.add('picked');
+      document.getElementById('out').value = `音色候选选择结果（${LESSON}）：\n${ITEM} → ${r.name}`;
+    });
+    grid.appendChild(c);
+  }));
+});
+</script></body></html>

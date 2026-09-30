@@ -334,3 +334,8 @@
 - 通过：shuffle_answers、check_bonus_in_dialogue。tsc 留到 WSL 录音时跑。
 - 大纲里又发现两处 shuffle_draft_answers.py 吃字：选项以「「」开头、圆圈数字后没空格（gj-12 T2 ②、T3 ①），已补回。规矩重申：大纲选项的圆圈数字后面一律加空格。
 - 录音排在第 9、10 课后面。
+
+### 2026-09-30 13:1x Luna 人耳：gj-03 对话 2「不是一个人的声音」（第二次）
+
+- 这条 9/29 已经用 consistent_redo.py 重选过（8 版里挑了句首距离最小的 s2，0.373），Luna 听还是不像同一个人 → 句首距离这个指标对这条不够。
+- ~~再自动重录一批~~（先不录：同一套指标再挑一次，结果多半一样）→ 新页面 `public/voice-candidates.html?lesson=gj-03&item=dialogue-02&ref=dialogue-04,dialogue-06`：把 9/29 录好的 8 版都摆出来，上面放同课同一个人的另外两句当对照，让 Luna 用耳朵挑。都不像的话再录一批。
