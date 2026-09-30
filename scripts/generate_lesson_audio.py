@@ -127,6 +127,10 @@ def collect_jobs() -> tuple[dict[str, str], dict[str, str], dict[str, str]]:
         b: dict[str, str] = {}
         cards: dict[str, str] = {}
         pairs = re.findall(r"role: '(A|B)',\n      text: '((?:[^'\\]|\\.)*)',", text)
+        # 2026-09-30：gj-12 前三句写成了一行一个对象，这个正则没认出来，后三句被当成对话 1〜3 录了音。
+        # 对话句数和 role 出现次数对不上就直接报错，不再悄悄跳过。
+        if len(pairs) != len(re.findall(r"role: '(?:A|B)'", text)):
+            raise SystemExit(f"{ts.name}：对话有 {len(re.findall(r'role: .(?:A|B).', text))} 句，只认出 {len(pairs)} 句 —— 对话要写成多行格式（role／text 各占一行）")
         for i, (role, line) in enumerate(pairs, start=1):
             (a if role == "A" else b)[f"dialogue-{i:02d}.wav"] = _unesc(line)
         for key, prefix in (("lessonWords", "lesson"), ("bonusWords", "word")):

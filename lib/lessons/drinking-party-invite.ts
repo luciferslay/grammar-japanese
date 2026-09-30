@@ -32,9 +32,24 @@ export const drinkingPartyInvite: Lesson = {
     ],
   },
   dialogue: [
-    { role: 'A', text: 'リン、金曜のゼミの飲み会、行く？', zh: '小粼，周五研讨课的聚餐你去吗？', audio: `${AUDIO}/dialogue-01.m4a` },
-    { role: 'B', text: 'うーん、今回はやめとこうかな。', zh: '嗯……这次还是算了吧。', audio: `${AUDIO}/dialogue-02.m4a` },
-    { role: 'A', text: 'え、飲み会、嫌いなの？', zh: '诶，你讨厌聚餐吗？', audio: `${AUDIO}/dialogue-03.m4a` },
+    {
+      role: 'A',
+      text: 'リン、金曜のゼミの飲み会、行く？',
+      zh: '小粼，周五研讨课的聚餐你去吗？',
+      audio: `${AUDIO}/dialogue-01.m4a`,
+    },
+    {
+      role: 'B',
+      text: 'うーん、今回はやめとこうかな。',
+      zh: '嗯……这次还是算了吧。',
+      audio: `${AUDIO}/dialogue-02.m4a`,
+    },
+    {
+      role: 'A',
+      text: 'え、飲み会、嫌いなの？',
+      zh: '诶，你讨厌聚餐吗？',
+      audio: `${AUDIO}/dialogue-03.m4a`,
+    },
     {
       role: 'B',
       text: '嫌いなわけじゃないよ。ただ、お酒が飲めないから、いつも周りに気を使っちゃって。',
