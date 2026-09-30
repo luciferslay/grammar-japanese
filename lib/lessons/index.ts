@@ -1,6 +1,8 @@
 import { backFromRyokan } from './back-from-ryokan';
 import { cafePartTime } from './cafe-part-time';
+import { deadlineRumor } from './deadline-rumor';
 import { drinkingPartyInvite } from './drinking-party-invite';
+import { foundWallet } from './found-wallet';
 import { newBicycle } from './new-bicycle';
 import { phoneDinner } from './phone-dinner';
 import { ramenTrip } from './ramen-trip';
@@ -43,6 +45,8 @@ export const pendingLessons: Lesson[] = [
   newBicycle,
   backFromRyokan,
   drinkingPartyInvite,
+  deadlineRumor,
+  foundWallet,
 ];
 
 /** 某一级里已上架的课（首页、上一课／下一课用）。 */

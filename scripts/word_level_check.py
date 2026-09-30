@@ -94,7 +94,7 @@ if "--draft" in args:
     targets += draft_words(ROOT / args[i + 1])
     del args[i:i + 2]
 for p in sorted(glob.glob(str(ROOT / "lib" / "lessons" / "*.ts"))):
-    if p.endswith(("types.ts", "index.ts")):
+    if p.endswith(("types.ts", "index.ts", "levels.ts")):
         continue
     lid, badge, words = lesson_words(Path(p))
     if not args or lid in args:

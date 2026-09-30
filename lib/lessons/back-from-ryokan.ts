@@ -211,6 +211,7 @@ export const backFromRyokan: Lesson = {
   },
   sentenceTitle: '用 〜わけだ 说说「怪不得」',
   related: [
+    { id: 'gj-13', note: '〜わけだ＝知道原因后「怪不得」；〜わけがない＝「根本不可能」' },
     { id: 'gj-12', note: '〜わけだ＝知道原因后「怪不得」；〜わけではない＝「并不是……」' },
   ],
 };

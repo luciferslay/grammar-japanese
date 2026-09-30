@@ -21,8 +21,18 @@
 | 10（N3-4） | gj-10 | 〜たばかり | 先週買ったばかりなのに | 大纲 Luna 确认（9/30）；课程文件写好（pendingLessons，`new-bicycle.ts`），音频待录，插图等 Codex |
 | 11（N3-5） | gj-11 | 〜わけだ | それじゃ、疲れてるわけだ | 大纲 Luna 批准（9/30）；课程文件写好（pendingLessons），音频待录，插图等 Codex |
 | 12（N3-6） | gj-12 | 〜わけではない | 嫌いなわけじゃないよ | 大纲 Luna 批准（9/30）；课程文件写好（pendingLessons），音频待录，插图等 Codex |
-| 13（中级 7） | gj-13 | 〜わけがない | 延びるわけがないよ | 大纲待 Luna 批注（`LESSON_DRAFT_gj-13-14.md`，9/30） |
-| 14（中级 8） | gj-14 | 〜べきだ | すぐ交番に届けるべきだよ | 大纲待 Luna 批注（`LESSON_DRAFT_gj-13-14.md`，9/30） |
+| 13（中级 7） | gj-13 | 〜わけがない | 延びるわけがないよ | 大纲 Luna 批准（10/1）；课程文件写好（pendingLessons，`deadline-rumor.ts`），音频待录，插图等 Codex |
+| 14（中级 8） | gj-14 | 〜べきだ | すぐ交番に届けるべきだよ | 大纲 Luna 批准（10/1）；课程文件写好（pendingLessons，`found-wallet.ts`），音频待录，插图等 Codex |
+| 15（中级 9） | gj-15 | 〜ことはない | そんなに心配することはないよ | 大纲待 Luna 批注（`LESSON_DRAFT_gj-15-16.md`，10/1）；插图命令在 `CODEX_PROMPTS_gj-15-24.md` |
+| 16（中级 10） | gj-16 | 〜に違いない | 山田先輩に違いないよ | 大纲待 Luna 批注（`LESSON_DRAFT_gj-15-16.md`，10/1）；插图命令在 `CODEX_PROMPTS_gj-15-24.md` |
+| 17（中级 11） | gj-17 | 〜っぽい | なんか風邪っぽいんだよね | 大纲待 Luna 批注（`LESSON_DRAFT_gj-17-18.md`，10/1）；插图命令在 `CODEX_PROMPTS_gj-15-24.md` |
+| 18（中级 12） | gj-18 | 〜がち | 家で過ごしがちなんだよね | 大纲待 Luna 批注（`LESSON_DRAFT_gj-17-18.md`，10/1）；插图命令在 `CODEX_PROMPTS_gj-15-24.md` |
+| 19（中级 13） | gj-19 | 〜気味 | ずっと疲れ気味でさ | 大纲待 Luna 批注（`LESSON_DRAFT_gj-19-20.md`，10/1）；插图命令在 `CODEX_PROMPTS_gj-15-24.md` |
+| 20（中级 14） | gj-20 | 〜せいで／〜おかげで | 電車が止まったせいで | 大纲待 Luna 批注（`LESSON_DRAFT_gj-19-20.md`，10/1）；插图命令在 `CODEX_PROMPTS_gj-15-24.md` |
+| 21（中级 15） | gj-21 | 〜ために（原因） | 強風のため、運転を見合わせております | 大纲待 Luna 批注（`LESSON_DRAFT_gj-21-22.md`，10/1）；插图命令在 `CODEX_PROMPTS_gj-15-24.md` |
+| 22（中级 16） | gj-22 | 〜として | 通訳ボランティアとして参加してるの | 大纲待 Luna 批注（`LESSON_DRAFT_gj-21-22.md`，10/1）；插图命令在 `CODEX_PROMPTS_gj-15-24.md` |
+| 23（中级 17） | gj-23 | 〜について／〜に対して | 日本の食文化について発表したんだ | 大纲待 Luna 批注（`LESSON_DRAFT_gj-23-24.md`，10/1）；插图命令在 `CODEX_PROMPTS_gj-15-24.md` |
+| 24（中级 18） | gj-24 | 〜によって | 方言って、地域によって違うんだね | 大纲待 Luna 批注（`LESSON_DRAFT_gj-23-24.md`，10/1）；插图命令在 `CODEX_PROMPTS_gj-15-24.md` |
 
 ## 顺序表初稿（做的时候再调）
 

@@ -209,6 +209,7 @@ export const drinkingPartyInvite: Lesson = {
   },
   sentenceTitle: '用 〜わけではない 说说「并不是……」',
   related: [
+    { id: 'gj-13', note: '〜わけではない＝「并不是」（弱）；〜わけがない＝「绝对不可能」（强）' },
     { id: 'gj-11', note: '〜わけだ＝知道原因后「怪不得」；〜わけではない＝「并不是……」' },
   ],
 };
