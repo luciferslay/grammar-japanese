@@ -370,3 +370,11 @@
 
 - 同 gj-03 对话 2：9/29 consistent_redo 按句首距离自动选了 s3，Luna 还是听出不像。用 voice-candidates.html 让她在 8 版里挑 → **s2**。m4a、json 用候选的，WSL 的 wav 母带另外复制。
 - 这已经是第二条「自动挑的不对、人耳挑才对」：以后「不像同一个人」一律直接给候选页，不再先自动选。
+
+### 2026-09-30 14:3x Cloudflare 不自动构建 → 查因、修好连接
+
+- Luna 14:1x 在 Cloudflare 建了 Worker `grammar-japanese`（Import repository），之后推送不触发构建。
+- 查到：Settings → Builds 显示「This project is disconnected from your Git account」；构建记录只有建 Worker 时那 1 条。韩语站 korean-learning（`luciferslay/Korean-learning`）连接正常。
+- 判断：Cloudflare 的 GitHub 应用（Cloudflare Workers and Pages）只授权了选定的仓库，不含 grammar-japanese。Luna 在 GitHub 应用设置里加上仓库、Cloudflare 里 Manage 重新连接后，「disconnected」提示消失。
+- 构建配置核对过：Build `npm run build`，Deploy `npx wrangler deploy --config dist/server/wrangler.json`，Root `/`，分支 `main`，Include `*`。
+- dadcfc2 是在修好连接**之前**推送的，Cloudflare 收不到那次通知 → 用这条 WORKLOG 提交再推一次，触发第一次自动构建。
