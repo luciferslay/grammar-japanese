@@ -18,18 +18,18 @@
     "max_new_tokens": 480
   },
   "metrics": {
-    "duration_seconds": 4.8853,
+    "duration_seconds": 4.914,
     "speech_seconds": 4.29,
     "mora_count": 31,
     "seconds_per_mora": 0.1384,
-    "active_rms_dbfs": -23.84,
-    "peak_dbfs": -12.0,
-    "median_f0_hz": 244.9,
-    "voiced_f0_p10_hz": 196.72,
-    "voiced_f0_p90_hz": 285.38,
+    "active_rms_dbfs": -23.82,
+    "peak_dbfs": -9.9,
+    "median_f0_hz": 260.87,
+    "voiced_f0_p10_hz": 209.06,
+    "voiced_f0_p90_hz": 311.69,
     "sample_rate_hz": 24000,
     "channels": 1,
-    "tail_margin_db": -29.0
+    "tail_margin_db": -25.2
   },
   "quality_assessment": {
     "automatic_pass": true,
@@ -43,21 +43,21 @@
     "short_term_rule": false,
     "manual_review": "required"
   },
-  "output_sha256": "5c27edfa5a9a4975f9b01ce12ca5815336764b99617606c255af13ce25677167",
+  "output_sha256": "fc0424dce3586866e460a416e8cfa743c8c50bb95a9a2168d05ccbcdc9c4537d",
   "tempo_conformance": {
-    "atempo_factor": 1.021505,
-    "pre_conformance_seconds_per_mora": 0.141,
+    "atempo_factor": 1.072931,
+    "pre_conformance_seconds_per_mora": 0.1481,
     "target_seconds_per_mora": 0.138
   },
   "tts_input_text": "はい、大丈夫です。制服は自分で洗わなければなりませんか。 はい。",
   "page_text": "はい、大丈夫です。制服は自分で洗わなければなりませんか。",
-  "seed_offset": 1101,
+  "seed_offset": 1106,
   "prosody": {
-    "median_f0": 244.9,
+    "median_f0": 262.3,
     "baseline_f0": 248.71,
-    "f0_vs_baseline": 0.985,
-    "tail_f0": 220.2,
-    "tail_vs_median": 0.899,
+    "f0_vs_baseline": 1.055,
+    "tail_f0": 252.6,
+    "tail_vs_median": 0.963,
     "low_pitch": false,
     "falling_tail": false,
     "pass": true
@@ -67,19 +67,19 @@
     "pass": true
   },
   "tail_cliff": {
-    "margin_db": -29.0,
-    "cliff_db": 3.7,
+    "margin_db": -25.2,
+    "cliff_db": 5.1,
     "pass": true,
     "limit_db": -20.0
   },
   "tail_fade": {
-    "fade_ms": 50,
-    "max_step_db": 7.1,
+    "fade_ms": 80,
+    "max_step_db": 4.5,
     "pass": true
   },
   "sentence_asr": {
     "by_model": {
-      "small": "はい、大丈夫です。 制服は自分で現れなければなりませんか?",
+      "small": "はい大丈夫です 制服は自分で洗わなければなりませんか",
       "medium": "はい大丈夫です 制服は自分で洗わなければなりませんか"
     },
     "target": "はいだいじょうぶですせいふくはじぶんであらわなければなりませんか",
@@ -90,7 +90,13 @@
     "pass": true
   },
   "leading_blank": {
-    "seconds": 0.1,
+    "seconds": 0.11,
     "pass": true
+  },
+  "picked_from_candidates": {
+    "candidate": "dialogue-02-consistency/s7",
+    "picked_at": "2026-09-30T04:13:30",
+    "by": "Luna 人耳（音色：像同一个人）",
+    "replaced": "s2"
   }
 }
