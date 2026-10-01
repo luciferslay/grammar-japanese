@@ -1,14 +1,24 @@
+import { afterLongHoliday } from './after-long-holiday';
 import { backFromRyokan } from './back-from-ryokan';
 import { cafePartTime } from './cafe-part-time';
+import { catchingACold } from './catching-a-cold';
 import { deadlineRumor } from './deadline-rumor';
 import { drinkingPartyInvite } from './drinking-party-invite';
+import { festivalInterpreter } from './festival-interpreter';
+import { foodCultureSeminar } from './food-culture-seminar';
 import { foundWallet } from './found-wallet';
+import { interviewNerves } from './interview-nerves';
+import { kyotoDayTrip } from './kyoto-day-trip';
+import { mysterySweets } from './mystery-sweets';
 import { newBicycle } from './new-bicycle';
 import { phoneDinner } from './phone-dinner';
+import { rainySeasonIndoors } from './rainy-season-indoors';
 import { ramenTrip } from './ramen-trip';
 import { roomViewing } from './room-viewing';
 import { spicyCurry } from './spicy-curry';
 import { springBreakPlans } from './spring-break-plans';
+import { stoppedTrain } from './stopped-train';
+import { strongWindStation } from './strong-wind-station';
 import { supermarketNoodles } from './supermarket-noodles';
 import { walkAndPhone } from './walk-and-phone';
 import { weekendTalk } from './weekend-talk';
@@ -47,6 +57,16 @@ export const pendingLessons: Lesson[] = [
   drinkingPartyInvite,
   deadlineRumor,
   foundWallet,
+  interviewNerves,
+  mysterySweets,
+  catchingACold,
+  rainySeasonIndoors,
+  afterLongHoliday,
+  stoppedTrain,
+  strongWindStation,
+  festivalInterpreter,
+  foodCultureSeminar,
+  kyotoDayTrip,
 ];
 
 /** 某一级里已上架的课（首页、上一课／下一课用）。 */
