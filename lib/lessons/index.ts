@@ -9,6 +9,7 @@ import { foodCultureSeminar } from './food-culture-seminar';
 import { foundWallet } from './found-wallet';
 import { interviewNerves } from './interview-nerves';
 import { kyotoDayTrip } from './kyoto-day-trip';
+import { midnightRadio } from './midnight-radio';
 import { mysterySweets } from './mystery-sweets';
 import { newBicycle } from './new-bicycle';
 import { phoneDinner } from './phone-dinner';
@@ -20,6 +21,7 @@ import { springBreakPlans } from './spring-break-plans';
 import { stoppedTrain } from './stopped-train';
 import { strongWindStation } from './strong-wind-station';
 import { supermarketNoodles } from './supermarket-noodles';
+import { sushiApprentice } from './sushi-apprentice';
 import { walkAndPhone } from './walk-and-phone';
 import { weekendTalk } from './weekend-talk';
 import type { Lesson } from './types';
@@ -67,6 +69,8 @@ export const pendingLessons: Lesson[] = [
   festivalInterpreter,
   foodCultureSeminar,
   kyotoDayTrip,
+  sushiApprentice,
+  midnightRadio,
 ];
 
 /** 某一级里已上架的课（首页、上一课／下一课用）。 */
