@@ -1,0 +1,90 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "この店は、静かで雰囲気がいいです。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 3.5193,
+    "speech_seconds": 2.76,
+    "mora_count": 18,
+    "seconds_per_mora": 0.1533,
+    "active_rms_dbfs": -23.75,
+    "peak_dbfs": -11.26,
+    "median_f0_hz": 242.42,
+    "voiced_f0_p10_hz": 198.35,
+    "voiced_f0_p90_hz": 308.53,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "1fbbdc5358afc4ac06bceeb9042ae10111b9c840616af10bd7e38b6fb23851e3",
+  "tempo_conformance": {
+    "atempo_factor": 0.926529,
+    "pre_conformance_seconds_per_mora": 0.1422,
+    "target_seconds_per_mora": 0.1535
+  },
+  "tts_input_text": "この店は、静かで雰囲気がいいです。",
+  "page_text": "この店は、静かで雰囲気がいいです。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 242.4,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 0.975,
+    "tail_f0": 213.3,
+    "tail_vs_median": 0.88,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.0418,
+    "limit": 0.35,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "この店は静かで雰囲気がいいです",
+      "medium": "この店は静かで雰囲気がいいです"
+    },
+    "target": "このみせはしずかでふんいきがいいです",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "internal_pause": {
+    "gaps_ms": [
+      320
+    ],
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  }
+}
