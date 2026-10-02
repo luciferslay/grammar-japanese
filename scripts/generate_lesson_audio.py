@@ -94,7 +94,10 @@ def _seed_base() -> int:
     """job 文件第二行可写 seed_offset=N：重录时换一批 seed。
 
     seed 是固定的，同一句重跑只会得到一模一样的几版（2026-09-20 custom-07 两条例句
-    重跑后停顿位置分毫不差）。要换说法就得换 seed。"""
+    重跑后停顿位置分毫不差）。要换说法就得换 seed。
+    也可以用环境变量 SEED_OFFSET=N（单条重录时用，见 _claude/redo.sh）。"""
+    if os.environ.get("SEED_OFFSET"):
+        return int(os.environ["SEED_OFFSET"])
     for marker in sorted((ROOT / "audio-jobs").glob("*.running")):
         job = marker.with_suffix(".job")
         if job.exists():
