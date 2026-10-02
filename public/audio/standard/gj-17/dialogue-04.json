@@ -1,0 +1,101 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "そう言って、本当は注射が怖いだけでしょ。そういうとこ、子どもっぽいよね。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 5.5485,
+    "speech_seconds": 4.83,
+    "mora_count": 35,
+    "seconds_per_mora": 0.138,
+    "active_rms_dbfs": -23.97,
+    "peak_dbfs": -8.86,
+    "median_f0_hz": 282.35,
+    "voiced_f0_p10_hz": 218.18,
+    "voiced_f0_p90_hz": 320.0,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -29.3
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "15fa6e8e8e1f84f773039071b769730b17a3565a5c968a00da60a8aba6e5f259",
+  "tempo_conformance": {
+    "atempo_factor": 1.198758,
+    "pre_conformance_seconds_per_mora": 0.1654,
+    "target_seconds_per_mora": 0.138
+  },
+  "tts_input_text": "そう言って、本当は注射が怖いだけでしょ。そういうとこ、子どもっぽいよね。 はい。",
+  "page_text": "そう言って、本当は注射が怖いだけでしょ。そういうとこ、子どもっぽいよね。",
+  "seed_offset": 1,
+  "prosody": {
+    "median_f0": 282.4,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.135,
+    "tail_f0": 250.1,
+    "tail_vs_median": 0.886,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -29.3,
+    "cliff_db": 2.7,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 70,
+    "max_step_db": 4.7,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "そういって本当は駐車が怖いだけでしょ そういうとこ子供っぽいよね",
+      "medium": "そう言って本当は駐車が怖いだけでしょ そういうとこ子供っぽいよね"
+    },
+    "target": "そういってほんとうはちゅうしゃがこわいだけでしょそういうとここどもっぽいよね",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.19,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.1071,
+    "limit": 0.7,
+    "pass": true
+  }
+}

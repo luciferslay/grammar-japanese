@@ -1,0 +1,101 @@
+{
+  "voice_id": "MALE_CALM_SLOW",
+  "text": "町の人間としては、もちろん歓迎だよ。昔からの伝統行事に興味を持ってもらえるのは、うれしいし。",
+  "seed": 202609232,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "61b7ceec5c5a01994440faf8f07d62398eb57d7f48ff821fd15bd566094c196d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 7.1447,
+    "speech_seconds": 6.56,
+    "mora_count": 53,
+    "seconds_per_mora": 0.1238,
+    "active_rms_dbfs": -23.67,
+    "peak_dbfs": -7.58,
+    "median_f0_hz": 165.52,
+    "voiced_f0_p10_hz": 113.0,
+    "voiced_f0_p90_hz": 220.18,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -22.4
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "66504a4b9adc08167c07eb543f408c91656652579c362a31243e6207c551d96f",
+  "tempo_conformance": {
+    "atempo_factor": 0.936532,
+    "pre_conformance_seconds_per_mora": 0.1158,
+    "target_seconds_per_mora": 0.1237
+  },
+  "tts_input_text": "町の人間としては、もちろん歓迎だよ。昔からの伝統行事に興味を持ってもらえるのは、うれしいし。 はい。",
+  "page_text": "町の人間としては、もちろん歓迎だよ。昔からの伝統行事に興味を持ってもらえるのは、うれしいし。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 165.5,
+    "baseline_f0": 145.41,
+    "f0_vs_baseline": 1.138,
+    "tail_f0": 137.1,
+    "tail_vs_median": 0.829,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -22.4,
+    "cliff_db": 7.7,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 60,
+    "max_step_db": 7.2,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "街の人間としてはもちろん歓迎だよ 昔からの伝統行事に興味を持ってもらえるのは嬉しいし",
+      "medium": "町の人間としてはもちろん歓迎だよ 昔からの伝統行事に興味を持ってもらえるのは嬉しいし"
+    },
+    "target": "まちのにんげんとしてはもちろんかんげいだよむかしからのでんとうぎょうじにきょうみをもってもらえるのはうれしいし",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.1,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.0061,
+    "limit": 0.7,
+    "pass": true
+  }
+}

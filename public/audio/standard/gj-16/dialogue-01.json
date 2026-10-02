@@ -1,0 +1,101 @@
+{
+  "voice_id": "MALE_CALM_SLOW",
+  "text": "あれ、テーブルに高級そうなお菓子の箱が置いてある。誰が持ってきたんだろう。",
+  "seed": 202609232,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "61b7ceec5c5a01994440faf8f07d62398eb57d7f48ff821fd15bd566094c196d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 5.3115,
+    "speech_seconds": 4.7,
+    "mora_count": 38,
+    "seconds_per_mora": 0.1237,
+    "active_rms_dbfs": -23.85,
+    "peak_dbfs": -7.58,
+    "median_f0_hz": 164.38,
+    "voiced_f0_p10_hz": 101.96,
+    "voiced_f0_p90_hz": 247.42,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -27.6
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "6facc7f0377fcf186338b0c711af645df2bad1f4c33179a4eadf7a8abe14eec1",
+  "tempo_conformance": {
+    "atempo_factor": 0.950942,
+    "pre_conformance_seconds_per_mora": 0.1176,
+    "target_seconds_per_mora": 0.1237
+  },
+  "tts_input_text": "あれ、テーブルに高級そうなお菓子の箱が置いてある。誰が持ってきたんだろう。 はい。",
+  "page_text": "あれ、テーブルに高級そうなお菓子の箱が置いてある。誰が持ってきたんだろう。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 155.9,
+    "baseline_f0": 145.41,
+    "f0_vs_baseline": 1.072,
+    "tail_f0": 101.1,
+    "tail_vs_median": 0.648,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -27.6,
+    "cliff_db": 9.1,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 60,
+    "max_step_db": 7.3,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "あれテーブルに高級そうなお菓子の箱が置いてある 誰が持ってきたんだろう",
+      "medium": "あれ、テーブルに高級そうなお菓子の箱が置いてある。 誰が持ってきたんだろう?"
+    },
+    "target": "あれてーぶるにこうきゅうそうなおかしのはこがおいてあるだれがもってきたんだろう",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.12,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.2662,
+    "limit": 0.7,
+    "pass": true
+  }
+}

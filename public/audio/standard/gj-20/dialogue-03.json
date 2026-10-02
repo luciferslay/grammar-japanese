@@ -1,0 +1,101 @@
+{
+  "voice_id": "MALE_CALM_SLOW",
+  "text": "そうそう。駅もすごく混雑してて、改札を出るまでに二十分もかかったんだ。",
+  "seed": 202609232,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "61b7ceec5c5a01994440faf8f07d62398eb57d7f48ff821fd15bd566094c196d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 5.4343,
+    "speech_seconds": 4.85,
+    "mora_count": 39,
+    "seconds_per_mora": 0.1244,
+    "active_rms_dbfs": -23.93,
+    "peak_dbfs": -6.77,
+    "median_f0_hz": 172.66,
+    "voiced_f0_p10_hz": 103.45,
+    "voiced_f0_p90_hz": 233.01,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -26.2
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "e61f67704ea47ed7704a8279b281886a575089ab710a86976bc601de2a2e0c90",
+  "tempo_conformance": {
+    "atempo_factor": 1.119333,
+    "pre_conformance_seconds_per_mora": 0.1385,
+    "target_seconds_per_mora": 0.1237
+  },
+  "tts_input_text": "そうそう。駅もすごく混雑してて、改札を出るまでに二十分もかかったんだ。 はい。",
+  "page_text": "そうそう。駅もすごく混雑してて、改札を出るまでに二十分もかかったんだ。",
+  "seed_offset": 1,
+  "prosody": {
+    "median_f0": 173.9,
+    "baseline_f0": 145.41,
+    "f0_vs_baseline": 1.196,
+    "tail_f0": 123.8,
+    "tail_vs_median": 0.712,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -26.2,
+    "cliff_db": 5.5,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 70,
+    "max_step_db": 6.1,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "そうそう 駅もすごく混雑してて 改札を出るまでに20分もかかったんだ",
+      "medium": "そうそう、駅もすごく混雑してて、改札を出るまでに20分もかかったんだ。"
+    },
+    "target": "そうそうえきもすごくこんざつしててかいさつをでるまでににじゅうふんもかかったんだ",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.1,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.3285,
+    "limit": 0.7,
+    "pass": true
+  }
+}

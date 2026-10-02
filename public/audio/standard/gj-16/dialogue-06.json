@@ -1,0 +1,101 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "ほら、私の予想が当たった。先輩、みんなを驚かせようと思ったに違いないね。あとでお礼を言いに行こう。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 8.0864,
+    "speech_seconds": 7.47,
+    "mora_count": 54,
+    "seconds_per_mora": 0.1383,
+    "active_rms_dbfs": -23.87,
+    "peak_dbfs": -10.75,
+    "median_f0_hz": 260.87,
+    "voiced_f0_p10_hz": 210.16,
+    "voiced_f0_p90_hz": 296.3,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -28.1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "5bf83c6bbdefa415d144c1456319f350f1a06e913a9d282471422a7863e5f458",
+  "tempo_conformance": {
+    "atempo_factor": 1.125872,
+    "pre_conformance_seconds_per_mora": 0.1554,
+    "target_seconds_per_mora": 0.138
+  },
+  "tts_input_text": "ほら、私の予想が当たった。先輩、みんなを驚かせようと思ったに違いないね。あとでお礼を言いに行こう。 はい。",
+  "page_text": "ほら、私の予想が当たった。先輩、みんなを驚かせようと思ったに違いないね。あとでお礼を言いに行こう。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 263.7,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.06,
+    "tail_f0": 285.7,
+    "tail_vs_median": 1.083,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -28.1,
+    "cliff_db": 5.2,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 120,
+    "max_step_db": 5.4,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "ほら、私の予想が当たった。 先輩、みんなを驚かせようと思ったに違いないね。 後でお礼を言いに行こう。",
+      "medium": "ほら、私の予想が当たった。先輩、みんなを驚かせようと思ったに違いないね。あとでお礼を言いに行こう。"
+    },
+    "target": "ほらわたしのよそうがあたったせんぱいみんなをおどろかせようとおもったにちがいないねあとでおれいをいいにいこう",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.1,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.3241,
+    "limit": 0.7,
+    "pass": true
+  }
+}

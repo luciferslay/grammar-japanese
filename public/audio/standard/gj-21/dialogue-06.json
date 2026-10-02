@@ -1,0 +1,101 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "電車が止まったのは強風のためなんだから、誰のせいでもないよ。晴れたら、また来よう。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 6.2812,
+    "speech_seconds": 5.68,
+    "mora_count": 41,
+    "seconds_per_mora": 0.1385,
+    "active_rms_dbfs": -23.86,
+    "peak_dbfs": -10.61,
+    "median_f0_hz": 244.9,
+    "voiced_f0_p10_hz": 203.39,
+    "voiced_f0_p90_hz": 279.07,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -28.3
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "1936d2ff4a7a194f388f72df45516bfc78c6aceb0017770e9fd563cd981e8e50",
+  "tempo_conformance": {
+    "atempo_factor": 1.117002,
+    "pre_conformance_seconds_per_mora": 0.1541,
+    "target_seconds_per_mora": 0.138
+  },
+  "tts_input_text": "電車が止まったのは強風のためなんだから、誰のせいでもないよ。晴れたら、また来よう。 はい。",
+  "page_text": "電車が止まったのは強風のためなんだから、誰のせいでもないよ。晴れたら、また来よう。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 244.9,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 0.985,
+    "tail_f0": 240.0,
+    "tail_vs_median": 0.98,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -28.3,
+    "cliff_db": 2.6,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 60,
+    "max_step_db": 5.8,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "電車が止まったのは恐怖のためなんだから誰のせいでもないよ晴れたらまた来よう",
+      "medium": "電車が止まったのは強風のためなんだから 誰のせいでもないよ晴れたらまた来よう"
+    },
+    "target": "でんしゃがとまったのはきょうふうのためなんだからだれのせいでもないよはれたらまたこよう",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.1,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.0544,
+    "limit": 0.7,
+    "pass": true
+  }
+}

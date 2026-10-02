@@ -1,0 +1,96 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "相談に乗る",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 1.5813,
+    "speech_seconds": 0.91,
+    "mora_count": 7,
+    "seconds_per_mora": 0.13,
+    "active_rms_dbfs": -23.45,
+    "peak_dbfs": -11.67,
+    "median_f0_hz": 282.35,
+    "voiced_f0_p10_hz": 268.16,
+    "voiced_f0_p90_hz": 289.16,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "e62a5e1c6b3d0217b7c2078273e1036da4c723bc30e30cc240c0b0817307950e",
+  "tempo_conformance": {
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.1186,
+    "target_seconds_per_mora": 0.1535
+  },
+  "tts_input_text": "相談に乗る。",
+  "page_text": "相談に乗る",
+  "seed_offset": 5,
+  "term_policy": {
+    "speech_seconds": 0.79,
+    "per_syllable": 0.1129,
+    "too_short": false,
+    "too_long": false,
+    "pass": true,
+    "cut_applied": false,
+    "lead_filler_cut": false,
+    "distance_to_target": 0.0171,
+    "asr": {
+      "by_model": {
+        "small": "相談に乗る",
+        "medium": "相談に乗る"
+      },
+      "target": "そうだんにのる",
+      "ratio": 1.0,
+      "exact": true,
+      "lead_filler": false,
+      "tail_extra": false,
+      "incomplete": false,
+      "pass": true
+    },
+    "ratio": 1.0
+  },
+  "prosody": {
+    "median_f0": 282.4,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.135,
+    "tail_f0": 279.1,
+    "tail_vs_median": 0.988,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.172,
+    "limit": 0.35,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.1,
+    "pass": true
+  }
+}

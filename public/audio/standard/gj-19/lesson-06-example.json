@@ -1,0 +1,90 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "忙しくて、昼ご飯を抜いてしまいました。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 3.6758,
+    "speech_seconds": 3.09,
+    "mora_count": 21,
+    "seconds_per_mora": 0.1471,
+    "active_rms_dbfs": -23.75,
+    "peak_dbfs": -9.81,
+    "median_f0_hz": 247.42,
+    "voiced_f0_p10_hz": 210.53,
+    "voiced_f0_p90_hz": 292.68,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "386a7cb425ecf4abf08a4406fd9a254f4599b41e23b839cc433b972e4726d373",
+  "tempo_conformance": {
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.1319,
+    "target_seconds_per_mora": 0.1535
+  },
+  "tts_input_text": "忙しくて、昼ご飯を抜いてしまいました。",
+  "page_text": "忙しくて、昼ご飯を抜いてしまいました。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 250.0,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.005,
+    "tail_f0": 244.9,
+    "tail_vs_median": 0.98,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.0368,
+    "limit": 0.35,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "忙しくて、昼ご飯を抜いてしまいました。",
+      "medium": "忙しくて昼ごはんを抜いてしまいました"
+    },
+    "target": "いそがしくてひるごめしをぬいてしまいました",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "internal_pause": {
+    "gaps_ms": [
+      300
+    ],
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.1,
+    "pass": true
+  }
+}

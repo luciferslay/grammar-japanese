@@ -1,0 +1,101 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "よかった。人に見せると思って丁寧に書いたおかげで、私もいい復習になったよ。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 6.3845,
+    "speech_seconds": 5.81,
+    "mora_count": 42,
+    "seconds_per_mora": 0.1383,
+    "active_rms_dbfs": -23.95,
+    "peak_dbfs": -10.45,
+    "median_f0_hz": 247.42,
+    "voiced_f0_p10_hz": 212.39,
+    "voiced_f0_p90_hz": 307.69,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -26.4
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "f36fcc66ac76122b2106466ac1b70bbe4c86e1f75a2e4487964115187c6fc68b",
+  "tempo_conformance": {
+    "atempo_factor": 1.138716,
+    "pre_conformance_seconds_per_mora": 0.1571,
+    "target_seconds_per_mora": 0.138
+  },
+  "tts_input_text": "よかった。人に見せると思って丁寧に書いたおかげで、私もいい復習になったよ。 はい。",
+  "page_text": "よかった。人に見せると思って丁寧に書いたおかげで、私もいい復習になったよ。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 247.4,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 0.995,
+    "tail_f0": 226.4,
+    "tail_vs_median": 0.915,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -26.4,
+    "cliff_db": 6.8,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 40,
+    "max_step_db": 6.6,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "よかった、人に見せると思って丁寧に書いたおかげで、私も良い復習になったよ。",
+      "medium": "よかった 人に見せると思って丁寧に描いたおかげで私もいい復讐になったよ"
+    },
+    "target": "よかったにんにみせるとおもってていねいにかいたおかげでわたしもいいふくしゅうになったよ",
+    "ratio": 0.9783,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.0704,
+    "limit": 0.7,
+    "pass": true
+  }
+}

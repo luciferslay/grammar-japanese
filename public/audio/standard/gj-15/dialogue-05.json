@@ -1,0 +1,101 @@
+{
+  "voice_id": "MALE_CALM_SLOW",
+  "text": "長所か……。もし答えられない質問が来て、慌てちゃったらどうしよう。第一印象が悪くなるよね。",
+  "seed": 202609232,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "61b7ceec5c5a01994440faf8f07d62398eb57d7f48ff821fd15bd566094c196d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 6.6449,
+    "speech_seconds": 6.08,
+    "mora_count": 48,
+    "seconds_per_mora": 0.1267,
+    "active_rms_dbfs": -23.84,
+    "peak_dbfs": -7.63,
+    "median_f0_hz": 155.34,
+    "voiced_f0_p10_hz": 93.75,
+    "voiced_f0_p90_hz": 220.18,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -21.5
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "e9ec3545c277aa59828eae2a8c30d6f66a03e86bf5a1fd269f7247b472a94ff0",
+  "tempo_conformance": {
+    "atempo_factor": 1.12,
+    "pre_conformance_seconds_per_mora": 0.1413,
+    "target_seconds_per_mora": 0.1237
+  },
+  "tts_input_text": "長所か……。もし答えられない質問が来て、慌てちゃったらどうしよう。第一印象が悪くなるよね。 はい。",
+  "page_text": "長所か……。もし答えられない質問が来て、慌てちゃったらどうしよう。第一印象が悪くなるよね。",
+  "seed_offset": 1,
+  "prosody": {
+    "median_f0": 156.9,
+    "baseline_f0": 145.41,
+    "f0_vs_baseline": 1.079,
+    "tail_f0": 101.5,
+    "tail_vs_median": 0.647,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -21.5,
+    "cliff_db": 15.2,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 20,
+    "max_step_db": 11.5,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "長所かもし答えられない質問が来て慌てちゃったらどうしよう第一印象が悪くなるよね",
+      "medium": "長所かもし答えられない質問が来て慌てちゃったらどうしよう 第一印象が悪くなるよね"
+    },
+    "target": "ちょうしょかもしこたえられないしつもんがきてあわてちゃったらどうしようだいいちいんしょうがわるくなるよね",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.1781,
+    "limit": 0.7,
+    "pass": true
+  }
+}

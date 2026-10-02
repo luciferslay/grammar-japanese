@@ -1,0 +1,101 @@
+{
+  "voice_id": "MALE_CALM_SLOW",
+  "text": "怖くないって！……あ、それより、また傘忘れちゃった。帰り、入れてくれない？",
+  "seed": 202609232,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "61b7ceec5c5a01994440faf8f07d62398eb57d7f48ff821fd15bd566094c196d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 5.4056,
+    "speech_seconds": 4.85,
+    "mora_count": 32,
+    "seconds_per_mora": 0.1516,
+    "active_rms_dbfs": -23.95,
+    "peak_dbfs": -7.0,
+    "median_f0_hz": 177.78,
+    "voiced_f0_p10_hz": 112.9,
+    "voiced_f0_p90_hz": 233.01,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -20.2
+  },
+  "quality_assessment": {
+    "automatic_pass": false,
+    "checks": {
+      "speed": false,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "3e0697488fd0155b80eddccb41928d64fb7f94f75492817b37b9f39f2f0d1fb2",
+  "tempo_conformance": {
+    "atempo_factor": 1.12,
+    "pre_conformance_seconds_per_mora": 0.1688,
+    "target_seconds_per_mora": 0.1237
+  },
+  "tts_input_text": "怖くないって！……あ、それより、また傘忘れちゃった。帰り、入れてくれない？ はい。",
+  "page_text": "怖くないって！……あ、それより、また傘忘れちゃった。帰り、入れてくれない？",
+  "seed_offset": 4,
+  "prosody": {
+    "median_f0": 177.8,
+    "baseline_f0": 145.41,
+    "f0_vs_baseline": 1.223,
+    "tail_f0": 231.9,
+    "tail_vs_median": 1.304,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -20.2,
+    "cliff_db": 14.1,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 30,
+    "max_step_db": 8.5,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "怖くないって あそれよりまたかさ忘れちゃった帰り入れてくれない",
+      "medium": "怖くないってあそれよりまた傘忘れちゃった帰り入れてくれない"
+    },
+    "target": "こわくないってあそれよりまたかさわすれちゃったかえりいれてくれない",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.0707,
+    "limit": 0.7,
+    "pass": true
+  }
+}

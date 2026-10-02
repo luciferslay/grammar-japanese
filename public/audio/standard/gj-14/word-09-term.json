@@ -1,0 +1,96 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "犯罪",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 1.1752,
+    "speech_seconds": 0.56,
+    "mora_count": 4,
+    "seconds_per_mora": 0.14,
+    "active_rms_dbfs": -23.69,
+    "peak_dbfs": -14.18,
+    "median_f0_hz": 240.0,
+    "voiced_f0_p10_hz": 234.84,
+    "voiced_f0_p90_hz": 244.9,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": true,
+    "manual_review": "required"
+  },
+  "output_sha256": "7c4508f8f6af67570860bb192119afc62d96a03f2604bc7c7513c9b9d4065612",
+  "tempo_conformance": {
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.1275,
+    "target_seconds_per_mora": 0.1535
+  },
+  "tts_input_text": "犯罪。",
+  "page_text": "犯罪",
+  "seed_offset": 0,
+  "term_policy": {
+    "speech_seconds": 0.5,
+    "per_syllable": 0.125,
+    "too_short": false,
+    "too_long": false,
+    "pass": true,
+    "cut_applied": false,
+    "lead_filler_cut": false,
+    "distance_to_target": 0.005,
+    "asr": {
+      "by_model": {
+        "small": "犯罪",
+        "medium": "犯罪"
+      },
+      "target": "はんざい",
+      "ratio": 1.0,
+      "exact": true,
+      "lead_filler": false,
+      "tail_extra": false,
+      "incomplete": false,
+      "pass": true
+    },
+    "ratio": 1.0
+  },
+  "prosody": {
+    "median_f0": 238.8,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 0.96,
+    "tail_f0": 240.0,
+    "tail_vs_median": 1.005,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.0856,
+    "limit": 0.35,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.12,
+    "pass": true
+  }
+}

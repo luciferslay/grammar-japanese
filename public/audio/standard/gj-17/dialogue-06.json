@@ -1,0 +1,101 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "昨日も忘れて濡れたのに？ 相変わらず忘れっぽいなあ。今日だけ特別だよ。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 5.7352,
+    "speech_seconds": 5.12,
+    "mora_count": 37,
+    "seconds_per_mora": 0.1384,
+    "active_rms_dbfs": -23.84,
+    "peak_dbfs": -11.03,
+    "median_f0_hz": 233.01,
+    "voiced_f0_p10_hz": 205.13,
+    "voiced_f0_p90_hz": 258.06,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "tail_margin_db": -27.8
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true,
+      "tail": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "f1adb5a4c12986de9ed6a9fe9365b54e8511747aff0e4f9f3b5a2e5913bbd7f9",
+  "tempo_conformance": {
+    "atempo_factor": 1.147669,
+    "pre_conformance_seconds_per_mora": 0.1584,
+    "target_seconds_per_mora": 0.138
+  },
+  "tts_input_text": "昨日も忘れて濡れたのに？ 相変わらず忘れっぽいなあ。今日だけ特別だよ。 はい。",
+  "page_text": "昨日も忘れて濡れたのに？ 相変わらず忘れっぽいなあ。今日だけ特別だよ。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 233.0,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 0.937,
+    "tail_f0": 229.7,
+    "tail_vs_median": 0.986,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": null,
+    "pass": true
+  },
+  "tail_cliff": {
+    "margin_db": -27.8,
+    "cliff_db": 2.6,
+    "pass": true,
+    "limit_db": -20.0
+  },
+  "tail_fade": {
+    "fade_ms": 60,
+    "max_step_db": 6.7,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "昨日も忘れてぬれたのにさあ変わらず忘れっぽいなぁ 今日だけ特別だよ",
+      "medium": "昨日も忘れて濡れたのにさあ変わらず忘れっぽいなぁ 今日だけ特別だよ"
+    },
+    "target": "きのうもわすれてぬれたのにあいかわらずわすれっぽいなあきょうだけとくべつだよ",
+    "ratio": 0.9535,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  },
+  "head_consistency": {
+    "distance": 0.0306,
+    "limit": 0.7,
+    "pass": true
+  }
+}

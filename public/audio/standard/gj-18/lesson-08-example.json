@@ -1,0 +1,90 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "最近、体重が二キロ増えました。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 3.2812,
+    "speech_seconds": 2.62,
+    "mora_count": 17,
+    "seconds_per_mora": 0.1541,
+    "active_rms_dbfs": -23.69,
+    "peak_dbfs": -11.2,
+    "median_f0_hz": 266.67,
+    "voiced_f0_p10_hz": 240.0,
+    "voiced_f0_p90_hz": 303.8,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "a928745807116499bbc9c9678e5d1153ca421a326dff21ef8c0deaade31147c3",
+  "tempo_conformance": {
+    "atempo_factor": 0.988695,
+    "pre_conformance_seconds_per_mora": 0.1518,
+    "target_seconds_per_mora": 0.1535
+  },
+  "tts_input_text": "最近、体重が二キロ増えました。",
+  "page_text": "最近、体重が二キロ増えました。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 269.7,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.084,
+    "tail_f0": 294.5,
+    "tail_vs_median": 1.092,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.0816,
+    "limit": 0.35,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "最近、体重が2キロ増えました",
+      "medium": "最近体重が2キロ増えました"
+    },
+    "target": "さいきんたいじゅうがにきろふえました",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "internal_pause": {
+    "gaps_ms": [
+      360
+    ],
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.11,
+    "pass": true
+  }
+}

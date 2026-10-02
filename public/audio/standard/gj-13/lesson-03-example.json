@@ -1,0 +1,90 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "雨で、試合が来週に延びました。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 3.2176,
+    "speech_seconds": 2.64,
+    "mora_count": 17,
+    "seconds_per_mora": 0.1553,
+    "active_rms_dbfs": -23.8,
+    "peak_dbfs": -10.22,
+    "median_f0_hz": 266.67,
+    "voiced_f0_p10_hz": 216.23,
+    "voiced_f0_p90_hz": 290.92,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "fceb599654cd671bcb27bfe90ad7a65ab43d19f5587d43a8ba58d7aa2b508456",
+  "tempo_conformance": {
+    "atempo_factor": 1.023185,
+    "pre_conformance_seconds_per_mora": 0.1571,
+    "target_seconds_per_mora": 0.1535
+  },
+  "tts_input_text": "雨で、試合が来週に延びました。",
+  "page_text": "雨で、試合が来週に延びました。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 266.7,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.072,
+    "tail_f0": 260.9,
+    "tail_vs_median": 0.978,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.0947,
+    "limit": 0.35,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "雨で試合が来週に踊びました",
+      "medium": "雨で試合が来週におどびました"
+    },
+    "target": "あめでしあいがらいしゅうにのびました",
+    "ratio": 0.9302,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "internal_pause": {
+    "gaps_ms": [
+      300
+    ],
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  }
+}

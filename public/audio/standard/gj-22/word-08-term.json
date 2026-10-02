@@ -1,0 +1,96 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "代表",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 1.1724,
+    "speech_seconds": 0.61,
+    "mora_count": 4,
+    "seconds_per_mora": 0.1525,
+    "active_rms_dbfs": -24.09,
+    "peak_dbfs": -12.44,
+    "median_f0_hz": 258.06,
+    "voiced_f0_p10_hz": 237.62,
+    "voiced_f0_p90_hz": 270.58,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": true,
+    "manual_review": "required"
+  },
+  "output_sha256": "9fbce87a67fc20a86d676171f8e66fc70462ee4fe29f3e09318940e0f10d74c9",
+  "tempo_conformance": {
+    "atempo_factor": 0.9,
+    "pre_conformance_seconds_per_mora": 0.135,
+    "target_seconds_per_mora": 0.1535
+  },
+  "tts_input_text": "代表。",
+  "page_text": "代表",
+  "seed_offset": 0,
+  "term_policy": {
+    "speech_seconds": 0.51,
+    "per_syllable": 0.1275,
+    "too_short": false,
+    "too_long": false,
+    "pass": true,
+    "cut_applied": false,
+    "lead_filler_cut": false,
+    "distance_to_target": 0.0025,
+    "asr": {
+      "by_model": {
+        "small": "代表",
+        "medium": "代表"
+      },
+      "target": "だいひょう",
+      "ratio": 1.0,
+      "exact": true,
+      "lead_filler": false,
+      "tail_extra": false,
+      "incomplete": false,
+      "pass": true
+    },
+    "ratio": 1.0
+  },
+  "prosody": {
+    "median_f0": 256.7,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 1.032,
+    "tail_f0": 258.1,
+    "tail_vs_median": 1.005,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.0332,
+    "limit": 0.35,
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.09,
+    "pass": true
+  }
+}
