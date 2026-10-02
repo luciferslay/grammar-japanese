@@ -428,3 +428,9 @@
 - 做课时改了一处：gj-26 找错题 T2 的理由选项原来夹着中文，选项一律日文，改成「「話さなくても済む」と言いたいときは 話さずに済みさえすれば。話さえしなければ では意味が違う」，大纲同步改了。
 - 通过：shuffle_answers、check_bonus_in_dialogue、对话句数、解说里的圆圈编号不指向正确答案。
 - 这两课的人物是新的：A 男声演寿司店老板／广播主持，B 女声演见习师傅／咨询师。录完重点听角色感（老板的口吻、播音腔）是不是自然。
+
+### 2026-10-02 12:5x 插图入库（Codex 存在 `C:\Users\lunac\Documents\Codex\ichinichi-illustrations\`）
+
+- 14 张：walk-and-phone、spicy-curry（gj-05、06）；deadline-rumor、found-wallet（gj-13、14）；gj-15〜24 的 10 张。
+- Claude 逐张看过：人物和前几课一致，没有可读文字或乱码（日历、显示屏、招牌都是空白或色块），手指结构正常。已复制进 public/。
+- 还缺：gj-09〜12（spring-break-plans、new-bicycle、back-from-ryokan、drinking-party-invite）、gj-25、26（sushi-apprentice、midnight-radio）。
