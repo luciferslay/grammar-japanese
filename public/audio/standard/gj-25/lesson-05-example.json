@@ -1,0 +1,90 @@
+{
+  "voice_id": "FEMALE_ONO_ANNA_CLONE",
+  "text": "人前で話すのは、場数を踏めば慣れます。",
+  "seed": 202609221,
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+  "reference_sha256": "31bc5cc39a3594e50da932eea8b4d341ca553a826732aa4d9f8e5545ab99856d",
+  "generation": {
+    "do_sample": true,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0.9,
+    "repetition_penalty": 1.05,
+    "subtalker_dosample": true,
+    "subtalker_top_k": 50,
+    "subtalker_top_p": 1.0,
+    "subtalker_temperature": 0.9,
+    "max_new_tokens": 480
+  },
+  "metrics": {
+    "duration_seconds": 3.9081,
+    "speech_seconds": 3.23,
+    "mora_count": 21,
+    "seconds_per_mora": 0.1538,
+    "active_rms_dbfs": -23.68,
+    "peak_dbfs": -9.33,
+    "median_f0_hz": 242.42,
+    "voiced_f0_p10_hz": 218.18,
+    "voiced_f0_p90_hz": 300.0,
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "quality_assessment": {
+    "automatic_pass": true,
+    "checks": {
+      "speed": true,
+      "pitch": true,
+      "loudness": true,
+      "peak": true
+    },
+    "short_term_rule": false,
+    "manual_review": "required"
+  },
+  "output_sha256": "6adbd7015aa20b1c9184c764655b823789a5ca53d3b137877898a5aa58e6fac7",
+  "tempo_conformance": {
+    "atempo_factor": 0.949279,
+    "pre_conformance_seconds_per_mora": 0.1457,
+    "target_seconds_per_mora": 0.1535
+  },
+  "tts_input_text": "人前で話すのは、場数を踏めば慣れます。",
+  "page_text": "人前で話すのは、場数を踏めば慣れます。",
+  "seed_offset": 0,
+  "prosody": {
+    "median_f0": 242.4,
+    "baseline_f0": 248.71,
+    "f0_vs_baseline": 0.975,
+    "tail_f0": 237.6,
+    "tail_vs_median": 0.98,
+    "low_pitch": false,
+    "falling_tail": false,
+    "pass": true
+  },
+  "timbre": {
+    "distance": 0.0474,
+    "limit": 0.35,
+    "pass": true
+  },
+  "sentence_asr": {
+    "by_model": {
+      "small": "人前で話すのはバスを踏め離れます",
+      "medium": "人前で話すのは場数を踏めば慣れます"
+    },
+    "target": "ひとまえではなすのはばかずをふめばなれます",
+    "ratio": 1.0,
+    "tail_ratio": 1.0,
+    "head_ratio": 1.0,
+    "lead_filler": false,
+    "pass": true
+  },
+  "internal_pause": {
+    "gaps_ms": [
+      380
+    ],
+    "pass": true
+  },
+  "leading_blank": {
+    "seconds": 0.11,
+    "pass": true
+  }
+}
