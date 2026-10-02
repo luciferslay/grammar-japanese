@@ -447,3 +447,18 @@
 
 - gj-09〜12（spring-break-plans、new-bicycle、back-from-ryokan、drinking-party-invite）、gj-25、26（sushi-apprentice、midnight-radio）。Claude 逐张看过：没有可读文字或乱码；gj-25、26 是新人物，和拓也、リン 不像，画风一致。
 - 至此第 1〜26 课的插图全部到齐。
+
+### 2026-10-02 16:46 第 25、26 课录音完成，18:55 推送
+
+- 两课各 89 个文件，日志无报错，提交 a28e82e；Luna 在 WSL 跑 push_from_wsl.sh 推到 GitHub（连同最后 6 张插图 3eec3f1）。
+- 定时检查改成 JST 每 3 小时整点一次（send_later 接力）；原来的 08:55 早报、20:55 晚报停用。
+
+### 2026-10-02 18:58 第 5 课附加例句「初めての町で道に迷いました。」没录全（Luna 人耳）
+
+- 对应 gj-05 word-11-example。录音脚本加了环境变量 SEED_OFFSET（e30bc14），新增 `_claude/redo.sh <课号> <条目> [seed 偏移]` 单条重录；等 Luna 在 WSL 跑。
+
+### 2026-10-03 02:2x 第 27、28 课大纲（等 Luna 拍板）
+
+- `LESSON_DRAFT_gj-27-28.md`：gj-27 〜たとえ〜ても（父女：女儿报名南极观测队，227 字）；gj-28 〜たびに（管理公司客服电话：每次回家屋里的东西都被动过，犯人是隔壁的猫，234 字）。
+- 单词全部 N3〜N2，和前 26 课没有重复的卡；gj-28 本课单词只有 7 个（不凑数）。答案已打散。
+- 插图命令：`CODEX_PROMPTS_gj-27-28.md`（antarctic-daughter.png、moving-things.png）。
