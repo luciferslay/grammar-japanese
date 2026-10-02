@@ -10,6 +10,8 @@ import { foundWallet } from './found-wallet';
 import { interviewNerves } from './interview-nerves';
 import { kyotoDayTrip } from './kyoto-day-trip';
 import { midnightRadio } from './midnight-radio';
+import { antarcticDaughter } from './antarctic-daughter';
+import { movingThings } from './moving-things';
 import { mysterySweets } from './mystery-sweets';
 import { newBicycle } from './new-bicycle';
 import { phoneDinner } from './phone-dinner';
@@ -71,6 +73,8 @@ export const pendingLessons: Lesson[] = [
   kyotoDayTrip,
   sushiApprentice,
   midnightRadio,
+  antarcticDaughter,
+  movingThings,
 ];
 
 /** 某一级里已上架的课（首页、上一课／下一课用）。 */

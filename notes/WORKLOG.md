@@ -462,3 +462,10 @@
 - `LESSON_DRAFT_gj-27-28.md`：gj-27 〜たとえ〜ても（父女：女儿报名南极观测队，227 字）；gj-28 〜たびに（管理公司客服电话：每次回家屋里的东西都被动过，犯人是隔壁的猫，234 字）。
 - 单词全部 N3〜N2，和前 26 课没有重复的卡；gj-28 本课单词只有 7 个（不凑数）。答案已打散。
 - 插图命令：`CODEX_PROMPTS_gj-27-28.md`（antarctic-daughter.png、moving-things.png）。
+
+### 2026-10-03 02:3x 第 27、28 课做课（Luna 02:26 批准大纲）
+
+- 课程文件：`lib/lessons/antarctic-daughter.ts`（gj-27）、`lib/lessons/moving-things.ts`（gj-28），放在 pendingLessons；路由 `app/lesson/gj-27`、`gj-28`。
+- shuffle_answers.py 重排后只动了这两课（其他课答案位置不变）；附加单词不在课文里；单词等级全部 N3〜N2。
+- 读音表没有预先登记（规矩：只登记人耳确认读错的词）。可能读错、录完要听的：父さん・母さん（とうさん／かあさん）、三階（さんがい）、三十人分、四十度、係（かかり）、物置（ものおき）。
+- 下一步：Luna 在 WSL 跑 run_new_lessons.sh gj-27 gj-28 录音；插图命令给 Codex（CODEX_PROMPTS_gj-27-28.md）。
